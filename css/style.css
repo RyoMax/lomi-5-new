@@ -1,0 +1,88 @@
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: butler-light;
+  src: url("../fonts/Butler_Light.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9F5EC;
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  color: #262626;
+  margin: 0;
+}
+body h1, body h2, body h3 {
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #AB6B4F;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (min-width: 480px) {
+  body {
+    background-color: grey;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-color: rgb(94, 94, 94);
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    background-color: rgb(47, 47, 47);
+  }
+}
+@media (min-width: 1280px) {
+  body {
+    background-color: black;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
