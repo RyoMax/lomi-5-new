@@ -1,0 +1,51 @@
+header {
+  position: relative;
+  color: #F9F5EC;
+  background-color: #F9F5EC;
+}
+header .header-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/main/header_mobile-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-x: 40%;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+header .header-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 2;
+}
+header h3 {
+  margin: 0;
+  margin-bottom: 3.2rem;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+}
+header .massage-btn {
+  color: #F9F5EC;
+  background-color: #994d2d;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 480px) {
+  header h3 {
+    font-size: 8rem;
+  }
+  header .massage-btn {
+    font-size: 1.6rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
