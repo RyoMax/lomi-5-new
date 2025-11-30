@@ -39,12 +39,22 @@ header .massage-btn {
   font-size: 1.2rem;
 }
 
+.container .image {
+  background-image: url(../img/main/Lomi2.jpg);
+}
+
 @media (min-width: 480px) {
   header h3 {
     font-size: 8rem;
   }
   header .massage-btn {
     font-size: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  .container .image {
+    display: block;
+    background-image: url(../img/main/Lomi2.jpg);
   }
 }
 

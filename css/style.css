@@ -282,9 +282,24 @@ button {
 }
 
 .container {
+  display: flex;
   width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+  background-color: #DBCFBF;
+  /* padding: 100px 0; */
+}
+.container .content {
+  padding: 100px 80px;
+  width: 100%;
+}
+.container h1, .container h2, .container h3 {
+  font-size: 2.8rem;
+}
+.container .image {
+  display: none;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .massage-btn {
