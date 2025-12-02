@@ -33,16 +33,104 @@ header h3 {
   text-align: center;
   font-weight: 500;
 }
+header img {
+  width: 30%;
+  max-width: 300px;
+}
+header .timify-button {
+  width: 100%;
+  text-align: center;
+}
 header .massage-btn {
   color: #F9F5EC;
   background-color: #994d2d;
   font-size: 1.2rem;
 }
 
-.container .image {
-  background-image: url(../img/main/Lomi2.jpg);
+main h1,
+main h2,
+main h3,
+main .h3 {
+  font-size: 3.2rem;
+  margin: 0 0 3.2rem;
+}
+main .h3 {
+  font-size: 2.8rem;
+}
+main .welcome {
+  padding: 200px 0;
+  background-color: #F9F5EC;
+  text-align: center;
+}
+main .welcome div {
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 30px;
+  max-width: 540px;
+}
+main .angebot {
+  padding: 200px 15px 100px;
+  background-color: #F9F5EC;
+  text-align: center;
+}
+main .angebot .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .angebot .content div {
+  width: 60%;
+  max-width: 280px;
+  margin-bottom: 60px;
+}
+main .angebot .content h3 {
+  font-size: 2.8rem;
+  color: #AB6B4F;
+}
+main .angebot .content img {
+  width: 100%;
+}
+main .container {
+  text-align: center;
+  position: relative;
+}
+main .container .content {
+  max-width: 540px;
+  margin: 0 auto;
+}
+main .container.about-lomi {
+  background-color: #DBCFBF;
+}
+main .container.about-lomi img {
+  position: absolute;
+  top: -30px;
+  right: 48%;
+  width: 110px;
+  height: 110px;
+  z-index: 3;
+}
+main .container.about-henriette {
+  background-color: #CECDAE;
+}
+main .container.about-henriette h4 {
+  color: #262626;
+  font-size: 1.6rem;
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+main .container.about-henriette .content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+main .container.about-henriette .image {
+  opacity: 0.7;
+  background-position: right;
 }
 
+/* .container .image {
+    background-image: url(../img/main/Lomi2.jpg);
+} */
 @media (min-width: 480px) {
   header h3 {
     font-size: 8rem;
@@ -52,9 +140,44 @@ header .massage-btn {
   }
 }
 @media (min-width: 768px) {
-  .container .image {
-    display: block;
+  main .welcome div {
+    max-width: 620px;
+  }
+  main .container .content {
+    max-width: none;
+  }
+  main .container.about-lomi .content {
+    text-align: left;
+    width: 50vw;
+  }
+  main .container.about-lomi .image {
     background-image: url(../img/main/Lomi2.jpg);
+    width: 50vw;
+  }
+  main .container.about-henriette .content {
+    text-align: right;
+    width: 60vw;
+  }
+  main .container.about-henriette .image {
+    background-image: url(../img/main/jette-start.jpg);
+    width: 40vw;
+  }
+  main .angebot .content {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 10%;
+  }
+  main .angebot .content div {
+    width: 30%;
+  }
+}
+@media (min-width: 1000px) {
+  header .header-bg {
+    background-image: url(../img/main/header_min.jpg);
+  }
+  main .container.about-henriette .content {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 

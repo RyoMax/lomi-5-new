@@ -36,6 +36,7 @@ nav {
   padding: 2rem;
   background-color: #F9F5EC;
   z-index: 20;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 nav .nav-container {
   display: flex;
@@ -132,6 +133,7 @@ nav .menu-icon.active .line3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10rem;
     max-width: none;
     margin: 0 2%;
   }
@@ -149,7 +151,7 @@ nav .menu-icon.active .line3 {
   nav .links {
     position: relative;
     flex-direction: row;
-    justify-content: end;
+    justify-content: space-around;
     gap: 1.5rem;
     padding: 1rem 0;
   }
@@ -165,6 +167,7 @@ nav .menu-icon.active .line3 {
 @media (min-width: 1280px) {
   nav .nav-container {
     margin: 0 8%;
+    gap: 15rem;
   }
   nav img {
     height: 8rem;
@@ -265,8 +268,16 @@ body {
 }
 body h1,
 body h2,
-body h3 {
+body h3,
+body .h3 {
   font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 a {
@@ -284,15 +295,14 @@ button {
 .container {
   display: flex;
   width: 100%;
-  background-color: #DBCFBF;
   /* padding: 100px 0; */
 }
 .container .content {
-  padding: 100px 80px;
+  padding: 100px 15px;
   width: 100%;
 }
-.container h1, .container h2, .container h3 {
-  font-size: 2.8rem;
+.container p {
+  margin: 0 0 4.8rem;
 }
 .container .image {
   display: none;
@@ -305,10 +315,15 @@ button {
 .massage-btn {
   border: #AB6B4F 3px solid;
   border-radius: 3px;
-  padding: 8px 12px;
-  font-size: 1.6rem;
-  letter-spacing: 8px;
+  padding: 6px 12px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: inherit;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
   transition: all 0.2s;
+  letter-spacing: 8px;
 }
 .massage-btn:hover,
 .massage-btn :active {
@@ -329,6 +344,12 @@ button {
 @media (min-width: 768px) {
   body {
     background-color: rgb(94, 94, 94);
+  }
+  .container .image {
+    display: block;
+  }
+  .container .content {
+    padding: 100px 80px;
   }
 }
 @media (min-width: 1000px) {
