@@ -1,0 +1,91 @@
+main h1,
+main h2,
+main h3,
+main .h3 {
+  font-size: 3.2rem;
+  margin: 0 0 3.2rem;
+}
+main h2 span {
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  font-size: 1.44rem;
+  letter-spacing: 8px;
+}
+main .welcome {
+  padding: 200px 0;
+  background-color: #F9F5EC;
+  text-align: center;
+}
+main .welcome div {
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 30px;
+  max-width: 540px;
+}
+main .container {
+  text-align: center;
+  position: relative;
+}
+main .container .content {
+  max-width: 540px;
+  margin: 0 auto;
+}
+main .container.about-lomi {
+  background-color: #DBCFBF;
+}
+main .container.about-henriette {
+  background-color: #CECDAE;
+}
+main .container.about-henriette .content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+main .container.about-henriette {
+  /* .image {
+      opacity: 0.7;
+      background-position: right;
+  } */
+}
+
+@media (min-width: 768px) {
+  main .welcome div {
+    max-width: 1140px;
+  }
+  main .container .content {
+    max-width: none;
+  }
+  main .container.about-lomi .content {
+    text-align: right;
+    width: 50vw;
+  }
+  main .container.about-lomi .image {
+    background-image: url(../img/about/lomi-massage.jpg);
+    width: 50vw;
+    opacity: 0.7;
+    background-position: left;
+  }
+  main .container.about-henriette .content {
+    text-align: left;
+    width: 60vw;
+  }
+  main .container.about-henriette .image {
+    background-image: url(../img/about/jette-about.jpg);
+    opacity: 0.7;
+    width: 40vw;
+  }
+  main .angebot .content {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 10%;
+  }
+  main .angebot .content div {
+    width: 30%;
+  }
+}
+@media (min-width: 1000px) {
+  main .container.about-henriette .content {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

@@ -1,9 +1,10 @@
 /* Navigation */
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100px;
   padding: 2rem;
   background-color: #F9F5EC;
   z-index: 20;
@@ -43,7 +44,8 @@ nav .links {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-nav .links li > *, nav .links .timify-button button {
+nav .links li > *,
+nav .links .timify-button button {
   color: #262626;
   font-size: 2.4rem;
   font-family: "butler-ultra-light", "Times New Roman", Times, serif;
@@ -68,6 +70,7 @@ nav .links .timify-button button {
   border: none;
 }
 nav .links.collapsed {
+  padding: 0;
   transform: translateY(-100%);
   z-index: -1;
   opacity: 0;
@@ -111,7 +114,7 @@ nav .menu-icon.active .line3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10rem;
+    gap: 1rem;
     max-width: none;
     margin: 0 2%;
   }
@@ -131,13 +134,14 @@ nav .menu-icon.active .line3 {
     flex-direction: row;
     justify-content: space-around;
     gap: 1.5rem;
-    padding: 1rem 0;
+    padding: 0;
+    box-shadow: none;
   }
   nav .links li > * {
     font-size: 2.2rem;
   }
   nav .links.collapsed {
-    transform: translateY(0);
+    transform: translateY(0%);
     z-index: 3;
     opacity: 2;
   }

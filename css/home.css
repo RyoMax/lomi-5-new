@@ -11,8 +11,8 @@ header .header-bg {
   background-image: url(../img/main/header_mobile-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-position-x: 40%;
+  background-position-y: center;
+  background-position-x: right;
   background-attachment: fixed;
   opacity: 0.8;
 }
@@ -22,7 +22,7 @@ header .header-content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 100px);
   background-color: transparent;
   z-index: 2;
 }
