@@ -40,14 +40,17 @@ nav .links {
   margin: 0;
   list-style: none;
   font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-nav .links li > * {
+nav .links li > *, nav .links .timify-button button {
   color: #262626;
   font-size: 2.4rem;
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
 }
 nav .links a:hover {
   color: #AB6B4F;
+  transition: all 0.2s ease-in-out;
 }
 nav .links li:last-child {
   border: #AB6B4F 3px solid;
@@ -59,6 +62,10 @@ nav .links li:last-child:hover {
 }
 nav .links li:last-child:hover div {
   color: #AB6B4F;
+}
+nav .links .timify-button button {
+  background-color: unset;
+  border: none;
 }
 nav .links.collapsed {
   transform: translateY(-100%);
@@ -113,7 +120,7 @@ nav .menu-icon.active .line3 {
     max-height: unset;
     height: 8rem;
   }
-  nav button {
+  nav #nav-button {
     display: none;
     background: none;
     border: none;

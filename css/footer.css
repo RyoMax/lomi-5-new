@@ -29,6 +29,10 @@ footer .footer-content ul li {
 footer .footer-content a {
   color: white;
   text-decoration: unset;
+  transition: all 0.2s ease-in-out;
+}
+footer .footer-content a:hover {
+  color: #DBCFBF;
 }
 footer .footer-content address {
   font-style: normal;

@@ -10,8 +10,8 @@
     <title>LOMI5 | Hawaiianische Massage in der Uckermark</title>
 
     <!-- CSS Links -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/style.css">
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <a class="logo" href="#">
                 <img src="./img/main/LogoMenu.png" alt="home logo">
             </a>
-            <button id="nav-button">
+            <button id="nav-button" aria-label="Toggle Hamburger Menu">
                 <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
                     <rect class="line1" width="100" height="15" rx="8"></rect>
                     <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
@@ -46,7 +46,9 @@
                 <li>
                     <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
                         data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-                        TERMIN BUCHEN
+                        <button>
+                            TERMIN BUCHEN
+                        </button>
                     </div>
                 </li>
             </ul>
@@ -76,14 +78,14 @@
             <div>
                 <h3>Lomi5 - Willkommen bei dir.</h3>
                 <p>
-                        <strong>Lomi5</strong> ist ein Ort der <strong>Ruhe und Erholung</strong>,
-                        in der <strong>Stille und Weite der Uckermark</strong> gelegen.
-                        Eine Lomi Lomi Massage ist wie ein tiefes Eintauchen in einen freundlichen, stillen
-                        Ozean - ein <strong>Versinken in dir selbst</strong>.
-                        Die uralte hawaiianische Tempelmassage befreit von Ballast und schafft Platz für neue
-                        Energie, Leichtigkeit und Freude. Sie hat vor allem mit dir zu tun und ist darum wie eine
-                        Reise zu dir selbst.
-                    </p>
+                    <strong>Lomi5</strong> ist ein Ort der <strong>Ruhe und Erholung</strong>,
+                    in der <strong>Stille und Weite der Uckermark</strong> gelegen.
+                    Eine Lomi Lomi Massage ist wie ein tiefes Eintauchen in einen freundlichen, stillen
+                    Ozean - ein <strong>Versinken in dir selbst</strong>.
+                    Die uralte hawaiianische Tempelmassage befreit von Ballast und schafft Platz für neue
+                    Energie, Leichtigkeit und Freude. Sie hat vor allem mit dir zu tun und ist darum wie eine
+                    Reise zu dir selbst.
+                </p>
             </div>
         </section>
 
@@ -93,7 +95,12 @@
                 <img src="img/main/Sonne_Icon.png" alt="">
                 <h1>Hawaiianische Massage in der Uckermark</h1>
                 <p>
-                    Bei einer Lomi Lomi Massage stehst du im Mittelpunkt, dir gilt alle Aufmerksamkeit, besonders deine eigene. Du wirst umsorgt und kannst dich immer tiefer entspannen und in dich hineinfallen lassen. Das Grün der Felder, Wiesen und Wälder, die unzähligen Seen, der ungestörte Blick in den Himmel und die Stille der Uckermark ergänzen die ganzheitliche Wirkung der Lomi und werden Teil davon. Ein Spaziergang auf dem alten Bahndamm oder ein erfrischendes Bad in einem der umliegenden Seen können so für dich zu einem kleinen Urlaub werden.
+                    Bei einer Lomi Lomi Massage stehst du im Mittelpunkt, dir gilt alle Aufmerksamkeit, besonders deine
+                    eigene. Du wirst umsorgt und kannst dich immer tiefer entspannen und in dich hineinfallen lassen.
+                    Das Grün der Felder, Wiesen und Wälder, die unzähligen Seen, der ungestörte Blick in den Himmel und
+                    die Stille der Uckermark ergänzen die ganzheitliche Wirkung der Lomi und werden Teil davon. Ein
+                    Spaziergang auf dem alten Bahndamm oder ein erfrischendes Bad in einem der umliegenden Seen können
+                    so für dich zu einem kleinen Urlaub werden.
                 </p>
                 <a class="btn" href="">
                     <button class="massage-btn">ERZÄHL MIR MEHR</button>
@@ -132,7 +139,8 @@
             <div class="image"></div>
             <div class="content">
                 <p class="h3">
-                    „Seit ich Lomi Lomi Massagen gebe, erlebe ich immer wieder voller Freude, welche erstaunlichen und wunderbaren Wirkungen Lomi Lomi hervorbringt.“
+                    „Seit ich Lomi Lomi Massagen gebe, erlebe ich immer wieder voller Freude, welche erstaunlichen und
+                    wunderbaren Wirkungen Lomi Lomi hervorbringt.“
 
                 </p>
                 <h4>-Henriette Burkard, Lomi-Masseurin</h4>
@@ -140,7 +148,7 @@
                     <button class="massage-btn">ÜBER HENRIETTE</button>
                 </a>
             </div>
-            
+
         </section>
     </main>
 
