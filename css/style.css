@@ -288,6 +288,8 @@ body .h3 {
   font-family: "butler-ultra-light", "Times New Roman", Times, serif;
   font-weight: 500;
   line-height: 1.2;
+  font-size: 3.2rem;
+  margin: 0 0 3.2rem;
 }
 
 p {
@@ -304,27 +306,7 @@ a:hover {
 }
 
 button {
-  font-family: "Montserrat", sans-serif;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  /* padding: 100px 0; */
-}
-.container .content {
-  padding: 100px 15px;
-  width: 100%;
-}
-.container p {
-  margin: 0 0 4.8rem;
-}
-.container .image {
-  display: none;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
 }
 
 .massage-btn {
@@ -360,12 +342,6 @@ button {
 @media (min-width: 768px) {
   body {
     background-color: rgb(94, 94, 94);
-  }
-  .container .image {
-    display: block;
-  }
-  .container .content {
-    padding: 100px 80px;
   }
 }
 @media (min-width: 1000px) {
