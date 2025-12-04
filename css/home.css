@@ -362,7 +362,7 @@ button {
 .container .content {
   max-width: 540px;
   margin: 0 auto;
-  padding: 100px 15px;
+  padding: 50px 30px;
   width: 100%;
 }
 .container p {
@@ -376,7 +376,7 @@ button {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .container .image {
     display: block;
   }
@@ -385,10 +385,10 @@ button {
     max-width: none;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1280px) {
   main .container .content {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
 header {
@@ -517,22 +517,6 @@ main .container.about-henriette .image {
   main .welcome div {
     max-width: 620px;
   }
-  main .container.about-lomi .content {
-    text-align: left;
-    width: 50vw;
-  }
-  main .container.about-lomi .image {
-    background-image: url(../img/main/Lomi2.jpg);
-    width: 50vw;
-  }
-  main .container.about-henriette .content {
-    text-align: right;
-    width: 60vw;
-  }
-  main .container.about-henriette .image {
-    background-image: url(../img/main/jette-start.jpg);
-    width: 40vw;
-  }
   main .angebot .content {
     flex-direction: row;
     justify-content: space-around;
@@ -545,6 +529,22 @@ main .container.about-henriette .image {
 @media (min-width: 1000px) {
   header .header-bg {
     background-image: url(../img/main/header_min.jpg);
+  }
+  .container.about-lomi .content {
+    text-align: left;
+    width: 50vw;
+  }
+  .container.about-lomi .image {
+    background-image: url(../img/main/Lomi2.jpg);
+    width: 50vw;
+  }
+  .container.about-henriette .content {
+    text-align: right;
+    width: 60vw;
+  }
+  .container.about-henriette .image {
+    background-image: url(../img/main/jette-start.jpg);
+    width: 40vw;
   }
 }
 

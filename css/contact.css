@@ -391,62 +391,42 @@ button {
     padding-bottom: 150px;
   }
 }
-main h2 span {
+main h1 span {
   font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
   font-size: 1.44rem;
   margin-bottom: 12px;
   letter-spacing: 8px;
 }
-main .angebot-info {
-  padding: 200px 0;
-  background-color: #F9F5EC;
-  text-align: center;
+main address {
+  text-align: left;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 800;
 }
-main .angebot-info div {
-  margin: 0 auto;
-  width: 90%;
-  padding: 0 30px;
-  max-width: 540px;
+main article {
+  margin-top: 40px;
 }
-main .container p {
+main article p,
+main article h2 {
   text-align: justify;
 }
-main .container.about-lomi {
+main .container.biesenbrow {
   background-color: #DBCFBF;
 }
-main .container.about-henriette {
-  background-color: #CECDAE;
-}
 
-@media (min-width: 768px) {
-  main .angebot-info div {
-    max-width: 1140px;
-  }
-}
 @media (min-width: 1000px) {
-  .container.about-lomi p {
-    text-align: right;
-  }
-  .container.about-lomi .content {
-    width: 50vw;
-  }
-  .container.about-lomi .image {
-    background-image: url(../img/about/lomi-massage.jpg);
-    width: 50vw;
-    opacity: 0.7;
-    background-position: left;
-  }
-  .container.about-henriette p {
+  main .container.biesenbrow .content {
     text-align: left;
+    width: 50vw;
   }
-  .container.about-henriette .content {
-    width: 60vw;
-  }
-  .container.about-henriette .image {
-    background-image: url(../img/about/jette-about.jpg);
+  main .container.biesenbrow .image {
+    background-image: url(../img/contact/loc_bb_desk.jpg);
+    width: 50vw;
     opacity: 0.7;
-    width: 40vw;
+    background-position: center;
+    background-position-x: 60%;
   }
 }
 
-/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=contact.css.map */
