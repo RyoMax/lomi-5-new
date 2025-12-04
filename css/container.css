@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.container .content {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 100px 15px;
+  width: 100%;
+}
+.container p {
+  margin: 0 0 4.8rem;
+}
+.container .image {
+  display: none;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .container .image {
+    display: block;
+  }
+  .container .content {
+    padding: 100px 80px;
+    max-width: none;
+  }
+}
+@media (min-width: 1000px) {
+  main .container .content {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+/*# sourceMappingURL=container.css.map */
