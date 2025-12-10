@@ -334,26 +334,6 @@ button {
 }
 
 /* Media Queries */
-@media (min-width: 480px) {
-  body {
-    background-color: grey;
-  }
-}
-@media (min-width: 768px) {
-  body {
-    background-color: rgb(94, 94, 94);
-  }
-}
-@media (min-width: 1000px) {
-  body {
-    background-color: rgb(47, 47, 47);
-  }
-}
-@media (min-width: 1280px) {
-  body {
-    background-color: black;
-  }
-}
 .container {
   display: flex;
   width: 100%;
@@ -391,41 +371,195 @@ button {
     padding-bottom: 150px;
   }
 }
-main h1 span {
+main {
+  background-image: url(../img/contact/L5_Icon.png);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+main h1 {
+  font-size: 4rem;
+}
+main address {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+main .biesenbrow {
+  background-color: #DBCFBF;
+  box-shadow: 0 -5px 45px #262626;
+}
+main .biesenbrow h1 span {
   font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
   font-size: 1.44rem;
   margin-bottom: 12px;
   letter-spacing: 8px;
 }
-main address {
+main .biesenbrow address {
   text-align: left;
-  font-style: normal;
-  font-size: 1.6rem;
-  line-height: 1.5;
   font-weight: 800;
 }
-main article {
+main .biesenbrow article {
   margin-top: 40px;
 }
-main article p,
-main article h2 {
+main .biesenbrow article p,
+main .biesenbrow article h2 {
   text-align: justify;
 }
-main .container.biesenbrow {
-  background-color: #DBCFBF;
+main .form {
+  margin-top: 150px;
+  background-color: #F9F5EC;
+  box-shadow: 0 25px 45px #262626;
+  text-align: center;
+}
+main .form .content > div {
+  display: flex;
+  flex-direction: column;
+}
+main .form a {
+  color: #262626;
+  transition: all 0.2s ease-in-out;
+}
+main .form a:hover, main .form a:active {
+  color: #AB6B4F;
+}
+main .form article > * {
+  margin-bottom: 48px;
+}
+main .form form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+main .form form input, main .form form textarea {
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 1.6rem;
+  border: 2px solid #262626;
+  border-radius: 0.4rem;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  transition: all 0.15s ease-in-out;
+}
+main .form form textarea {
+  resize: none;
+  height: 19.2rem;
+}
+main .form form .massage-btn {
+  margin: 0;
 }
 
+.to-form-btn {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.to-form-btn.hidden {
+  display: none;
+}
+
+.to-form-btn .massage-btn {
+  animation: pulse 6s infinite ease-in-out;
+}
+
+.to-form-btn .massage-btn:hover {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #262626;
+    background-color: #F9F5EC;
+    color: #262626;
+  }
+  10% {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px #262626;
+    background-color: #994d2d;
+    color: #F9F5EC;
+  }
+  20% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #262626;
+    background-color: #F9F5EC;
+    color: #262626;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #262626;
+    background-color: #F9F5EC;
+    color: #262626;
+  }
+}
+@media (min-width: 768px) {
+  main h1 {
+    font-size: 5rem;
+  }
+  main .form {
+    margin-top: 250px;
+  }
+  main .form .content {
+    max-width: unset;
+    padding: 50px 30px;
+    text-align: left;
+  }
+  main .form .content > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .form .content > div > *:nth-child(1) {
+    width: 30%;
+  }
+  main .form .content > div > *:nth-child(2) {
+    width: 60%;
+  }
+  main .form .content .btn-box {
+    text-align: right;
+  }
+}
 @media (min-width: 1000px) {
-  main .container.biesenbrow .content {
+  main {
+    background-size: 50%;
+  }
+  main .biesenbrow .content {
     text-align: left;
     width: 50vw;
   }
-  main .container.biesenbrow .image {
+  main .biesenbrow .image {
     background-image: url(../img/contact/loc_bb_desk.jpg);
     width: 50vw;
     opacity: 0.7;
     background-position: center;
     background-position-x: 60%;
+  }
+  main .form {
+    margin-top: 350px;
+  }
+  main .form .content {
+    width: 65vw;
+    padding: 100px 30px;
+  }
+  main .form .image {
+    background-image: url(../img/contact/Lomi-Haus.jpg);
+    width: 35vw;
+    background-position: center;
+    background-position-x: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  main {
+    background-size: 40%;
   }
 }
 

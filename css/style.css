@@ -334,25 +334,5 @@ button {
 }
 
 /* Media Queries */
-@media (min-width: 480px) {
-  body {
-    background-color: grey;
-  }
-}
-@media (min-width: 768px) {
-  body {
-    background-color: rgb(94, 94, 94);
-  }
-}
-@media (min-width: 1000px) {
-  body {
-    background-color: rgb(47, 47, 47);
-  }
-}
-@media (min-width: 1280px) {
-  body {
-    background-color: black;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

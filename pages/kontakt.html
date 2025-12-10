@@ -56,7 +56,7 @@
     </nav>
 
     <main>
-        <!-- Standort Uckermark -->
+        <!-- Anfahrt: Standort Uckermark -->
         <section class="container biesenbrow">
             <div class="content">
                 <h1>
@@ -71,20 +71,77 @@
                     16278 Angermünde
                 </address>
                 <article>
-                <h2>Anfahrt</h2>
-                <p>
-                    Es gibt zwei Busse, die in Biesenbrow halten - Bus 475 von Schwedt oder Wilmersdorf aus. Bus 450 von
-                    Angermünde und Gramzow aus bis zur Haltestelle Biesenbrow Mitte.
-                </p>
-                <p>
-                    Mit dem Auto kannst du bis vor's Haus fahren und in meiner Einfahrt parken.
-                    Wenn du Lust auf eine Radtour hast, kannst du mit dem Zug bis Wilmersdorf fahren und von dort aus
-                    radeln. Es sind etwa 10km bis nach Biesenbrow.
-                </p>
+                    <h2>Anfahrt</h2>
+                    <p>
+                        Es gibt zwei Busse, die in Biesenbrow halten - Bus 475 von Schwedt oder Wilmersdorf aus. Bus 450
+                        von
+                        Angermünde und Gramzow aus bis zur Haltestelle Biesenbrow Mitte.
+                    </p>
+                    <p>
+                        Mit dem Auto kannst du bis vor's Haus fahren und in meiner Einfahrt parken.
+                        Wenn du Lust auf eine Radtour hast, kannst du mit dem Zug bis Wilmersdorf fahren und von dort
+                        aus
+                        radeln. Es sind etwa 10km bis nach Biesenbrow.
+                    </p>
                 </article>
 
             </div>
             <div class="image"></div>
+        </section>
+
+        <!-- Kontaktformular -->
+        <section class="container form">
+            <div class="image"></div>
+            <div class="content">
+                <div>
+                    <h1>Kontakt</h2>
+                    <p id="contact">
+                        Hast du eine Frage, ein Anliegen oder kann ich sonst etwas für dich tun? Dann schreibe mir eine
+                        Nachricht, ich bin gerne für dich da!
+                    </p>
+                </div>
+                <div>
+                    <article>
+
+                        <p>Termine nach Vereinbarung</p>
+                        <p>
+                            Auch erreichbar unter
+                            <br>
+                            <strong><a href="mailto:info@lomi5.de">info@lomi5.de</a></strong>
+                        </p>
+                        <address>
+                            Hirtenende 5 <br>
+                            16278 Biesenbrow <br>
+                            Angermünde OT Biesenbrow
+                        </address>
+                    </article>
+                    <form id="form" action="">
+                        <div>
+                            <label for="name">Vor- und Nachname <span class="required">*</span></label>
+                            <input type="text" name="name" id="name" placeholder="Dein Name"
+                                required>
+                        </div>
+                        <div>
+                            <label for="email">E-Mail-Adresse <span class="required">*</span></label>
+                            <input type="email" name="email" id="email"
+                                placeholder="max@mustermann.de" required>
+                        </div>
+                        <div>
+                            <label for="message">Deine Nachricht</label>
+                            <textarea name="message" id="message"
+                                placeholder="Fragen, Anmerkungen, ..."></textarea>
+                        </div>
+                        <div class="btn-box">
+                            <button name="submit" type="submit" class="massage-btn">SENDEN</button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+
+                </div>
+
+            </div>
+
         </section>
     </main>
 
@@ -120,8 +177,14 @@
             </ul>
         </div>
     </footer>
+    <div class="to-form-btn">
+        <a href="#contact">
+            <button class="massage-btn">ZUM KONTAKT&shy;FORMULAR</button>
+        </a>
+    </div>
 
     <script src="../js/nav.js"></script>
+    <script src="../js/form.js"></script>
 </body>
 
 </html>
