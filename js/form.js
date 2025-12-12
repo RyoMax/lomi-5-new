@@ -1,6 +1,8 @@
 let form = document.getElementById("form");
 let toFormBtn = document.querySelector(".to-form-btn");
 
+
+
 if (form) {
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {

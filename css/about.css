@@ -423,7 +423,7 @@ main .container.about-henriette {
     width: 60vw;
   }
   .container.about-henriette .image {
-    background-image: url(../img/about/jette-about.jpg);
+    background-image: url(../img/about/jette-about.avif);
     opacity: 0.7;
     width: 40vw;
   }

@@ -17,3 +17,9 @@ Behalte Sass (Dart Sass) und produziere eine single minified style.css.
 Inline einen kleinen Critical-CSS-Block (z. B. Logo, Navigation-Grundlayout).
 Lade den Rest per media="print" Trick oder preload + onload (mit noscript Fallback).
 Stelle sicher, dass Live Server / Produktion die kompilierte style.css ausliefert und dass du sass --watch scss:css laufen hast.
+
+
+[ ] - Checkbox 
+
+- [X] "df"
+- [ ] "df"

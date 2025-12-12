@@ -372,10 +372,10 @@ button {
   }
 }
 main {
-  background-image: url(../img/contact/L5_Icon.png);
-  background-size: 60%;
+  background-image: url(../img/contact/StockroseMuster_lg_min.png);
+  background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-attachment: fixed;
 }
 main h1 {
@@ -530,14 +530,14 @@ main .form form .massage-btn {
 }
 @media (min-width: 1000px) {
   main {
-    background-size: 50%;
+    /* background-size:50%; */
   }
   main .biesenbrow .content {
     text-align: left;
     width: 50vw;
   }
   main .biesenbrow .image {
-    background-image: url(../img/contact/loc_bb_desk.jpg);
+    background-image: url(../img/contact/loc_bb_desk.avif);
     width: 50vw;
     opacity: 0.7;
     background-position: center;
@@ -551,7 +551,7 @@ main .form form .massage-btn {
     padding: 100px 30px;
   }
   main .form .image {
-    background-image: url(../img/contact/Lomi-Haus.jpg);
+    background-image: url(../img/contact/Lomi-Haus.avif);
     width: 35vw;
     background-position: center;
     background-position-x: 60%;
@@ -559,7 +559,7 @@ main .form form .massage-btn {
 }
 @media (min-width: 1280px) {
   main {
-    background-size: 40%;
+    /* background-size:40%; */
   }
 }
 
