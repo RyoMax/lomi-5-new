@@ -412,10 +412,14 @@ main .card {
   background-color: #F9F5EC;
   text-align: right;
 }
+main .card:nth-child(1) div img, main .card:nth-child(2) div img {
+  aspect-ratio: auto 1/1;
+}
 main .card div {
   display: flex;
 }
 main .card div img {
+  aspect-ratio: auto 12/8;
   width: 50%;
   height: auto;
 }
