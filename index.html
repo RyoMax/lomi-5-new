@@ -10,7 +10,530 @@
     <title>LOMI5 | Hawaiianische Massage in der Uckermark</title>
 
     <!-- CSS Links -->
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css">
+    <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css"> -->
+
+    <style>
+        /* Navigation */
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 2rem;
+  background-color: #F9F5EC;
+  z-index: 20;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+nav img {
+  width: 80%;
+  max-height: 80px;
+}
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+nav .links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #F9F5EC;
+  width: 100%;
+  padding: 3rem 0;
+  margin: 0;
+  list-style: none;
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+nav .links li > *,
+nav .links .timify-button button {
+  color: #262626;
+  font-size: 2.4rem;
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+}
+nav .links a:hover {
+  color: #AB6B4F;
+  transition: all 0.2s ease-in-out;
+}
+nav .links li:last-child {
+  border: #AB6B4F 3px solid;
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+nav .links li:last-child:hover {
+  cursor: pointer;
+}
+nav .links li:last-child:hover div {
+  color: #AB6B4F;
+}
+nav .links .timify-button button {
+  background-color: unset;
+  border: none;
+}
+nav .links.collapsed {
+  padding: 0;
+  transform: translateY(-100%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0s ease;
+}
+nav {
+  /* button icon animation */
+}
+nav .menu-icon {
+  cursor: pointer;
+  fill: #AB6B4F;
+}
+nav .menu-icon rect {
+  transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+  transform-origin: 50px 40px;
+  /* center of viewBox */
+}
+nav {
+  /* --- When active (X-state) --- */
+}
+nav .menu-icon.active .line1 {
+  transform: rotate(45deg);
+  y: 32;
+  /* move to center */
+}
+nav .menu-icon.active .line2 {
+  opacity: 0;
+  /* fade middle line out */
+}
+nav .menu-icon.active .line3 {
+  transform: rotate(-45deg);
+  y: 32;
+  /* move to center */
+}
+
+@media (min-width: 1000px) {
+  nav {
+    padding: 1rem 0;
+  }
+  nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: none;
+    margin: 0 2%;
+  }
+  nav img {
+    width: unset;
+    max-height: unset;
+    height: 8rem;
+  }
+  nav #nav-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  nav .links {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 0;
+    box-shadow: none;
+  }
+  nav .links li > * {
+    font-size: 2.2rem;
+  }
+  nav .links.collapsed {
+    transform: translateY(0%);
+    z-index: 3;
+    opacity: 2;
+  }
+}
+@media (min-width: 1280px) {
+  nav .nav-container {
+    margin: 0 8%;
+    gap: 15rem;
+  }
+  nav img {
+    height: 8rem;
+  }
+  nav .links li > * {
+    font-size: 2.4rem;
+  }
+}
+/* Footer styling */
+footer {
+  background-color: #777657;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 25px 25px;
+}
+footer img {
+  width: 100%;
+  margin-top: 50px;
+  order: 2;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 1.8rem;
+  order: 1;
+}
+footer .footer-content ul {
+  margin-bottom: 1.6rem;
+  list-style: none;
+  padding: 0;
+}
+footer .footer-content ul li {
+  margin: 18px;
+}
+footer .footer-content a {
+  color: white;
+  text-decoration: unset;
+  transition: all 0.2s ease-in-out;
+}
+footer .footer-content a:hover {
+  color: #DBCFBF;
+}
+footer .footer-content address {
+  font-style: normal;
+  line-height: 2.8rem;
+}
+
+@media (min-width: 480px) {
+  footer {
+    align-items: center;
+  }
+  footer img {
+    width: 70%;
+  }
+  footer .footer-content {
+    justify-content: center;
+    gap: 70px;
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    padding: 75px 0;
+  }
+  footer img {
+    order: 1;
+    box-sizing: content-box;
+    width: 20rem;
+    margin: 0;
+    padding: 25px 100px;
+    padding-left: 0;
+    border-right: 1px solid #CECDAE;
+  }
+  footer .footer-content {
+    justify-content: start;
+    order: 2;
+    width: 50%;
+    padding-left: 100px;
+  }
+}
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9F5EC;
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  color: #262626;
+  margin: 0;
+}
+body h1,
+body h2,
+body h3,
+body .h3 {
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 3.2rem;
+  margin: 0 0 3.2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #AB6B4F;
+}
+
+button {
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+}
+
+.massage-btn {
+  border: #AB6B4F 3px solid;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: inherit;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 8px;
+}
+.massage-btn:hover,
+.massage-btn :active {
+  background-color: #AB6B4F;
+  color: #F9F5EC;
+  box-shadow: 5px 5px 10px #262626;
+}
+.massage-btn:focus {
+  box-shadow: none;
+}
+
+/* Media Queries */
+.container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.container .content {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  width: 100%;
+}
+.container p {
+  margin: 0 0 4.8rem;
+}
+.container .image {
+  display: none;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1000px) {
+  .container .image {
+    display: block;
+  }
+  .container .content {
+    padding: 100px 80px;
+    max-width: none;
+  }
+}
+@media (min-width: 1280px) {
+  main .container .content {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+header {
+  position: relative;
+  color: #F9F5EC;
+  background-color: #F9F5EC;
+}
+header .header-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/main/header_mobile-min.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: right;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+header .header-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  background-color: transparent;
+  z-index: 2;
+}
+header h3 {
+  margin: 0;
+  margin-bottom: 3.2rem;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+}
+header img {
+  width: 30%;
+  max-width: 300px;
+}
+header .timify-button {
+  width: 100%;
+  text-align: center;
+}
+header .massage-btn {
+  color: #F9F5EC;
+  background-color: #994d2d;
+  font-size: 1.2rem;
+}
+
+main .h3 {
+  font-size: 2.8rem;
+}
+main .welcome {
+  padding: 200px 0;
+  background-color: #F9F5EC;
+  text-align: center;
+}
+main .welcome div {
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 30px;
+  max-width: 540px;
+}
+main .angebot {
+  padding: 200px 15px 100px;
+  background-color: #F9F5EC;
+  text-align: center;
+}
+main .angebot .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .angebot .content div {
+  width: 60%;
+  max-width: 280px;
+  margin-bottom: 60px;
+}
+main .angebot .content h3 {
+  font-size: 2.8rem;
+  color: #AB6B4F;
+}
+main .angebot .content img {
+  width: 100%;
+}
+main .container {
+  position: relative;
+}
+main .container.about-lomi {
+  background-color: #DBCFBF;
+}
+main .container.about-lomi img {
+  position: absolute;
+  top: -30px;
+  right: 48%;
+  width: 110px;
+  height: 110px;
+  z-index: 3;
+}
+main .container.about-henriette {
+  background-color: #CECDAE;
+}
+main .container.about-henriette h4 {
+  color: #262626;
+  font-size: 1.6rem;
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+main .container.about-henriette .image {
+  opacity: 0.7;
+  background-position: right;
+}
+
+@media (min-width: 480px) {
+  header h3 {
+    font-size: 8rem;
+  }
+  header .massage-btn {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  main .welcome div {
+    max-width: 620px;
+  }
+  main .angebot .content {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 10%;
+  }
+  main .angebot .content div {
+    width: 30%;
+  }
+}
+@media (min-width: 1000px) {
+  header .header-bg {
+    background-image: url(../img/main/header_min.webp);
+  }
+  .container.about-lomi .content {
+    text-align: left;
+    width: 50vw;
+  }
+  .container.about-lomi .image {
+    background-image: url(../img/main/Lomi2.webp);
+    width: 50vw;
+  }
+  .container.about-henriette .content {
+    text-align: right;
+    width: 60vw;
+  }
+  .container.about-henriette .image {
+    background-image: url(../img/main/jette-start.webp);
+    width: 40vw;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
+
+    </style>
+
 </head>
 
 <body>
