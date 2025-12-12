@@ -1,33 +1,9 @@
+/* Navigation */
 @font-face {
   font-family: butler-ultra-light;
   src: url("../fonts/Butler_Ultra_Light.otf");
   font-display: swap;
 }
-@font-face {
-  font-family: butler-light;
-  src: url("../fonts/Butler_Light.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Medium.ttf");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-LightItalic.ttf");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-/* Navigation */
 nav {
   position: sticky;
   top: 0;
@@ -262,6 +238,17 @@ footer .footer-content address {
     padding-left: 100px;
   }
 }
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
 * {
   box-sizing: border-box;
 }
@@ -381,7 +368,7 @@ header .header-bg {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url(../img/main/header_mobile-min.jpg);
+  background-image: url(../img/main/header_mobile-min.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
@@ -508,14 +495,14 @@ main .container.about-henriette .image {
 }
 @media (min-width: 1000px) {
   header .header-bg {
-    background-image: url(../img/main/header_min.jpg);
+    background-image: url(../img/main/header_min.webp);
   }
   .container.about-lomi .content {
     text-align: left;
     width: 50vw;
   }
   .container.about-lomi .image {
-    background-image: url(../img/main/Lomi2.jpg);
+    background-image: url(../img/main/Lomi2.webp);
     width: 50vw;
   }
   .container.about-henriette .content {
@@ -523,7 +510,7 @@ main .container.about-henriette .image {
     width: 60vw;
   }
   .container.about-henriette .image {
-    background-image: url(../img/main/jette-start.jpg);
+    background-image: url(../img/main/jette-start.webp);
     width: 40vw;
   }
 }

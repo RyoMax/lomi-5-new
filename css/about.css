@@ -10,24 +10,23 @@
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Medium.ttf");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
   src: url("../fonts/Montserrat-LightItalic.ttf");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
 /* Navigation */
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
 nav {
   position: sticky;
   top: 0;
@@ -262,6 +261,17 @@ footer .footer-content address {
     padding-left: 100px;
   }
 }
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
 * {
   box-sizing: border-box;
 }
@@ -423,7 +433,7 @@ main .container.about-henriette {
     width: 60vw;
   }
   .container.about-henriette .image {
-    background-image: url(../img/about/jette-about.avif);
+    background-image: url(../img/about/jette-about.jpg);
     opacity: 0.7;
     width: 40vw;
   }

@@ -12,662 +12,566 @@
     <!-- CSS Links -->
     <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/contact.css"> -->
     <style>
-        @font-face {
-            font-family: butler-ultra-light;
-            src: url("../fonts/Butler_Ultra_Light.otf");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: butler-light;
-            src: url("../fonts/Butler_Light.otf");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: Montserrat;
-            src: url("../fonts/Montserrat-Regular.ttf");
-            font-weight: normal;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: Montserrat;
-            src: url("../fonts/Montserrat-Medium.ttf");
-            font-weight: 500;
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: Montserrat;
-            src: url("../fonts/Montserrat-LightItalic.ttf");
-            font-weight: 300;
-            font-style: italic;
-            font-display: swap;
-        }
-
         /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            padding: 2rem;
-            background-color: #F9F5EC;
-            z-index: 20;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 2rem;
+  background-color: #F9F5EC;
+  z-index: 20;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+nav img {
+  width: 80%;
+  max-height: 80px;
+}
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+nav .links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #F9F5EC;
+  width: 100%;
+  padding: 3rem 0;
+  margin: 0;
+  list-style: none;
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+nav .links li > *,
+nav .links .timify-button button {
+  color: #262626;
+  font-size: 2.4rem;
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+}
+nav .links a:hover {
+  color: #AB6B4F;
+  transition: all 0.2s ease-in-out;
+}
+nav .links li:last-child {
+  border: #AB6B4F 3px solid;
+  border-radius: 3px;
+  padding: 0.5rem;
+}
+nav .links li:last-child:hover {
+  cursor: pointer;
+}
+nav .links li:last-child:hover div {
+  color: #AB6B4F;
+}
+nav .links .timify-button button {
+  background-color: unset;
+  border: none;
+}
+nav .links.collapsed {
+  padding: 0;
+  transform: translateY(-100%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0s ease;
+}
+nav {
+  /* button icon animation */
+}
+nav .menu-icon {
+  cursor: pointer;
+  fill: #AB6B4F;
+}
+nav .menu-icon rect {
+  transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+  transform-origin: 50px 40px;
+  /* center of viewBox */
+}
+nav {
+  /* --- When active (X-state) --- */
+}
+nav .menu-icon.active .line1 {
+  transform: rotate(45deg);
+  y: 32;
+  /* move to center */
+}
+nav .menu-icon.active .line2 {
+  opacity: 0;
+  /* fade middle line out */
+}
+nav .menu-icon.active .line3 {
+  transform: rotate(-45deg);
+  y: 32;
+  /* move to center */
+}
+
+@media (min-width: 1000px) {
+  nav {
+    padding: 1rem 0;
+  }
+  nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: none;
+    margin: 0 2%;
+  }
+  nav img {
+    width: unset;
+    max-height: unset;
+    height: 8rem;
+  }
+  nav #nav-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  nav .links {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 0;
+    box-shadow: none;
+  }
+  nav .links li > * {
+    font-size: 2.2rem;
+  }
+  nav .links.collapsed {
+    transform: translateY(0%);
+    z-index: 3;
+    opacity: 2;
+  }
+}
+@media (min-width: 1280px) {
+  nav .nav-container {
+    margin: 0 8%;
+    gap: 15rem;
+  }
+  nav img {
+    height: 8rem;
+  }
+  nav .links li > * {
+    font-size: 2.4rem;
+  }
+}
+/* Footer styling */
+footer {
+  background-color: #777657;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 25px 25px;
+}
+footer img {
+  width: 100%;
+  margin-top: 50px;
+  order: 2;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 1.8rem;
+  order: 1;
+}
+footer .footer-content ul {
+  margin-bottom: 1.6rem;
+  list-style: none;
+  padding: 0;
+}
+footer .footer-content ul li {
+  margin: 18px;
+}
+footer .footer-content a {
+  color: white;
+  text-decoration: unset;
+  transition: all 0.2s ease-in-out;
+}
+footer .footer-content a:hover {
+  color: #DBCFBF;
+}
+footer .footer-content address {
+  font-style: normal;
+  line-height: 2.8rem;
+}
+
+@media (min-width: 480px) {
+  footer {
+    align-items: center;
+  }
+  footer img {
+    width: 70%;
+  }
+  footer .footer-content {
+    justify-content: center;
+    gap: 70px;
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    padding: 75px 0;
+  }
+  footer img {
+    order: 1;
+    box-sizing: content-box;
+    width: 20rem;
+    margin: 0;
+    padding: 25px 100px;
+    padding-left: 0;
+    border-right: 1px solid #CECDAE;
+  }
+  footer .footer-content {
+    justify-content: start;
+    order: 2;
+    width: 50%;
+    padding-left: 100px;
+  }
+}
+@font-face {
+  font-family: butler-ultra-light;
+  src: url("../fonts/Butler_Ultra_Light.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F9F5EC;
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  color: #262626;
+  margin: 0;
+}
+body h1,
+body h2,
+body h3,
+body .h3 {
+  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 3.2rem;
+  margin: 0 0 3.2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #AB6B4F;
+}
+
+button {
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+}
+
+.massage-btn {
+  border: #AB6B4F 3px solid;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: inherit;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 8px;
+}
+.massage-btn:hover,
+.massage-btn :active {
+  background-color: #AB6B4F;
+  color: #F9F5EC;
+  box-shadow: 5px 5px 10px #262626;
+}
+.massage-btn:focus {
+  box-shadow: none;
+}
+
+/* Media Queries */
+.container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+.container .content {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  width: 100%;
+}
+.container p {
+  margin: 0 0 4.8rem;
+}
+.container .image {
+  display: none;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1000px) {
+  .container .image {
+    display: block;
+  }
+  .container .content {
+    padding: 100px 80px;
+    max-width: none;
+  }
+}
+@media (min-width: 1280px) {
+  main .container .content {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
+main {
+  background-image: url(../img/contact/StockroseMuster_lg_min.webp);
+  background-size: contain;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
+}
+main h1 {
+  font-size: 4rem;
+}
+main address {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+main .biesenbrow {
+  background-color: #DBCFBF;
+  box-shadow: 0 -5px 45px #262626;
+}
+main .biesenbrow h1 span {
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  font-size: 1.44rem;
+  margin-bottom: 12px;
+  letter-spacing: 8px;
+}
+main .biesenbrow address {
+  text-align: left;
+  font-weight: 800;
+}
+main .biesenbrow article {
+  margin-top: 40px;
+}
+main .biesenbrow article p,
+main .biesenbrow article h2 {
+  text-align: justify;
+}
+main .form {
+  margin-top: 150px;
+  background-color: #F9F5EC;
+  box-shadow: 0 25px 45px #262626;
+  text-align: center;
+}
+main .form .content > div {
+  display: flex;
+  flex-direction: column;
+}
+main .form a {
+  color: #262626;
+  transition: all 0.2s ease-in-out;
+}
+main .form a:hover, main .form a:active {
+  color: #AB6B4F;
+}
+main .form article > * {
+  margin-bottom: 48px;
+}
+main .form form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+main .form form input, main .form form textarea {
+  width: 100%;
+  height: 3.2rem;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 1.6rem;
+  border: 2px solid #262626;
+  border-radius: 0.4rem;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  transition: all 0.15s ease-in-out;
+}
+main .form form textarea {
+  resize: none;
+  height: 19.2rem;
+}
+main .form form .massage-btn {
+  margin: 0;
+}
+
+.to-form-btn {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.to-form-btn.hidden {
+  display: none;
+}
+
+.to-form-btn .massage-btn {
+  animation: pulse 6s infinite ease-in-out;
+}
+
+.to-form-btn .massage-btn:hover {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #262626;
+    background-color: #F9F5EC;
+    color: #262626;
+  }
+  10% {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px #262626;
+    background-color: #994d2d;
+    color: #F9F5EC;
+  }
+  20% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #262626;
+    background-color: #F9F5EC;
+    color: #262626;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 #262626;
+    background-color: #F9F5EC;
+    color: #262626;
+  }
+}
+@media (min-width: 768px) {
+  main h1 {
+    font-size: 5rem;
+  }
+  main .form {
+    margin-top: 250px;
+  }
+  main .form .content {
+    max-width: unset;
+    padding: 50px 30px;
+    text-align: left;
+  }
+  main .form .content > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .form .content > div > *:nth-child(1) {
+    width: 30%;
+  }
+  main .form .content > div > *:nth-child(2) {
+    width: 60%;
+  }
+  main .form .content .btn-box {
+    text-align: right;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    /* background-size:50%; */
+  }
+  main .biesenbrow .content {
+    text-align: left;
+    width: 50vw;
+  }
+  main .biesenbrow .image {
+    background-image: url(../img/contact/loc_bb_desk.jpg);
+    width: 50vw;
+    opacity: 0.7;
+    background-position: center;
+    background-position-x: 60%;
+  }
+  main .form {
+    margin-top: 350px;
+  }
+  main .form .content {
+    width: 65vw;
+    padding: 100px 30px;
+  }
+  main .form .image {
+    background-image: url(../img/contact/Lomi-Haus.jpg);
+    width: 35vw;
+    background-position: center;
+    background-position-x: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  main {
+    /* background-size:40%; */
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */
 
-        nav .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        nav img {
-            width: 80%;
-            max-height: 80px;
-        }
-
-        nav button {
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        nav .links {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            background-color: #F9F5EC;
-            width: 100%;
-            padding: 3rem 0;
-            margin: 0;
-            list-style: none;
-            font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        nav .links li>*,
-        nav .links .timify-button button {
-            color: #262626;
-            font-size: 2.4rem;
-            font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-        }
-
-        nav .links a:hover {
-            color: #AB6B4F;
-            transition: all 0.2s ease-in-out;
-        }
-
-        nav .links li:last-child {
-            border: #AB6B4F 3px solid;
-            border-radius: 3px;
-            padding: 0.5rem;
-        }
-
-        nav .links li:last-child:hover {
-            cursor: pointer;
-        }
-
-        nav .links li:last-child:hover div {
-            color: #AB6B4F;
-        }
-
-        nav .links .timify-button button {
-            background-color: unset;
-            border: none;
-        }
-
-        nav .links.collapsed {
-            padding: 0;
-            transform: translateY(-100%);
-            z-index: -1;
-            opacity: 0;
-            transition: all 0s ease;
-        }
-
-        nav {
-            /* button icon animation */
-        }
-
-        nav .menu-icon {
-            cursor: pointer;
-            fill: #AB6B4F;
-        }
-
-        nav .menu-icon rect {
-            transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
-            transform-origin: 50px 40px;
-            /* center of viewBox */
-        }
-
-        nav {
-            /* --- When active (X-state) --- */
-        }
-
-        nav .menu-icon.active .line1 {
-            transform: rotate(45deg);
-            y: 32;
-            /* move to center */
-        }
-
-        nav .menu-icon.active .line2 {
-            opacity: 0;
-            /* fade middle line out */
-        }
-
-        nav .menu-icon.active .line3 {
-            transform: rotate(-45deg);
-            y: 32;
-            /* move to center */
-        }
-
-        @media (min-width: 1000px) {
-            nav {
-                padding: 1rem 0;
-            }
-
-            nav .nav-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 1rem;
-                max-width: none;
-                margin: 0 2%;
-            }
-
-            nav img {
-                width: unset;
-                max-height: unset;
-                height: 8rem;
-            }
-
-            nav #nav-button {
-                display: none;
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-
-            nav .links {
-                position: relative;
-                flex-direction: row;
-                justify-content: space-around;
-                gap: 1.5rem;
-                padding: 0;
-                box-shadow: none;
-            }
-
-            nav .links li>* {
-                font-size: 2.2rem;
-            }
-
-            nav .links.collapsed {
-                transform: translateY(0%);
-                z-index: 3;
-                opacity: 2;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            nav .nav-container {
-                margin: 0 8%;
-                gap: 15rem;
-            }
-
-            nav img {
-                height: 8rem;
-            }
-
-            nav .links li>* {
-                font-size: 2.4rem;
-            }
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: #777657;
-            display: flex;
-            flex-direction: column;
-            padding: 50px 25px 25px;
-        }
-
-        footer img {
-            width: 100%;
-            margin-top: 50px;
-            order: 2;
-        }
-
-        footer .footer-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            color: white;
-            font-size: 1.8rem;
-            order: 1;
-        }
-
-        footer .footer-content ul {
-            margin-bottom: 1.6rem;
-            list-style: none;
-            padding: 0;
-        }
-
-        footer .footer-content ul li {
-            margin: 18px;
-        }
-
-        footer .footer-content a {
-            color: white;
-            text-decoration: unset;
-            transition: all 0.2s ease-in-out;
-        }
-
-        footer .footer-content a:hover {
-            color: #DBCFBF;
-        }
-
-        footer .footer-content address {
-            font-style: normal;
-            line-height: 2.8rem;
-        }
-
-        @media (min-width: 480px) {
-            footer {
-                align-items: center;
-            }
-
-            footer img {
-                width: 70%;
-            }
-
-            footer .footer-content {
-                justify-content: center;
-                gap: 70px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            footer {
-                flex-direction: row;
-                justify-content: center;
-                padding: 75px 0;
-            }
-
-            footer img {
-                order: 1;
-                box-sizing: content-box;
-                width: 20rem;
-                margin: 0;
-                padding: 25px 100px;
-                padding-left: 0;
-                border-right: 1px solid #CECDAE;
-            }
-
-            footer .footer-content {
-                justify-content: start;
-                order: 2;
-                width: 50%;
-                padding-left: 100px;
-            }
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        :root {
-            font-size: 62.5%;
-            /* 1rem = 10px */
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #F9F5EC;
-            font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-            color: #262626;
-            margin: 0;
-        }
-
-        body h1,
-        body h2,
-        body h3,
-        body .h3 {
-            font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-            font-weight: 500;
-            line-height: 1.2;
-            font-size: 3.2rem;
-            margin: 0 0 3.2rem;
-        }
-
-        p {
-            font-size: 1.6rem;
-            line-height: 1.5;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #AB6B4F;
-        }
-
-        button {
-            font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-        }
-
-        .massage-btn {
-            border: #AB6B4F 3px solid;
-            border-radius: 3px;
-            padding: 6px 12px;
-            margin-left: 5%;
-            margin-right: 5%;
-            background-color: inherit;
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 1.5;
-            cursor: pointer;
-            transition: all 0.2s;
-            letter-spacing: 8px;
-        }
-
-        .massage-btn:hover,
-        .massage-btn :active {
-            background-color: #AB6B4F;
-            color: #F9F5EC;
-            box-shadow: 5px 5px 10px #262626;
-        }
-
-        .massage-btn:focus {
-            box-shadow: none;
-        }
-
-        /* Media Queries */
-        .container {
-            display: flex;
-            width: 100%;
-            text-align: center;
-        }
-
-        .container .content {
-            max-width: 540px;
-            margin: 0 auto;
-            padding: 50px 30px;
-            width: 100%;
-        }
-
-        .container p {
-            margin: 0 0 4.8rem;
-        }
-
-        .container .image {
-            display: none;
-            width: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        @media (min-width: 1000px) {
-            .container .image {
-                display: block;
-            }
-
-            .container .content {
-                padding: 100px 80px;
-                max-width: none;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            main .container .content {
-                padding-top: 150px;
-                padding-bottom: 150px;
-            }
-        }
-
-        main {
-            background-image: url(../img/contact/StockroseMuster_lg_min.png);
-            background-size: contain;
-            background-position: center;
-            /* background-repeat: no-repeat; */
-            background-attachment: fixed;
-        }
-
-        main h1 {
-            font-size: 4rem;
-        }
-
-        main address {
-            font-style: normal;
-            font-size: 1.6rem;
-            line-height: 1.5;
-        }
-
-        main .biesenbrow {
-            background-color: #DBCFBF;
-            box-shadow: 0 -5px 45px #262626;
-        }
-
-        main .biesenbrow h1 span {
-            font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-            font-size: 1.44rem;
-            margin-bottom: 12px;
-            letter-spacing: 8px;
-        }
-
-        main .biesenbrow address {
-            text-align: left;
-            font-weight: 800;
-        }
-
-        main .biesenbrow article {
-            margin-top: 40px;
-        }
-
-        main .biesenbrow article p,
-        main .biesenbrow article h2 {
-            text-align: justify;
-        }
-
-        main .form {
-            margin-top: 150px;
-            background-color: #F9F5EC;
-            box-shadow: 0 25px 45px #262626;
-            text-align: center;
-        }
-
-        main .form .content>div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        main .form a {
-            color: #262626;
-            transition: all 0.2s ease-in-out;
-        }
-
-        main .form a:hover,
-        main .form a:active {
-            color: #AB6B4F;
-        }
-
-        main .form article>* {
-            margin-bottom: 48px;
-        }
-
-        main .form form label {
-            display: block;
-            margin-bottom: 0.8rem;
-            font-size: 1.6rem;
-        }
-
-        main .form form input,
-        main .form form textarea {
-            width: 100%;
-            height: 3.2rem;
-            padding: 0.6rem 1.2rem;
-            margin-bottom: 1.6rem;
-            border: 2px solid #262626;
-            border-radius: 0.4rem;
-            background-color: inherit;
-            font-family: inherit;
-            font-size: 1.6rem;
-            font-style: italic;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #495057;
-            transition: all 0.15s ease-in-out;
-        }
-
-        main .form form textarea {
-            resize: none;
-            height: 19.2rem;
-        }
-
-        main .form form .massage-btn {
-            margin: 0;
-        }
-
-        .to-form-btn {
-            position: fixed;
-            bottom: 50px;
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .to-form-btn.hidden {
-            display: none;
-        }
-
-        .to-form-btn .massage-btn {
-            animation: pulse 6s infinite ease-in-out;
-        }
-
-        .to-form-btn .massage-btn:hover {
-            animation: none;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 #262626;
-                background-color: #F9F5EC;
-                color: #262626;
-            }
-
-            10% {
-                transform: scale(1.05);
-                box-shadow: 5px 5px 10px #262626;
-                background-color: #994d2d;
-                color: #F9F5EC;
-            }
-
-            20% {
-                transform: scale(1);
-                box-shadow: 0 0 0 #262626;
-                background-color: #F9F5EC;
-                color: #262626;
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 #262626;
-                background-color: #F9F5EC;
-                color: #262626;
-            }
-        }
-
-        @media (min-width: 768px) {
-            main h1 {
-                font-size: 5rem;
-            }
-
-            main .form {
-                margin-top: 250px;
-            }
-
-            main .form .content {
-                max-width: unset;
-                padding: 50px 30px;
-                text-align: left;
-            }
-
-            main .form .content>div {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            main .form .content>div>*:nth-child(1) {
-                width: 30%;
-            }
-
-            main .form .content>div>*:nth-child(2) {
-                width: 60%;
-            }
-
-            main .form .content .btn-box {
-                text-align: right;
-            }
-        }
-
-        @media (min-width: 1000px) {
-            main {
-                /* background-size:50%; */
-            }
-
-            main .biesenbrow .content {
-                text-align: left;
-                width: 50vw;
-            }
-
-            main .biesenbrow .image {
-                background-image: url(../img/contact/loc_bb_desk.avif);
-                width: 50vw;
-                opacity: 0.7;
-                background-position: center;
-                background-position-x: 60%;
-            }
-
-            main .form {
-                margin-top: 350px;
-            }
-
-            main .form .content {
-                width: 65vw;
-                padding: 100px 30px;
-            }
-
-            main .form .image {
-                background-image: url(../img/contact/Lomi-Haus.avif);
-                width: 35vw;
-                background-position: center;
-                background-position-x: 60%;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            main {
-                /* background-size:40%; */
-            }
-        }
-
-        /*# sourceMappingURL=contact.css.map */
     </style>
 
 </head>
@@ -677,7 +581,7 @@
     <nav>
         <div class="nav-container">
             <a class="logo" href="../">
-                <img src="../img/main/LogoMenu.png" alt="home logo">
+                <img src="../img/main/LogoMenu.webp" alt="home logo">
             </a>
             <button id="nav-button" aria-label="Toggle Hamburger Menu">
                 <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
@@ -803,7 +707,7 @@
 
     <!-- Footer -->
     <footer>
-        <img src="../img/main/LogoFürFooter.png"
+        <img src="../img/main/LogoFürFooter.webp"
             alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter">
         <div class="footer-content">
             <ul>
