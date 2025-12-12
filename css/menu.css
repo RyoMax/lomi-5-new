@@ -23,6 +23,7 @@ nav .nav-container {
   margin: 0 auto;
 }
 nav img {
+  aspect-ratio: auto 5/1;
   width: 80%;
   max-height: 80px;
 }
