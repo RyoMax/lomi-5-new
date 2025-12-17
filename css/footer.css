@@ -1,7 +1,12 @@
 /* Footer styling */
 footer {
   background-color: #777657;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 50px 25px 25px;
 }
@@ -9,14 +14,23 @@ footer img {
   aspect-ratio: auto 1/1;
   width: 100%;
   margin-top: 50px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
 }
 footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: distribute; /* Flexbox 'space-around' */
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   color: white;
   font-size: 1.8rem;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
   order: 1;
 }
 footer .footer-content ul {
@@ -30,6 +44,7 @@ footer .footer-content ul li {
 footer .footer-content a {
   color: white;
   text-decoration: unset;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 footer .footer-content a:hover {
@@ -42,23 +57,34 @@ footer .footer-content address {
 
 @media (min-width: 480px) {
   footer {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   footer img {
     width: 70%;
   }
   footer .footer-content {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 70px;
   }
 }
 @media (min-width: 768px) {
   footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 75px 0;
   }
   footer img {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
     box-sizing: content-box;
     width: 20rem;
@@ -68,7 +94,11 @@ footer .footer-content address {
     border-right: 1px solid #CECDAE;
   }
   footer .footer-content {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     width: 50%;
     padding-left: 100px;

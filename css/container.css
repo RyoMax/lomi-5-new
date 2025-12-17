@@ -1,4 +1,6 @@
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   text-align: center;
@@ -15,6 +17,7 @@
 .container .image {
   display: none;
   width: 100%;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
