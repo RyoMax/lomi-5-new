@@ -41,11 +41,11 @@ Empfohlen:
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"LocalBusiness",
+  "@type":"["LocalBusiness", "HealthAndBeautyBusiness", "MassageTherapy"]",
   "name":"Lomi5",
-  "description":"Hawaiianische Lomi Lomi Massage in der Uckermark.",
+  "description": "Hawaiianische Lomi Lomi Massage in Prenzlau und der Uckermark – Entspannung für Körper und Geist."
+  "email": "info@lomi5.de",
   "image":"https://lomi5.de/path-to-image.webp",
-  "telephone":"+49…",
   "address":{
     "@type":"PostalAddress",
     "streetAddress":"Hirtenende 5",
@@ -53,7 +53,61 @@ Empfohlen:
     "postalCode":"16278",
     "addressCountry":"DE"
   },
-  "openingHours":"Mo-Su 09:00-20:00"
+  "priceRange": "25€ - 125€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Massageangebote",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Sanfte Lomi Lomi Ölmassage - 25 min - Rücken, Schultern, Nacken",
+        "price": "25.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Sanfte Lomi Lomi Ölmassage - 55 min -Rücken, Schultern, Nacken, Beine, Po",
+        "price": "50.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Sanfte Lomi Lomi Ölmassage - 75 min - Ganzer Körper",
+        "price": "70.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Intensive Lomi Lomi Ölmassage - 75 min - Ganzer Körper",
+        "price": "90.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Intensive Lomi Lomi Ölmassage mit Unterstreichungen - 100 min - Ganzer Körper",
+        "price": "125.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      },
+    ]
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "REPLACE_WITH_BOOKING_URL",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/AndroidPlatform",
+        "http://schema.org/IPhonePlatform"
+      ]
+    },
+    "name": "Termin buchen"
+  }
 }
 </script>
 ```

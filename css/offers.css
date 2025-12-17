@@ -311,6 +311,7 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -432,8 +433,9 @@ main .card div:first-child {
 main .card div:first-child h2 {
   margin: 0;
   font-size: 3.28rem;
+  line-height: 3rem;
 }
-main .card div:first-child h3 {
+main .card div:first-child h2 span {
   margin-bottom: 1rem;
   font-size: 1.36rem;
   font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
@@ -502,7 +504,7 @@ main .forward-contact .massage-btn {
   main .card div:first-child h2 {
     font-size: 5.2rem;
   }
-  main .card div:first-child h3 {
+  main .card div:first-child h2 span {
     font-size: 1.5rem;
   }
   main .card div:first-child h4 {
@@ -563,8 +565,9 @@ main .forward-contact .massage-btn {
   }
   main .card div:first-child h2 {
     font-size: 6.2rem;
+    line-height: 4rem;
   }
-  main .card div:first-child h3 {
+  main .card div:first-child h2 span {
     margin-bottom: 2rem;
     font-size: 2rem;
   }

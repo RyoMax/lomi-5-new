@@ -73,7 +73,7 @@ Verbesserungsvorschläge:
 
 Personen-Schema einfügen für Henriette → Google erkennt echte Person, Expertise
 
-„Nicht medizinisch“ Hinweis kann als **<aside>** oder **<small>** semantisch markiert werden
+„Nicht medizinisch“ Hinweis kann als **`<aside>`** oder **`<small>`** semantisch markiert werden
 
 Beispiel Structured Data für Autorin:
 ```
