@@ -2,756 +2,975 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Kontaktiere Henriette für Lomi Lomi Massagen. Hier findest du Anfahrt, Kontaktformular und alle Informationen zur Terminbuchung.">
-    <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
-    <title>LOMI5 | Kontakt & Anfahrt | Hawaiianische Massage in der Uckermark</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Kontaktiere Henriette für Lomi Lomi Massagen. Hier findest du Anfahrt, Kontaktformular und alle Informationen zur Terminbuchung.">
+  <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
+  <title>LOMI5 | Kontakt & Anfahrt | Hawaiianische Massage in der Uckermark</title>
 
-    <!-- CSS Links -->
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/contact.css">
-    <!-- <style>
-        /* Navigation */
-@font-face {
-  font-family: butler-ultra-light;
-  src: url("../fonts/Butler_Ultra_Light.otf");
-  font-display: swap;
-}
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  padding: 2rem;
-  background-color: #F9F5EC;
-  z-index: 20;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-nav .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-nav img {
-  aspect-ratio: auto 5/1;
-  width: 80%;
-  max-height: 80px;
-}
-nav button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-nav .links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  background-color: #F9F5EC;
-  width: 100%;
-  padding: 3rem 0;
-  margin: 0;
-  list-style: none;
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-nav .links li > *,
-nav .links .timify-button button {
-  color: #262626;
-  font-size: 2.4rem;
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-}
-nav .links a:hover {
-  color: #AB6B4F;
-  transition: all 0.2s ease-in-out;
-}
-nav .links li:last-child {
-  border: #AB6B4F 3px solid;
-  border-radius: 3px;
-  padding: 0.5rem;
-}
-nav .links li:last-child:hover {
-  cursor: pointer;
-}
-nav .links li:last-child:hover div {
-  color: #AB6B4F;
-}
-nav .links .timify-button button {
-  background-color: unset;
-  border: none;
-}
-nav .links.collapsed {
-  padding: 0;
-  transform: translateY(-100%);
-  z-index: -1;
-  opacity: 0;
-  transition: all 0s ease;
-}
-nav {
-  /* button icon animation */
-}
-nav .menu-icon {
-  cursor: pointer;
-  fill: #AB6B4F;
-}
-nav .menu-icon rect {
-  transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
-  transform-origin: 50px 40px;
-  /* center of viewBox */
-}
-nav {
-  /* --- When active (X-state) --- */
-}
-nav .menu-icon.active .line1 {
-  transform: rotate(45deg);
-  y: 32;
-  /* move to center */
-}
-nav .menu-icon.active .line2 {
-  opacity: 0;
-  /* fade middle line out */
-}
-nav .menu-icon.active .line3 {
-  transform: rotate(-45deg);
-  y: 32;
-  /* move to center */
-}
+  <!-- CSS Links -->
+  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/contact.css"> -->
 
-@media (min-width: 1000px) {
-  nav {
-    padding: 1rem 0;
-  }
-  nav .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    max-width: none;
-    margin: 0 2%;
-  }
-  nav img {
-    width: unset;
-    max-height: unset;
-    height: 8rem;
-  }
-  nav #nav-button {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  nav .links {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 1.5rem;
-    padding: 0;
-    box-shadow: none;
-  }
-  nav .links li > * {
-    font-size: 2.2rem;
-  }
-  nav .links.collapsed {
-    transform: translateY(0%);
-    z-index: 3;
-    opacity: 2;
-  }
-}
-@media (min-width: 1280px) {
-  nav .nav-container {
-    margin: 0 8%;
-    gap: 15rem;
-  }
-  nav img {
-    height: 8rem;
-  }
-  nav .links li > * {
-    font-size: 2.4rem;
-  }
-}
-/* Footer styling */
-footer {
-  background-color: #777657;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 25px 25px;
-}
-footer img {
-  aspect-ratio: auto 1/1;
-  width: 100%;
-  margin-top: 50px;
-  order: 2;
-}
-footer .footer-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  color: white;
-  font-size: 1.8rem;
-  order: 1;
-}
-footer .footer-content ul {
-  margin-bottom: 1.6rem;
-  list-style: none;
-  padding: 0;
-}
-footer .footer-content ul li {
-  margin: 18px;
-}
-footer .footer-content a {
-  color: white;
-  text-decoration: unset;
-  transition: all 0.2s ease-in-out;
-}
-footer .footer-content a:hover {
-  color: #DBCFBF;
-}
-footer .footer-content address {
-  font-style: normal;
-  line-height: 2.8rem;
-}
+  <style>
+    @charset "UTF-8";
 
-@media (min-width: 480px) {
-  footer {
-    align-items: center;
-  }
-  footer img {
-    width: 70%;
-  }
-  footer .footer-content {
-    justify-content: center;
-    gap: 70px;
-  }
-}
-@media (min-width: 768px) {
-  footer {
-    flex-direction: row;
-    justify-content: center;
-    padding: 75px 0;
-  }
-  footer img {
-    order: 1;
-    box-sizing: content-box;
-    width: 20rem;
-    margin: 0;
-    padding: 25px 100px;
-    padding-left: 0;
-    border-right: 1px solid #CECDAE;
-  }
-  footer .footer-content {
-    justify-content: start;
-    order: 2;
-    width: 50%;
-    padding-left: 100px;
-  }
-}
-@font-face {
-  font-family: butler-ultra-light;
-  src: url("../fonts/Butler_Ultra_Light.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-* {
-  box-sizing: border-box;
-}
+    /* Navigation */
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
 
-:root {
-  font-size: 62.5%;
-  /* 1rem = 10px */
-}
+    nav {
+      -webkit-position: sticky;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      padding: 2rem;
+      background-color: #F9F5EC;
+      z-index: 20;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    nav .nav-container {
+      display: -webkit-box;
+      /* Ältere WebKit Flexbox */
+      display: -ms-flexbox;
+      /* IE 10 Flexbox */
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-body {
-  background-color: #F9F5EC;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  color: #262626;
-  margin: 0;
-}
-body h1,
-body h2,
-body h3,
-body .h3 {
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 3.2rem;
-  margin: 0 0 3.2rem;
-}
+    nav img {
+      aspect-ratio: auto 5/1;
+      width: 80%;
+      max-height: 80px;
+    }
 
-p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
+    nav button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-a {
-  text-decoration: none;
-}
+    nav .links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      /* === OPTIMIERUNG FÜR WEBKIT/SAFARI (Flexbox) === */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #F9F5EC;
+      width: 100%;
+      padding: 3rem 0;
+      margin: 0;
+      list-style: none;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
 
-a:hover {
-  color: #AB6B4F;
-}
+    nav .links li>*,
+    nav .links .timify-button button {
+      color: #262626;
+      font-size: 2.4rem;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+    }
 
-button {
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-}
+    nav .links a:hover {
+      color: #AB6B4F;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
 
-.massage-btn {
-  border: #AB6B4F 3px solid;
-  border-radius: 3px;
-  padding: 6px 12px;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: inherit;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5;
-  cursor: pointer;
-  transition: all 0.2s;
-  letter-spacing: 8px;
-}
-.massage-btn:hover,
-.massage-btn :active {
-  background-color: #AB6B4F;
-  color: #F9F5EC;
-  box-shadow: 5px 5px 10px #262626;
-}
-.massage-btn:focus {
-  box-shadow: none;
-}
+    nav .links li:last-child {
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+      padding: 0.5rem;
+    }
 
-/* Media Queries */
-.container {
-  display: flex;
-  width: 100%;
-  text-align: center;
-}
-.container .content {
-  max-width: 540px;
-  margin: 0 auto;
-  padding: 50px 30px;
-  width: 100%;
-}
-.container p {
-  margin: 0 0 4.8rem;
-}
-.container .image {
-  display: none;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    nav .links li:last-child:hover {
+      cursor: pointer;
+    }
 
-@media (min-width: 1000px) {
-  .container .image {
-    display: block;
-  }
-  .container .content {
-    padding: 100px 80px;
-    max-width: none;
-  }
-}
-@media (min-width: 1280px) {
-  main .container .content {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-main {
-  background-image: url(../img/contact/StockroseMuster_lg_min.webp);
-  background-size: contain;
-  background-position: center;
-  /* background-repeat: no-repeat; */
-  background-attachment: fixed;
-}
-main h1 {
-  font-size: 4rem;
-}
-main address {
-  font-style: normal;
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-main .biesenbrow {
-  background-color: #DBCFBF;
-  box-shadow: 0 -5px 45px #262626;
-}
-main .biesenbrow h1 span {
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  font-size: 1.44rem;
-  margin-bottom: 12px;
-  letter-spacing: 8px;
-}
-main .biesenbrow address {
-  text-align: left;
-  font-weight: 800;
-}
-main .biesenbrow article {
-  margin-top: 40px;
-}
-main .biesenbrow article p,
-main .biesenbrow article h2 {
-  text-align: justify;
-}
-main .form {
-  margin-top: 150px;
-  background-color: #F9F5EC;
-  box-shadow: 0 25px 45px #262626;
-  text-align: center;
-}
-main .form .content > div {
-  display: flex;
-  flex-direction: column;
-}
-main .form a {
-  color: #262626;
-  transition: all 0.2s ease-in-out;
-}
-main .form a:hover, main .form a:active {
-  color: #AB6B4F;
-}
-main .form article > * {
-  margin-bottom: 48px;
-}
-main .form form label {
-  display: block;
-  margin-bottom: 0.8rem;
-  font-size: 1.6rem;
-}
-main .form form input, main .form form textarea {
-  width: 100%;
-  height: 3.2rem;
-  padding: 0.6rem 1.2rem;
-  margin-bottom: 1.6rem;
-  border: 2px solid #262626;
-  border-radius: 0.4rem;
-  background-color: inherit;
-  font-family: inherit;
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  transition: all 0.15s ease-in-out;
-}
-main .form form textarea {
-  resize: none;
-  height: 19.2rem;
-}
-main .form form .massage-btn {
-  margin: 0;
-}
+    nav .links li:last-child:hover div {
+      color: #AB6B4F;
+    }
 
-.to-form-btn {
-  position: fixed;
-  bottom: 50px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
+    nav .links .timify-button button {
+      background-color: unset;
+      border: none;
+    }
 
-.to-form-btn.hidden {
-  display: none;
-}
+    nav .links.collapsed {
+      padding: 0;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      z-index: -1;
+      opacity: 0;
+      -webkit-transition: all 0s ease;
+      transition: all 0s ease;
+    }
 
-.to-form-btn .massage-btn {
-  animation: pulse 6s infinite ease-in-out;
-}
+    nav {
+      /* button icon animation */
+    }
 
-.to-form-btn .massage-btn:hover {
-  animation: none;
-}
+    nav .menu-icon {
+      cursor: pointer;
+      fill: #AB6B4F;
+    }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 #262626;
-    background-color: #F9F5EC;
-    color: #262626;
-  }
-  10% {
-    transform: scale(1.05);
-    box-shadow: 5px 5px 10px #262626;
-    background-color: #994d2d;
-    color: #F9F5EC;
-  }
-  20% {
-    transform: scale(1);
-    box-shadow: 0 0 0 #262626;
-    background-color: #F9F5EC;
-    color: #262626;
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 #262626;
-    background-color: #F9F5EC;
-    color: #262626;
-  }
-}
-@media (min-width: 768px) {
-  main h1 {
-    font-size: 5rem;
-  }
-  main .form {
-    margin-top: 250px;
-  }
-  main .form .content {
-    max-width: unset;
-    padding: 50px 30px;
-    text-align: left;
-  }
-  main .form .content > div {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  main .form .content > div > *:nth-child(1) {
-    width: 30%;
-  }
-  main .form .content > div > *:nth-child(2) {
-    width: 60%;
-  }
-  main .form .content .btn-box {
-    text-align: right;
-  }
-}
-@media (min-width: 1000px) {
-  main {
-    /* background-size:50%; */
-  }
-  main .biesenbrow .content {
-    text-align: left;
-    width: 50vw;
-  }
-  main .biesenbrow .image {
-    background-image: url(../img/contact/loc_bb_desk.jpg);
-    width: 50vw;
-    opacity: 0.7;
-    background-position: center;
-    background-position-x: 60%;
-  }
-  main .form {
-    margin-top: 350px;
-  }
-  main .form .content {
-    width: 65vw;
-    padding: 100px 30px;
-  }
-  main .form .image {
-    background-image: url(../img/contact/Lomi-Haus.jpg);
-    width: 35vw;
-    background-position: center;
-    background-position-x: 60%;
-  }
-}
-@media (min-width: 1280px) {
-  main {
-    /* background-size:40%; */
-  }
-}
+    nav .menu-icon rect {
+      -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      -webkit-transform-origin: 50px 40px;
+      transform-origin: 50px 40px;
+      /* center of viewBox */
+    }
 
-/*# sourceMappingURL=contact.css.map */
+    nav {
+      /* --- When active (X-state) --- */
+    }
 
-    </style> -->
+    nav .menu-icon.active .line1 {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      y: 32;
+      /* move to center */
+    }
+
+    nav .menu-icon.active .line2 {
+      opacity: 0;
+      /* fade middle line out */
+    }
+
+    nav .menu-icon.active .line3 {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      y: 32;
+      /* move to center */
+    }
+
+    @media (min-width: 1000px) {
+      nav {
+        padding: 1rem 0;
+      }
+
+      nav .nav-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 1rem;
+        max-width: none;
+        margin: 0 2%;
+      }
+
+      nav img {
+        width: unset;
+        max-height: unset;
+        height: 8rem;
+      }
+
+      nav #nav-button {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      nav .links {
+        position: relative;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+        gap: 1.5rem;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      nav .links li>* {
+        font-size: 2.2rem;
+      }
+
+      nav .links.collapsed {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        z-index: 3;
+        opacity: 2;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      nav .nav-container {
+        margin: 0 8%;
+        gap: 15rem;
+      }
+
+      nav img {
+        height: 8rem;
+      }
+
+      nav .links li>* {
+        font-size: 2.4rem;
+      }
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #777657;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 50px 25px 25px;
+    }
+
+    footer img {
+      aspect-ratio: auto 1/1;
+      width: 100%;
+      margin-top: 50px;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+    }
+
+    footer .footer-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: distribute;
+      /* Flexbox 'space-around' */
+      justify-content: space-around;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      color: white;
+      font-size: 1.8rem;
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+
+    footer .footer-content ul {
+      margin-bottom: 1.6rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    footer .footer-content ul li {
+      margin: 18px;
+    }
+
+    footer .footer-content a {
+      color: white;
+      text-decoration: unset;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    footer .footer-content a:hover {
+      color: #DBCFBF;
+    }
+
+    footer .footer-content address {
+      font-style: normal;
+      line-height: 2.8rem;
+    }
+
+    @media (min-width: 480px) {
+      footer {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      footer img {
+        width: 70%;
+      }
+
+      footer .footer-content {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 70px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 75px 0;
+      }
+
+      footer img {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        box-sizing: content-box;
+        width: 20rem;
+        margin: 0;
+        padding: 25px 100px;
+        padding-left: 0;
+        border-right: 1px solid #CECDAE;
+      }
+
+      footer .footer-content {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        width: 50%;
+        padding-left: 100px;
+      }
+    }
+
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-display: swap;
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    :root {
+      font-size: 62.5%;
+      /* 1rem = 10px */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #F9F5EC;
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      color: #262626;
+      margin: 0;
+    }
+
+    body h1,
+    body h2,
+    body h3,
+    body .h3 {
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 3.2rem;
+      margin: 0 0 3.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover {
+      color: #AB6B4F;
+    }
+
+    button {
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+    }
+
+    .massage-btn {
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+      padding: 6px 12px;
+      margin-left: 5%;
+      margin-right: 5%;
+      background-color: inherit;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      letter-spacing: 8px;
+    }
+
+    .massage-btn:hover,
+    .massage-btn :active {
+      background-color: #AB6B4F;
+      color: #F9F5EC;
+      -webkit-box-shadow: 5px 5px 10px #262626;
+      box-shadow: 5px 5px 10px #262626;
+    }
+
+    .massage-btn:focus {
+      box-shadow: none;
+    }
+
+    /* Media Queries */
+    .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      text-align: center;
+    }
+
+    .container .content {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 50px 30px;
+      width: 100%;
+    }
+
+    .container p {
+      margin: 0 0 4.8rem;
+    }
+
+    .container .image {
+      display: none;
+      width: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: 1000px) {
+      .container .image {
+        display: block;
+      }
+
+      .container .content {
+        padding: 100px 80px;
+        max-width: none;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      main .container .content {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-display: swap;
+    }
+
+    main {
+      background-image: url(../img/contact/StockroseMuster_lg_min.webp);
+      background-size: contain;
+      background-position: center;
+      -webkit-background-attachment: fixed;
+      background-attachment: fixed;
+    }
+
+    main h1 {
+      font-size: 4rem;
+    }
+
+    main address {
+      font-style: normal;
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    main .biesenbrow {
+      background-color: #DBCFBF;
+      -webkit-box-shadow: 0 -5px 45px #262626;
+      box-shadow: 0 -5px 45px #262626;
+    }
+
+    main .biesenbrow h1 span {
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      font-size: 1.44rem;
+      margin-bottom: 12px;
+      letter-spacing: 8px;
+    }
+
+    main .biesenbrow address {
+      text-align: left;
+      font-weight: 800;
+    }
+
+    main .biesenbrow article {
+      margin-top: 40px;
+    }
+
+    main .biesenbrow article p,
+    main .biesenbrow article h2 {
+      text-align: justify;
+    }
+
+    main .form {
+      margin-top: 150px;
+      background-color: #F9F5EC;
+      -webkit-box-shadow: 0 25px 45px #262626;
+      box-shadow: 0 25px 45px #262626;
+      text-align: center;
+    }
+
+    main .form .content>div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    main .form a {
+      color: #262626;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    main .form a:hover,
+    main .form a:active {
+      color: #AB6B4F;
+    }
+
+    main .form article>* {
+      margin-bottom: 48px;
+    }
+
+    main .form form label {
+      display: block;
+      margin-bottom: 0.8rem;
+      font-size: 1.6rem;
+    }
+
+    main .form form input,
+    main .form form textarea {
+      width: 100%;
+      height: 3.2rem;
+      padding: 0.6rem 1.2rem;
+      margin-bottom: 1.6rem;
+      border: 2px solid #262626;
+      border-radius: 0.4rem;
+      background-color: inherit;
+      font-family: inherit;
+      font-size: 1.6rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
+    }
+
+    main .form form textarea {
+      resize: none;
+      height: 19.2rem;
+    }
+
+    main .form form .massage-btn {
+      margin: 0;
+    }
+
+    .to-form-btn {
+      position: fixed;
+      bottom: 50px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .to-form-btn.hidden {
+      display: none;
+    }
+
+    .to-form-btn .massage-btn {
+      -webkit-animation: pulse 6s infinite ease-in-out;
+      animation: pulse 6s infinite ease-in-out;
+    }
+
+    .to-form-btn .massage-btn:hover {
+      -webkit-animation: none;
+      animation: none;
+    }
+
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 #262626;
+        box-shadow: 0 0 0 #262626;
+        background-color: #F9F5EC;
+        color: #262626;
+      }
+
+      10% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-box-shadow: 5px 5px 10px #262626;
+        box-shadow: 5px 5px 10px #262626;
+        background-color: #994d2d;
+        color: #F9F5EC;
+      }
+
+      20% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 #262626;
+        box-shadow: 0 0 0 #262626;
+        background-color: #F9F5EC;
+        color: #262626;
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 #262626;
+        box-shadow: 0 0 0 #262626;
+        background-color: #F9F5EC;
+        color: #262626;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #262626;
+        background-color: #F9F5EC;
+        color: #262626;
+      }
+
+      10% {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 10px #262626;
+        background-color: #994d2d;
+        color: #F9F5EC;
+      }
+
+      20% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #262626;
+        background-color: #F9F5EC;
+        color: #262626;
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #262626;
+        background-color: #F9F5EC;
+        color: #262626;
+      }
+    }
+
+    @media (min-width: 768px) {
+      main h1 {
+        font-size: 5rem;
+      }
+
+      main .form {
+        margin-top: 250px;
+      }
+
+      main .form .content {
+        max-width: unset;
+        padding: 50px 30px;
+        text-align: left;
+      }
+
+      main .form .content>div {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+
+      main .form .content>div>*:nth-child(1) {
+        width: 30%;
+      }
+
+      main .form .content>div>*:nth-child(2) {
+        width: 60%;
+      }
+
+      main .form .content .btn-box {
+        text-align: right;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      main {
+        /* background-size:50%; */
+      }
+
+      main .biesenbrow .content {
+        text-align: left;
+        width: 50vw;
+      }
+
+      main .biesenbrow .image {
+        background-image: url(../img/contact/loc_bb_desk.jpg);
+        width: 50vw;
+        opacity: 0.7;
+        background-position: center;
+        background-position-x: 60%;
+      }
+
+      main .form {
+        margin-top: 350px;
+      }
+
+      main .form .content {
+        width: 65vw;
+        padding: 100px 30px;
+      }
+
+      main .form .image {
+        background-image: url(../img/contact/Lomi-Haus.jpg);
+        width: 35vw;
+        background-position: center;
+        background-position-x: 60%;
+      }
+    }
+
+    /*# sourceMappingURL=contact.css.map */
+  </style>
 
 </head>
 
 <body>
-    <!-- Responsive Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a aria-label="Zur Startseite" class="logo" href="../">
-                <img src="../img/main/LogoMenu.webp" alt="Lomi5 – Hawaiianische Massage in der Uckermark Logo" width="300">
-            </a>
-            <button id="nav-button" aria-label="Toggle Hamburger Menu">
-                <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
-                    <rect class="line1" width="100" height="15" rx="8"></rect>
-                    <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
-                    <rect class="line3" y="50" width="100" height="15" rx="8"></rect>
-                </svg>
+  <!-- Responsive Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a aria-label="Zur Startseite" class="logo" href="../">
+        <img src="../img/main/LogoMenu.webp" alt="Lomi5 – Hawaiianische Massage in der Uckermark Logo" width="300">
+      </a>
+      <button id="nav-button" aria-label="Toggle Hamburger Menu">
+        <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+          <rect class="line1" width="100" height="15" rx="8"></rect>
+          <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
+          <rect class="line3" y="50" width="100" height="15" rx="8"></rect>
+        </svg>
 
 
+      </button>
+      <ul class="links collapsed" id="links">
+        <li>
+          <a href="../">HOME</a>
+        </li>
+        <li>
+          <a href="./about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="./angebot.html">ANGEBOT</a>
+        </li>
+        <li>
+          <a href="#">KONTAKT</a>
+        </li>
+        <li>
+          <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
+            data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
+            <button>
+              TERMIN&nbsp;BUCHEN
             </button>
-            <ul class="links collapsed" id="links">
-                <li>
-                    <a href="../">HOME</a>
-                </li>
-                <li>
-                    <a href="./about.html">ABOUT</a>
-                </li>
-                <li>
-                    <a href="./angebot.html">ANGEBOT</a>
-                </li>
-                <li>
-                    <a href="#">KONTAKT</a>
-                </li>
-                <li>
-                    <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
-                        data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-                        <button>
-                            TERMIN&nbsp;BUCHEN
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Anfahrt: Standort Uckermark -->
-        <section class="container biesenbrow">
-            <div class="content">
-                <h1>
-                    <span>STANDORT UCKERMARK</span> <br>
-                    Massage in Biesenbrow
-                </h1>
-                <p>
-                    In der Uckermark begrüße ich dich in meinem haus in Biesenbrow
-                </p>
-                <address>
-                    Hirtenende 5 <br>
-                    16278 Angermünde
-                </address>
-                <article>
-                    <h2>Anfahrt</h2>
-                    <p>
-                        Es gibt zwei Busse, die in Biesenbrow halten - Bus 475 von Schwedt oder Wilmersdorf aus. Bus 450
-                        von
-                        Angermünde und Gramzow aus bis zur Haltestelle Biesenbrow Mitte.
-                    </p>
-                    <p>
-                        Mit dem Auto kannst du bis vor's Haus fahren und in meiner Einfahrt parken.
-                        Wenn du Lust auf eine Radtour hast, kannst du mit dem Zug bis Wilmersdorf fahren und von dort
-                        aus
-                        radeln. Es sind etwa 10km bis nach Biesenbrow.
-                    </p>
-                </article>
-
-            </div>
-            <div class="image"></div>
-        </section>
-
-        <!-- Kontaktformular -->
-        <section class="container form">
-            <div class="image"></div>
-            <div class="content">
-                <div>
-                    <h2>Kontakt</h2>
-                        <p id="contact">
-                            Hast du eine Frage, ein Anliegen oder kann ich sonst etwas für dich tun? Dann schreibe mir
-                            eine
-                            Nachricht, ich bin gerne für dich da!
-                            <br>
-                            <strong><a href="./angebot.html">Schau dir auch noch einmal die Massageangebote an</a></strong>
-                          </p>
-                </div>
-                <div>
-                    <article>
-
-                        <p>Termine nach Vereinbarung</p>
-                        <p>
-                            Auch erreichbar unter
-                            <br>
-                            <strong><a href="mailto:info@lomi5.de">info@lomi5.de</a></strong>
-                        </p>
-                        <address>
-                            Hirtenende 5 <br>
-                            16278 Biesenbrow <br>
-                            Angermünde OT Biesenbrow
-                        </address>
-                    </article>
-                    <form id="form" action="../php/sendEmaill.php" method="POST">
-                        <div>
-                            <label for="name">Vor- und Nachname <span class="required">*</span></label>
-                            <input type="text" name="name" id="name" placeholder="Dein Name" required>
-                        </div>
-                        <div>
-                            <label for="email">E-Mail-Adresse <span class="required">*</span></label>
-                            <input type="email" name="email" id="email" placeholder="max@mustermann.de" required>
-                        </div>
-                        <div>
-                            <label for="message">Deine Nachricht</label>
-                            <textarea name="message" id="message" placeholder="Fragen, Anmerkungen, ..."></textarea>
-                        </div>
-                        <div class="btn-box">
-                            <button name="submit" type="submit" class="massage-btn">SENDEN</button>
-                        </div>
-                    </form>
-                </div>
-                <div>
-
-                </div>
-
-            </div>
-
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <img src="../img/main/LogoFürFooter.webp"
-            alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter" width="300">
-        <div class="footer-content">
-            <ul>
-                <li>
-                    <strong><a href="./kontakt.html">Kontakt</a></strong>
-                </li>
-                <li>
-                    <a href="mailto:info@lomi5.de">info@lomi5.de</a>
-                </li>
-                <li>
-                    <address>
-                        Henriette Burkard
-                        <br>
-                        Hirtenende 5
-                        <br>
-                        16278 Biesenbrow
-                    </address>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <strong><a href="./impressum.html">Impressum</a></strong>
-                </li>
-                <li>
-                    <strong><a href="./about.html">Über Lomi5</a></strong>
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <div class="to-form-btn">
-        <a href="#contact">
-            <button class="massage-btn">ZUM KONTAKT&shy;FORMULAR</button>
-        </a>
+          </div>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <script async src="../js/nav.js"></script>
-    <script async src="../js/form.js"></script>
+  <main>
+    <!-- Anfahrt: Standort Uckermark -->
+    <section class="container biesenbrow">
+      <div class="content">
+        <h1>
+          <span>STANDORT UCKERMARK</span> <br>
+          Massage in Biesenbrow
+        </h1>
+        <p>
+          In der Uckermark begrüße ich dich in meinem haus in Biesenbrow
+        </p>
+        <address>
+          Hirtenende 5 <br>
+          16278 Angermünde
+        </address>
+        <article>
+          <h2>Anfahrt</h2>
+          <p>
+            Es gibt zwei Busse, die in Biesenbrow halten - Bus 475 von Schwedt oder Wilmersdorf aus. Bus 450
+            von
+            Angermünde und Gramzow aus bis zur Haltestelle Biesenbrow Mitte.
+          </p>
+          <p>
+            Mit dem Auto kannst du bis vor's Haus fahren und in meiner Einfahrt parken.
+            Wenn du Lust auf eine Radtour hast, kannst du mit dem Zug bis Wilmersdorf fahren und von dort
+            aus
+            radeln. Es sind etwa 10km bis nach Biesenbrow.
+          </p>
+        </article>
 
-    <!-- For SEO Optimization -->
-    <script type="application/ld+json">
+      </div>
+      <div class="image"></div>
+    </section>
+
+    <!-- Kontaktformular -->
+    <section class="container form">
+      <div class="image"></div>
+      <div class="content">
+        <div>
+          <h2>Kontakt</h2>
+          <p id="contact">
+            Hast du eine Frage, ein Anliegen oder kann ich sonst etwas für dich tun? Dann schreibe mir
+            eine
+            Nachricht, ich bin gerne für dich da!
+            <br>
+            <strong><a href="./angebot.html">Schau dir auch noch einmal die Massageangebote an</a></strong>
+          </p>
+        </div>
+        <div>
+          <article>
+
+            <p>Termine nach Vereinbarung</p>
+            <p>
+              Auch erreichbar unter
+              <br>
+              <strong><a href="mailto:info@lomi5.de">info@lomi5.de</a></strong>
+            </p>
+            <address>
+              Hirtenende 5 <br>
+              16278 Biesenbrow <br>
+              Angermünde OT Biesenbrow
+            </address>
+          </article>
+          <form id="form" action="../php/sendEmaill.php" method="POST">
+            <div>
+              <label for="name">Vor- und Nachname <span class="required">*</span></label>
+              <input type="text" name="name" id="name" placeholder="Dein Name" required>
+            </div>
+            <div>
+              <label for="email">E-Mail-Adresse <span class="required">*</span></label>
+              <input type="email" name="email" id="email" placeholder="max@mustermann.de" required>
+            </div>
+            <div>
+              <label for="message">Deine Nachricht</label>
+              <textarea name="message" id="message" placeholder="Fragen, Anmerkungen, ..."></textarea>
+            </div>
+            <div class="btn-box">
+              <button name="submit" type="submit" class="massage-btn">SENDEN</button>
+            </div>
+          </form>
+        </div>
+        <div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <img src="../img/main/LogoFürFooter.webp"
+      alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter"
+      width="300">
+    <div class="footer-content">
+      <ul>
+        <li>
+          <strong><a href="./kontakt.html">Kontakt</a></strong>
+        </li>
+        <li>
+          <a href="mailto:info@lomi5.de">info@lomi5.de</a>
+        </li>
+        <li>
+          <address>
+            Henriette Burkard
+            <br>
+            Hirtenende 5
+            <br>
+            16278 Biesenbrow
+          </address>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <strong><a href="./impressum.html">Impressum</a></strong>
+        </li>
+        <li>
+          <strong><a href="./about.html">Über Lomi5</a></strong>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div class="to-form-btn">
+    <a href="#contact">
+      <button class="massage-btn">ZUM KONTAKT&shy;FORMULAR</button>
+    </a>
+  </div>
+
+  <script async src="../js/nav.js"></script>
+  <script async src="../js/form.js"></script>
+
+  <!-- For SEO Optimization -->
+  <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":["LocalBusiness", "HealthAndBeautyBusiness", "MassageTherapy"],

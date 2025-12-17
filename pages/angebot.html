@@ -2,859 +2,1068 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Entdecke das Lomi Lomi Massageangebot von Lomi5 in der Uckermark (Nord-Brandenburg): von sanfter Ölmassage bis intensiver Ganzkörpermassage. Jetzt Termin buchen.">
-    <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
-    <title>LOMI5 | Massageangebot | Hawaiianische Massage in der Uckermark</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Entdecke das Lomi Lomi Massageangebot von Lomi5 in der Uckermark (Nord-Brandenburg): von sanfter Ölmassage bis intensiver Ganzkörpermassage. Jetzt Termin buchen.">
+  <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
+  <title>LOMI5 | Massageangebot | Hawaiianische Massage in der Uckermark</title>
 
-    <!-- CSS Links -->
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/offers.css">
+  <!-- CSS Links -->
+  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/offers.css"> -->
 
-    <!-- <style>
-      @font-face {
-  font-family: butler-ultra-light;
-  src: url("../fonts/Butler_Ultra_Light.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: butler-light;
-  src: url("../fonts/Butler_Light.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-LightItalic.ttf");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-/* Navigation */
-@font-face {
-  font-family: butler-ultra-light;
-  src: url("../fonts/Butler_Ultra_Light.otf");
-  font-display: swap;
-}
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  padding: 2rem;
-  background-color: #F9F5EC;
-  z-index: 20;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-nav .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-nav img {
-  aspect-ratio: auto 5/1;
-  width: 80%;
-  max-height: 80px;
-}
-nav button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-nav .links {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  background-color: #F9F5EC;
-  width: 100%;
-  padding: 3rem 0;
-  margin: 0;
-  list-style: none;
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-nav .links li > *,
-nav .links .timify-button button {
-  color: #262626;
-  font-size: 2.4rem;
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-}
-nav .links a:hover {
-  color: #AB6B4F;
-  transition: all 0.2s ease-in-out;
-}
-nav .links li:last-child {
-  border: #AB6B4F 3px solid;
-  border-radius: 3px;
-  padding: 0.5rem;
-}
-nav .links li:last-child:hover {
-  cursor: pointer;
-}
-nav .links li:last-child:hover div {
-  color: #AB6B4F;
-}
-nav .links .timify-button button {
-  background-color: unset;
-  border: none;
-}
-nav .links.collapsed {
-  padding: 0;
-  transform: translateY(-100%);
-  z-index: -1;
-  opacity: 0;
-  transition: all 0s ease;
-}
-nav {
-  /* button icon animation */
-}
-nav .menu-icon {
-  cursor: pointer;
-  fill: #AB6B4F;
-}
-nav .menu-icon rect {
-  transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
-  transform-origin: 50px 40px;
-  /* center of viewBox */
-}
-nav {
-  /* --- When active (X-state) --- */
-}
-nav .menu-icon.active .line1 {
-  transform: rotate(45deg);
-  y: 32;
-  /* move to center */
-}
-nav .menu-icon.active .line2 {
-  opacity: 0;
-  /* fade middle line out */
-}
-nav .menu-icon.active .line3 {
-  transform: rotate(-45deg);
-  y: 32;
-  /* move to center */
-}
+  <style>
+    @charset "UTF-8";
 
-@media (min-width: 1000px) {
-  nav {
-    padding: 1rem 0;
-  }
-  nav .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    max-width: none;
-    margin: 0 2%;
-  }
-  nav img {
-    width: unset;
-    max-height: unset;
-    height: 8rem;
-  }
-  nav #nav-button {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  nav .links {
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 1.5rem;
-    padding: 0;
-    box-shadow: none;
-  }
-  nav .links li > * {
-    font-size: 2.2rem;
-  }
-  nav .links.collapsed {
-    transform: translateY(0%);
-    z-index: 3;
-    opacity: 2;
-  }
-}
-@media (min-width: 1280px) {
-  nav .nav-container {
-    margin: 0 8%;
-    gap: 15rem;
-  }
-  nav img {
-    height: 8rem;
-  }
-  nav .links li > * {
-    font-size: 2.4rem;
-  }
-}
-/* Footer styling */
-footer {
-  background-color: #777657;
-  display: flex;
-  flex-direction: column;
-  padding: 50px 25px 25px;
-}
-footer img {
-  aspect-ratio: auto 1/1;
-  width: 100%;
-  margin-top: 50px;
-  order: 2;
-}
-footer .footer-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  color: white;
-  font-size: 1.8rem;
-  order: 1;
-}
-footer .footer-content ul {
-  margin-bottom: 1.6rem;
-  list-style: none;
-  padding: 0;
-}
-footer .footer-content ul li {
-  margin: 18px;
-}
-footer .footer-content a {
-  color: white;
-  text-decoration: unset;
-  transition: all 0.2s ease-in-out;
-}
-footer .footer-content a:hover {
-  color: #DBCFBF;
-}
-footer .footer-content address {
-  font-style: normal;
-  line-height: 2.8rem;
-}
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
 
-@media (min-width: 480px) {
-  footer {
-    align-items: center;
-  }
-  footer img {
-    width: 70%;
-  }
-  footer .footer-content {
-    justify-content: center;
-    gap: 70px;
-  }
-}
-@media (min-width: 768px) {
-  footer {
-    flex-direction: row;
-    justify-content: center;
-    padding: 75px 0;
-  }
-  footer img {
-    order: 1;
-    box-sizing: content-box;
-    width: 20rem;
-    margin: 0;
-    padding: 25px 100px;
-    padding-left: 0;
-    border-right: 1px solid #CECDAE;
-  }
-  footer .footer-content {
-    justify-content: start;
-    order: 2;
-    width: 50%;
-    padding-left: 100px;
-  }
-}
-@font-face {
-  font-family: butler-ultra-light;
-  src: url("../fonts/Butler_Ultra_Light.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
-}
-* {
-  box-sizing: border-box;
-}
+    @font-face {
+      font-family: butler-light;
+      src: url("../fonts/Butler_Light.otf");
+      font-display: swap;
+    }
 
-:root {
-  font-size: 62.5%;
-  /* 1rem = 10px */
-}
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-LightItalic.ttf");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-display: swap;
+    }
 
-body {
-  background-color: #F9F5EC;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  color: #262626;
-  margin: 0;
-}
-body h1,
-body h2,
-body h3,
-body .h3 {
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 3.2rem;
-  margin: 0 0 3.2rem;
-}
+    /* Navigation */
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
 
-p {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
+    nav {
+      -webkit-position: sticky;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      padding: 2rem;
+      background-color: #F9F5EC;
+      z-index: 20;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-a {
-  text-decoration: none;
-}
+    nav .nav-container {
+      display: -webkit-box;
+      /* Ältere WebKit Flexbox */
+      display: -ms-flexbox;
+      /* IE 10 Flexbox */
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-a:hover {
-  color: #AB6B4F;
-}
+    nav img {
+      aspect-ratio: auto 5/1;
+      width: 80%;
+      max-height: 80px;
+    }
 
-button {
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-}
+    nav button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-.massage-btn {
-  border: #AB6B4F 3px solid;
-  border-radius: 3px;
-  padding: 6px 12px;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: inherit;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5;
-  cursor: pointer;
-  transition: all 0.2s;
-  letter-spacing: 8px;
-}
-.massage-btn:hover,
-.massage-btn :active {
-  background-color: #AB6B4F;
-  color: #F9F5EC;
-  box-shadow: 5px 5px 10px #262626;
-}
-.massage-btn:focus {
-  box-shadow: none;
-}
+    nav .links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      /* === OPTIMIERUNG FÜR WEBKIT/SAFARI (Flexbox) === */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #F9F5EC;
+      width: 100%;
+      padding: 3rem 0;
+      margin: 0;
+      list-style: none;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
 
-/* Media Queries */
-.container {
-  display: flex;
-  width: 100%;
-  text-align: center;
-}
-.container .content {
-  max-width: 540px;
-  margin: 0 auto;
-  padding: 50px 30px;
-  width: 100%;
-}
-.container p {
-  margin: 0 0 4.8rem;
-}
-.container .image {
-  display: none;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    nav .links li>*,
+    nav .links .timify-button button {
+      color: #262626;
+      font-size: 2.4rem;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+    }
 
-@media (min-width: 1000px) {
-  .container .image {
-    display: block;
-  }
-  .container .content {
-    padding: 100px 80px;
-    max-width: none;
-  }
-}
-@media (min-width: 1280px) {
-  main .container .content {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
-}
-main {
-  background-color: #DBCFBF;
-  padding: 50px 30px;
-}
-main .lomi-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-main .lomi-cards > div {
-  max-width: 400px;
-}
-main h1 {
-  text-align: center;
-  font-size: 4.8rem;
-}
-main h1 span {
-  margin-bottom: 12px;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  font-size: 1.6rem;
-  letter-spacing: 8px;
-}
-main .card {
-  padding: 3.2rem;
-  margin-bottom: 4.8rem;
-  background-color: #F9F5EC;
-  text-align: right;
-}
-main .card:nth-child(1) div img, main .card:nth-child(2) div img {
-  aspect-ratio: auto 1/1;
-}
-main .card div {
-  display: flex;
-}
-main .card div img {
-  aspect-ratio: auto 12/8;
-  width: 50%;
-  height: auto;
-}
-main .card div:first-child {
-  justify-content: space-between;
-  align-items: center;
-}
-main .card div:first-child h2 {
-  margin: 0;
-  font-size: 3.28rem;
-}
-main .card div:first-child h3 {
-  margin-bottom: 1rem;
-  font-size: 1.36rem;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-}
-main .card div:first-child h4 {
-  margin: 0;
-  margin-bottom: 0.8rem;
-  font-size: 1.04rem;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-style: italic;
-}
-main .card div:last-child {
-  justify-content: space-between;
-  align-items: start;
-  border-top: 1px solid #777657;
-}
-main .card div:last-child a {
-  align-self: center;
-  flex-grow: 1;
-  max-width: 40%;
-  min-width: fit-content;
-}
-main .card div:last-child button {
-  width: 100%;
-  padding: 0.2rem 0.2rem;
-  background-color: #994d2d;
-  border: #AB6B4F 3px solid;
-  border-radius: 3px;
-  color: #F9F5EC;
-  text-align: center;
-  font-size: 0.96rem;
-  letter-spacing: 2px;
-}
-main .card div:last-child p {
-  margin: 0;
-  padding-top: 0.5rem;
-  font-size: 1.5rem;
-  font-family: "butler-light", "Times New Roman", Times, serif;
-}
-main .card div:last-child p:last-child {
-  border-left: 1px solid #777657;
-  padding-left: 10px;
-}
-main .forward-contact {
-  text-align: center;
-}
-main .forward-contact p:nth-child(1) {
-  font-size: 2rem;
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-}
-main .forward-contact p:nth-child(2) {
-  font-size: 2.2rem;
-  font-family: "butler-light", "Times New Roman", Times, serif;
-}
-main .forward-contact .massage-btn {
-  border: none;
-  background-color: #F9F5EC;
-}
+    nav .links a:hover {
+      color: #AB6B4F;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
 
-@media (min-width: 480px) {
-  main .card div img {
-    width: 40%;
-    height: auto;
-  }
-  main .card div:first-child h2 {
-    font-size: 5.2rem;
-  }
-  main .card div:first-child h3 {
-    font-size: 1.5rem;
-  }
-  main .card div:first-child h4 {
-    font-size: 1.3rem;
-  }
-  main .card div:last-child a {
-    max-width: 30%;
-  }
-  main .card div:last-child button {
-    font-size: 1.1rem;
-  }
-  main .card div:last-child p {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 768px) {
-  main .lomi-cards > div {
-    max-width: 325px;
-  }
-  main .card div img {
-    width: 35%;
-  }
-  main .forward-contact p:nth-child(1) {
-    font-size: 2.2rem;
-  }
-  main .forward-contact p:nth-child(2) {
-    font-size: 2.4rem;
-  }
-}
-@media (min-width: 1000px) {
-  main .lomi-cards > div {
-    max-width: unset;
-    width: 400px;
-  }
-  main .card div img {
-    width: 40%;
-  }
-  main .card div:first-child h4 {
-    font-size: 1.4rem;
-  }
-  main .card div:last-child button {
-    font-size: 1.5rem;
-  }
-  main .card div:last-child p {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 1280px) {
-  main .lomi-cards > div {
-    max-width: unset;
-    width: 500px;
-  }
-  main .card {
-    padding: 6rem;
-  }
-  main .card div img {
-    width: 45%;
-  }
-  main .card div:first-child h2 {
-    font-size: 6.2rem;
-  }
-  main .card div:first-child h3 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
-  main .card div:first-child h4 {
-    font-size: 1.6rem;
-  }
-  main .card div:last-child button {
-    font-size: 1.7rem;
-  }
-  main .card div:last-child p {
-    font-size: 3.5rem;
-  }
-  main .forward-contact p:nth-child(1) {
-    font-size: 2.8rem;
-  }
-  main .forward-contact p:nth-child(2) {
-    font-size: 3rem;
-  }
-}
+    nav .links li:last-child {
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+      padding: 0.5rem;
+    }
 
-/*# sourceMappingURL=offers.css.map */
+    nav .links li:last-child:hover {
+      cursor: pointer;
+    }
 
-    </style> -->
+    nav .links li:last-child:hover div {
+      color: #AB6B4F;
+    }
 
+    nav .links .timify-button button {
+      background-color: unset;
+      border: none;
+    }
+
+    nav .links.collapsed {
+      padding: 0;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      z-index: -1;
+      opacity: 0;
+      -webkit-transition: all 0s ease;
+      transition: all 0s ease;
+    }
+
+    nav {
+      /* button icon animation */
+    }
+
+    nav .menu-icon {
+      cursor: pointer;
+      fill: #AB6B4F;
+    }
+
+    nav .menu-icon rect {
+      -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      -webkit-transform-origin: 50px 40px;
+      transform-origin: 50px 40px;
+      /* center of viewBox */
+    }
+
+    nav {
+      /* --- When active (X-state) --- */
+    }
+
+    nav .menu-icon.active .line1 {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      y: 32;
+      /* move to center */
+    }
+
+    nav .menu-icon.active .line2 {
+      opacity: 0;
+      /* fade middle line out */
+    }
+
+    nav .menu-icon.active .line3 {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      y: 32;
+      /* move to center */
+    }
+
+    @media (min-width: 1000px) {
+      nav {
+        padding: 1rem 0;
+      }
+
+      nav .nav-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 1rem;
+        max-width: none;
+        margin: 0 2%;
+      }
+
+      nav img {
+        width: unset;
+        max-height: unset;
+        height: 8rem;
+      }
+
+      nav #nav-button {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      nav .links {
+        position: relative;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+        gap: 1.5rem;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      nav .links li>* {
+        font-size: 2.2rem;
+      }
+
+      nav .links.collapsed {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        z-index: 3;
+        opacity: 2;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      nav .nav-container {
+        margin: 0 8%;
+        gap: 15rem;
+      }
+
+      nav img {
+        height: 8rem;
+      }
+
+      nav .links li>* {
+        font-size: 2.4rem;
+      }
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #777657;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 50px 25px 25px;
+    }
+
+    footer img {
+      aspect-ratio: auto 1/1;
+      width: 100%;
+      margin-top: 50px;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+    }
+
+    footer .footer-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: distribute;
+      /* Flexbox 'space-around' */
+      justify-content: space-around;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      color: white;
+      font-size: 1.8rem;
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+
+    footer .footer-content ul {
+      margin-bottom: 1.6rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    footer .footer-content ul li {
+      margin: 18px;
+    }
+
+    footer .footer-content a {
+      color: white;
+      text-decoration: unset;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    footer .footer-content a:hover {
+      color: #DBCFBF;
+    }
+
+    footer .footer-content address {
+      font-style: normal;
+      line-height: 2.8rem;
+    }
+
+    @media (min-width: 480px) {
+      footer {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      footer img {
+        width: 70%;
+      }
+
+      footer .footer-content {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 70px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 75px 0;
+      }
+
+      footer img {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        box-sizing: content-box;
+        width: 20rem;
+        margin: 0;
+        padding: 25px 100px;
+        padding-left: 0;
+        border-right: 1px solid #CECDAE;
+      }
+
+      footer .footer-content {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        width: 50%;
+        padding-left: 100px;
+      }
+    }
+
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-display: swap;
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    :root {
+      font-size: 62.5%;
+      /* 1rem = 10px */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #F9F5EC;
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      color: #262626;
+      margin: 0;
+    }
+
+    body h1,
+    body h2,
+    body h3,
+    body .h3 {
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 3.2rem;
+      margin: 0 0 3.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover {
+      color: #AB6B4F;
+    }
+
+    button {
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+    }
+
+    .massage-btn {
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+      padding: 6px 12px;
+      margin-left: 5%;
+      margin-right: 5%;
+      background-color: inherit;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      letter-spacing: 8px;
+    }
+
+    .massage-btn:hover,
+    .massage-btn :active {
+      background-color: #AB6B4F;
+      color: #F9F5EC;
+      -webkit-box-shadow: 5px 5px 10px #262626;
+      box-shadow: 5px 5px 10px #262626;
+    }
+
+    .massage-btn:focus {
+      box-shadow: none;
+    }
+
+    /* Media Queries */
+    .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      text-align: center;
+    }
+
+    .container .content {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 50px 30px;
+      width: 100%;
+    }
+
+    .container p {
+      margin: 0 0 4.8rem;
+    }
+
+    .container .image {
+      display: none;
+      width: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: 1000px) {
+      .container .image {
+        display: block;
+      }
+
+      .container .content {
+        padding: 100px 80px;
+        max-width: none;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      main .container .content {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+    }
+
+    main {
+      background-color: #DBCFBF;
+      padding: 50px 30px;
+    }
+
+    main .lomi-cards {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 50px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    main .lomi-cards>div {
+      max-width: 400px;
+    }
+
+    main h1 {
+      text-align: center;
+      font-size: 4.8rem;
+    }
+
+    main h1 span {
+      margin-bottom: 12px;
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      font-size: 1.6rem;
+      letter-spacing: 8px;
+    }
+
+    main .card {
+      padding: 3.2rem;
+      margin-bottom: 4.8rem;
+      background-color: #F9F5EC;
+      text-align: right;
+    }
+
+    main .card:nth-child(1) div img,
+    main .card:nth-child(2) div img {
+      aspect-ratio: auto 1/1;
+    }
+
+    main .card div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    main .card div img {
+      aspect-ratio: auto 12/8;
+      width: 50%;
+      height: auto;
+    }
+
+    main .card div:first-child {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    main .card div:first-child h2 {
+      margin: 0;
+      font-size: 3.28rem;
+      line-height: 3rem;
+    }
+
+    main .card div:first-child h2 span {
+      margin-bottom: 1rem;
+      font-size: 1.36rem;
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+    }
+
+    main .card div:first-child h4 {
+      margin: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1.04rem;
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    main .card div:last-child {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: start;
+      border-top: 1px solid #777657;
+    }
+
+    main .card div:last-child a {
+      -ms-flex-item-align: center;
+      align-self: center;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 40%;
+      min-width: fit-content;
+    }
+
+    main .card div:last-child button {
+      width: 100%;
+      padding: 0.2rem 0.2rem;
+      background-color: #994d2d;
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+      color: #F9F5EC;
+      text-align: center;
+      font-size: 0.96rem;
+      letter-spacing: 2px;
+    }
+
+    main .card div:last-child p {
+      margin: 0;
+      padding-top: 0.5rem;
+      font-size: 1.5rem;
+      font-family: "butler-light", "Times New Roman", Times, serif;
+    }
+
+    main .card div:last-child p:last-child {
+      border-left: 1px solid #777657;
+      padding-left: 10px;
+    }
+
+    main .forward-contact {
+      text-align: center;
+    }
+
+    main .forward-contact p:nth-child(1) {
+      font-size: 2rem;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+    }
+
+    main .forward-contact p:nth-child(2) {
+      font-size: 2.2rem;
+      font-family: "butler-light", "Times New Roman", Times, serif;
+    }
+
+    main .forward-contact .massage-btn {
+      border: none;
+      background-color: #F9F5EC;
+    }
+
+    @media (min-width: 480px) {
+      main .card div img {
+        width: 40%;
+        height: auto;
+      }
+
+      main .card div:first-child h2 {
+        font-size: 5.2rem;
+      }
+
+      main .card div:first-child h2 span {
+        font-size: 1.5rem;
+      }
+
+      main .card div:first-child h4 {
+        font-size: 1.3rem;
+      }
+
+      main .card div:last-child a {
+        max-width: 30%;
+      }
+
+      main .card div:last-child button {
+        font-size: 1.1rem;
+      }
+
+      main .card div:last-child p {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      main .lomi-cards>div {
+        max-width: 325px;
+      }
+
+      main .card div img {
+        width: 35%;
+      }
+
+      main .forward-contact p:nth-child(1) {
+        font-size: 2.2rem;
+      }
+
+      main .forward-contact p:nth-child(2) {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      main .lomi-cards>div {
+        max-width: unset;
+        width: 400px;
+      }
+
+      main .card div img {
+        width: 40%;
+      }
+
+      main .card div:first-child h4 {
+        font-size: 1.4rem;
+      }
+
+      main .card div:last-child button {
+        font-size: 1.5rem;
+      }
+
+      main .card div:last-child p {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      main .lomi-cards>div {
+        max-width: unset;
+        width: 500px;
+      }
+
+      main .card {
+        padding: 6rem;
+      }
+
+      main .card div img {
+        width: 45%;
+      }
+
+      main .card div:first-child h2 {
+        font-size: 6.2rem;
+        line-height: 4rem;
+      }
+
+      main .card div:first-child h2 span {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      main .card div:first-child h4 {
+        font-size: 1.6rem;
+      }
+
+      main .card div:last-child button {
+        font-size: 1.7rem;
+      }
+
+      main .card div:last-child p {
+        font-size: 3.5rem;
+      }
+
+      main .forward-contact p:nth-child(1) {
+        font-size: 2.8rem;
+      }
+
+      main .forward-contact p:nth-child(2) {
+        font-size: 3rem;
+      }
+    }
+
+    /*# sourceMappingURL=offers.css.map */
+  </style>
 
 </head>
 
 <body>
-    <!-- Responsive Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a aria-label="Zur Startseite" class="logo" href="../">
-                <img src="../img/main/LogoMenu.webp" alt="Lomi5 – Hawaiianische Massage in der Uckermark Logo" width="300">
-            </a>
-            <button id="nav-button" aria-label="Toggle Hamburger Menu">
-                <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
-                    <rect class="line1" width="100" height="15" rx="8"></rect>
-                    <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
-                    <rect class="line3" y="50" width="100" height="15" rx="8"></rect>
-                </svg>
+  <!-- Responsive Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a aria-label="Zur Startseite" class="logo" href="../">
+        <img src="../img/main/LogoMenu.webp" alt="Lomi5 – Hawaiianische Massage in der Uckermark Logo" width="300">
+      </a>
+      <button id="nav-button" aria-label="Toggle Hamburger Menu">
+        <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+          <rect class="line1" width="100" height="15" rx="8"></rect>
+          <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
+          <rect class="line3" y="50" width="100" height="15" rx="8"></rect>
+        </svg>
 
 
+      </button>
+      <ul class="links collapsed" id="links">
+        <li>
+          <a href="../">HOME</a>
+        </li>
+        <li>
+          <a href="./about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">ANGEBOT</a>
+        </li>
+        <li>
+          <a href="./kontakt.html">KONTAKT</a>
+        </li>
+        <li>
+          <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
+            data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
+            <button>
+              TERMIN&nbsp;BUCHEN
             </button>
-            <ul class="links collapsed" id="links">
-                <li>
-                    <a href="../">HOME</a>
-                </li>
-                <li>
-                    <a href="./about.html">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#">ANGEBOT</a>
-                </li>
-                <li>
-                    <a href="./kontakt.html">KONTAKT</a>
-                </li>
-                <li>
-                    <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
-                        data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-                        <button>
-                            TERMIN&nbsp;BUCHEN
-                        </button>
-                    </div>
-                </li>
-            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h1>
+      <span>DAS LOMI - LOMI</span> <br>
+      Massage&shy;angebot
+    </h1>
+
+    <!-- Massageangebot - Pakete -->
+    <section class="lomi-cards">
+
+      <!-- Lomi Paket 1 -->
+      <div class="card">
+        <div>
+          <img src="../img/products/Lomi1_Icon.avif"
+            alt="Zeichnerische Darstellung einer Person von Schultern bis zum Kopf. Die Person hält in Entspannung die Augen geschlossen, während der Nacken sanft massiert wird."
+            width="130">
+          <article>
+            <h2>
+              Lomi1 <br>
+              <span>Sanfte Ölmassage</span>
+            </h2>
+            <h4>
+              Rücken - Schultern - Nacken
+            </h4>
+          </article>
         </div>
-    </nav>
+        <div>
+          <a href="https://apps.timify.com/sharable-link/6d212aecc3/1.0.0" class="btn-box" target="_blank">
+            <button>BUCHEN</button>
+          </a>
+          <p>
+            <data value="25">25 €</data>
+          </p>
+          <p>
+            <time datetime="PT25M">25 min</time>
+          </p>
+        </div>
+      </div>
 
-    <main>
-        <h1>
-            <span>DAS LOMI - LOMI</span> <br>
-            Massage&shy;angebot
-        </h1>
+      <!-- Lomi Paket 2 -->
+      <div class="card">
+        <div>
+          <img src="../img/products/Lomi2_Icon.avif"
+            alt="Zeichnerische Darstellung des Rumpfes einer Person, welche auf dem Bauch liegt und dem der Rücken sanft massiert wird"
+            width="130">
+          <article>
+            <h2>
+              Lomi2 <br>
+              <span>Sanfte Ölmassage</span>
+            </h2>
+            <h4>
+              Rücken - Schultern - Nacken
+              Beine - Po
+            </h4>
+          </article>
+        </div>
+        <div>
+          <a href="https://apps.timify.com/sharable-link/060116e9ea/1.0.0" class="btn-box" target="_blank">
+            <button>BUCHEN</button>
+          </a>
+          <p>
+            <data value="50">50 €</data>
+          </p>
+          <p>
+            <time datetime="PT55M">55 min</time>
+          </p>
 
-        <!-- Massageangebot - Pakete -->
-        <section class="lomi-cards">
+        </div>
+      </div>
 
-            <!-- Lomi Paket 1 -->
-            <div class="card">
-                <div>
-                    <img src="../img/products/Lomi1_Icon.avif"
-                        alt="Zeichnerische Darstellung einer Person von Schultern bis zum Kopf. Die Person hält in Entspannung die Augen geschlossen, während der Nacken sanft massiert wird." width="130">
-                    <article>
-                        <h2>
-                            Lomi1 <br>
-                            <span>Sanfte Ölmassage</span>
-                        </h2>
-                        <h4>
-                            Rücken - Schultern - Nacken
-                        </h4>
-                    </article>
-                </div>
-                <div>
-                    <a href="https://apps.timify.com/sharable-link/6d212aecc3/1.0.0" class="btn-box" target="_blank">
-                        <button>BUCHEN</button>
-                    </a>
-                    <p>
-                        <data value="25">25 €</data>
-                    </p>
-                    <p>
-                        <time datetime="PT25M">25 min</time>
-                    </p>
-                </div>
-            </div>
+      <!-- Lomi Paket 3 -->
+      <div class="card">
+        <div>
+          <img src="../img/products/Lomi3_Icon.avif"
+            alt="Zeichnerische Darstellung von der Seite einer Person, die auf dem Bauch liegt, den Kopf entspannt zur Seite geneigt. Ihr wird der untere Rücken sanft massiert."
+            width="130">
+          <article>
+            <h2>
+              Lomi3 <br>
+              <span>Sanfte Ölmassage</span>
+            </h2>
+            <h4>
+              Ganzer Körper
+            </h4>
+          </article>
+        </div>
+        <div>
+          <a href="https://apps.timify.com/sharable-link/6c4e2a3c86/1.0.0" class="btn-box" target="_blank">
+            <button>BUCHEN</button>
+          </a>
+          <p>
+            <data value="70">70 €</data>
+          </p>
+          <p>
+            <time datetime="PT75M">75 min</time>
+          </p>
+        </div>
+      </div>
 
-            <!-- Lomi Paket 2 -->
-            <div class="card">
-                <div>
-                    <img src="../img/products/Lomi2_Icon.avif"
-                        alt="Zeichnerische Darstellung des Rumpfes einer Person, welche auf dem Bauch liegt und dem der Rücken sanft massiert wird" width="130">
-                    <article>
-                        <h2>
-                            Lomi2 <br>
-                            <span>Sanfte Ölmassage</span>                            
-                        </h2>
-                        <h4>
-                            Rücken - Schultern - Nacken
-                            Beine - Po
-                        </h4>
-                    </article>
-                </div>
-                <div>
-                    <a href="https://apps.timify.com/sharable-link/060116e9ea/1.0.0" class="btn-box" target="_blank">
-                        <button>BUCHEN</button>
-                    </a>
-                    <p>
-                        <data value="50">50 €</data>
-                    </p>
-                    <p>
-                        <time datetime="PT55M">55 min</time>
-                    </p>
-                    
-                </div>
-            </div>
+      <!-- Lomi Paket 4 -->
+      <div class="card">
+        <div>
+          <img src="../img/products/Lomi4_Icon.avif"
+            alt="Zeichnerische Darstellung von der Seite einer Person, die auf dem Bauch liegt, den Kopf entspannt zur Seite geneigt. Ihr wird der obere Rücken intensiver mit Ellenbogen massiert."
+            width="130">
+          <article>
+            <h2>
+              Lomi4 <br>
+              <span>Intensive Ölmassage</span>
+            </h2>
+            <h4>
+              Ganzer Körper
+            </h4>
+          </article>
+        </div>
+        <div>
+          <a href="https://apps.timify.com/sharable-link/f00d650a0b/1.0.0" class="btn-box" target="_blank">
+            <button>BUCHEN</button>
+          </a>
+          <p>
+            <data value="90">90 €</data>
+          </p>
+          <p>
+            <time datetime="PT75M">75 min</time>
+          </p>
+        </div>
+      </div>
 
-            <!-- Lomi Paket 3 -->
-            <div class="card">
-                <div>
-                    <img src="../img/products/Lomi3_Icon.avif"
-                        alt="Zeichnerische Darstellung von der Seite einer Person, die auf dem Bauch liegt, den Kopf entspannt zur Seite geneigt. Ihr wird der untere Rücken sanft massiert." width="130">
-                    <article>
-                        <h2>
-                            Lomi3 <br>
-                            <span>Sanfte Ölmassage</span>
-                        </h2>
-                        <h4>
-                            Ganzer Körper
-                        </h4>
-                    </article>
-                </div>
-                <div>
-                    <a href="https://apps.timify.com/sharable-link/6c4e2a3c86/1.0.0" class="btn-box" target="_blank">
-                        <button>BUCHEN</button>
-                    </a>
-                    <p>
-                        <data value="70">70 €</data>
-                    </p>
-                    <p>
-                        <time datetime="PT75M">75 min</time>
-                    </p>
-                </div>
-            </div>
+      <!-- Lomi Paket 5 -->
+      <div class="card">
+        <div>
+          <img src="../img/products/Lomi5_Icon.avif"
+            alt="Zeichnerische Darstellung von der Seite einer Person, die auf dem Bauch liegt, den Kopf entspannt zur Seite geneigt. Durch eine unterstreinde Massage werden ihr sowohl der untere Rücken, als auch die Seite massiert, indem ein Arm der Masseurin auf, der andere Arm zwischen Person und liege die Seite massiert."
+            width="130">
+          <article>
+            <h2>
+              Lomi5 <br>
+              <span>Intensive Ölmassage
+                mit Unter&shy;streichungen</span>
+            </h2>
+            <h4>
+              Ganzer Körper
+            </h4>
+          </article>
+        </div>
+        <div>
+          <a href="https://apps.timify.com/sharable-link/e0192cf160/1.0.0" class="btn-box" target="_blank">
+            <button>BUCHEN</button>
+          </a>
+          <p>
+            <data value="125">125 €</data>
+          </p>
+          <p>
+            <time datetime="PT100M">100 min</time>
+          </p>
+        </div>
+      </div>
 
-            <!-- Lomi Paket 4 -->
-            <div class="card">
-                <div>
-                    <img src="../img/products/Lomi4_Icon.avif"
-                        alt="Zeichnerische Darstellung von der Seite einer Person, die auf dem Bauch liegt, den Kopf entspannt zur Seite geneigt. Ihr wird der obere Rücken intensiver mit Ellenbogen massiert." width="130">
-                    <article>
-                        <h2>
-                            Lomi4 <br>
-                            <span>Intensive Ölmassage</span>
-                        </h2>
-                        <h4>
-                            Ganzer Körper
-                        </h4>
-                    </article>
-                </div>
-                <div>
-                    <a href="https://apps.timify.com/sharable-link/f00d650a0b/1.0.0" class="btn-box" target="_blank">
-                        <button>BUCHEN</button>
-                    </a>
-                    <p>
-                        <data value="90">90 €</data>
-                    </p>
-                    <p>
-                        <time datetime="PT75M">75 min</time>
-                    </p>
-                </div>
-            </div>
+      <!-- Zum Kontakt -->
+      <div class="forward-contact">
+        <p>
+          Du bist noch unschlüssig,
+          <br>
+          welche Lomi die richtige für dich ist?
+        </p>
+        <p>
+          Dann melde dich bei mir. Ich unterstütze dich
+          gerne bei deiner Wahl!
+        </p>
+        <a href="./kontakt.html">
+          <button class="massage-btn">KONTAKT</button>
+        </a>
+      </div>
+    </section>
+  </main>
 
-            <!-- Lomi Paket 5 -->
-            <div class="card">
-                <div>
-                    <img src="../img/products/Lomi5_Icon.avif"
-                        alt="Zeichnerische Darstellung von der Seite einer Person, die auf dem Bauch liegt, den Kopf entspannt zur Seite geneigt. Durch eine unterstreinde Massage werden ihr sowohl der untere Rücken, als auch die Seite massiert, indem ein Arm der Masseurin auf, der andere Arm zwischen Person und liege die Seite massiert." width="130">
-                    <article>
-                        <h2>
-                            Lomi5 <br>
-                            <span>Intensive Ölmassage
-                            mit Unter&shy;streichungen</span>
-                        </h2>
-                        <h4>
-                            Ganzer Körper
-                        </h4>
-                    </article>
-                </div>
-                <div>
-                    <a href="https://apps.timify.com/sharable-link/e0192cf160/1.0.0" class="btn-box" target="_blank">
-                        <button>BUCHEN</button>
-                    </a>
-                    <p>
-                        <data value="125">125 €</data>
-                    </p>
-                    <p>
-                        <time datetime="PT100M">100 min</time>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Zum Kontakt -->
-            <div class="forward-contact">
-                <p>
-                    Du bist noch unschlüssig,
-                    <br>
-                    welche Lomi die richtige für dich ist?
-                </p>
-                <p>
-                    Dann melde dich bei mir. Ich unterstütze dich 
-                    gerne bei deiner Wahl!
-                </p>
-                <a href="./kontakt.html">
-                    <button class="massage-btn">KONTAKT</button>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Foote                font-size: 2rem;
+  <!-- Foote                font-size: 2rem;
 r -->
-    <footer>
-        <img src="../img/main/LogoFürFooter.webp"
-            alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter" width="300">
-        <div class="footer-content">
-            <ul>
-                <li>
-                    <strong><a href="./kontakt.html">Kontakt</a></strong>
-                </li>
-                <li>
-                    <a href="mailto:info@lomi5.de">info@lomi5.de</a>
-                </li>
-                <li>
-                    <address>
-                        Henriette Burkard
-                        <br>
-                        Hirtenende 5
-                        <br>
-                        16278 Biesenbrow
-                    </address>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <strong><a href="./impressum.html">Impressum</a></strong>
-                </li>
-                <li>
-                    <strong><a href="./about.html">Über Lomi5</a></strong>
-                </li>
-            </ul>
-        </div>
-    </footer>
+  <footer>
+    <img src="../img/main/LogoFürFooter.webp"
+      alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter"
+      width="300">
+    <div class="footer-content">
+      <ul>
+        <li>
+          <strong><a href="./kontakt.html">Kontakt</a></strong>
+        </li>
+        <li>
+          <a href="mailto:info@lomi5.de">info@lomi5.de</a>
+        </li>
+        <li>
+          <address>
+            Henriette Burkard
+            <br>
+            Hirtenende 5
+            <br>
+            16278 Biesenbrow
+          </address>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <strong><a href="./impressum.html">Impressum</a></strong>
+        </li>
+        <li>
+          <strong><a href="./about.html">Über Lomi5</a></strong>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
-    <script async src="../js/nav.js"></script>
+  <script async src="../js/nav.js"></script>
 
-    <!-- For SEO Optimization -->
+  <!-- For SEO Optimization -->
   <script type="application/ld+json">
 {
   "@context":"https://schema.org",

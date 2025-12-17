@@ -10,9 +10,11 @@
   <title>LOMI5 | Über Lomi Lomi und Henriette | Hawaiianische Massage in der Uckermark</title>
 
   <!-- CSS Links -->
-  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/about.css">
+  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/about.css"> -->
 
-  <!-- <style>
+  <style>
+    @charset "UTF-8";
+
     @font-face {
       font-family: butler-ultra-light;
       src: url("../fonts/Butler_Ultra_Light.otf");
@@ -48,6 +50,7 @@
     }
 
     nav {
+      -webkit-position: sticky;
       position: sticky;
       top: 0;
       left: 0;
@@ -56,12 +59,21 @@
       padding: 2rem;
       background-color: #F9F5EC;
       z-index: 20;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     nav .nav-container {
+      display: -webkit-box;
+      /* Ältere WebKit Flexbox */
+      display: -ms-flexbox;
+      /* IE 10 Flexbox */
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       max-width: 800px;
       margin: 0 auto;
@@ -83,9 +95,19 @@
       position: absolute;
       top: 100%;
       left: 0;
+      /* === OPTIMIERUNG FÜR WEBKIT/SAFARI (Flexbox) === */
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       gap: 1.5rem;
       background-color: #F9F5EC;
@@ -94,7 +116,9 @@
       margin: 0;
       list-style: none;
       font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
     }
 
@@ -107,6 +131,7 @@
 
     nav .links a:hover {
       color: #AB6B4F;
+      -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
     }
 
@@ -131,9 +156,11 @@
 
     nav .links.collapsed {
       padding: 0;
+      -webkit-transform: translateY(-100%);
       transform: translateY(-100%);
       z-index: -1;
       opacity: 0;
+      -webkit-transition: all 0s ease;
       transition: all 0s ease;
     }
 
@@ -147,7 +174,9 @@
     }
 
     nav .menu-icon rect {
+      -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
       transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      -webkit-transform-origin: 50px 40px;
       transform-origin: 50px 40px;
       /* center of viewBox */
     }
@@ -157,6 +186,7 @@
     }
 
     nav .menu-icon.active .line1 {
+      -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
       y: 32;
       /* move to center */
@@ -168,6 +198,7 @@
     }
 
     nav .menu-icon.active .line3 {
+      -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       y: 32;
       /* move to center */
@@ -179,8 +210,14 @@
       }
 
       nav .nav-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         gap: 1rem;
         max-width: none;
@@ -202,7 +239,12 @@
 
       nav .links {
         position: relative;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-around;
         gap: 1.5rem;
         padding: 0;
@@ -214,6 +256,7 @@
       }
 
       nav .links.collapsed {
+        -webkit-transform: translateY(0%);
         transform: translateY(0%);
         z-index: 3;
         opacity: 2;
@@ -238,7 +281,12 @@
     /* Footer styling */
     footer {
       background-color: #777657;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       padding: 50px 25px 25px;
     }
@@ -247,15 +295,25 @@
       aspect-ratio: auto 1/1;
       width: 100%;
       margin-top: 50px;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
       order: 2;
     }
 
     footer .footer-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: distribute;
+      /* Flexbox 'space-around' */
       justify-content: space-around;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       color: white;
       font-size: 1.8rem;
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
       order: 1;
     }
 
@@ -272,6 +330,7 @@
     footer .footer-content a {
       color: white;
       text-decoration: unset;
+      -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
     }
 
@@ -286,6 +345,8 @@
 
     @media (min-width: 480px) {
       footer {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
       }
 
@@ -294,6 +355,8 @@
       }
 
       footer .footer-content {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         gap: 70px;
       }
@@ -301,12 +364,19 @@
 
     @media (min-width: 768px) {
       footer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         padding: 75px 0;
       }
 
       footer img {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         box-sizing: content-box;
         width: 20rem;
@@ -317,7 +387,11 @@
       }
 
       footer .footer-content {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: start;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
         width: 50%;
         padding-left: 100px;
@@ -338,6 +412,7 @@
     }
 
     * {
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
     }
 
@@ -375,6 +450,7 @@
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
     a:hover {
@@ -396,6 +472,7 @@
       font-weight: 400;
       line-height: 1.5;
       cursor: pointer;
+      -webkit-transition: all 0.2s;
       transition: all 0.2s;
       letter-spacing: 8px;
     }
@@ -404,6 +481,7 @@
     .massage-btn :active {
       background-color: #AB6B4F;
       color: #F9F5EC;
+      -webkit-box-shadow: 5px 5px 10px #262626;
       box-shadow: 5px 5px 10px #262626;
     }
 
@@ -413,6 +491,8 @@
 
     /* Media Queries */
     .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       width: 100%;
       text-align: center;
@@ -432,6 +512,7 @@
     .container .image {
       display: none;
       width: 100%;
+      -webkit-background-size: cover;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -494,7 +575,7 @@
     }
 
     @media (min-width: 1000px) {
-      .container.about-lomi p {
+      .container.about-lomi {
         text-align: right;
       }
 
@@ -509,7 +590,7 @@
         background-position: left;
       }
 
-      .container.about-henriette p {
+      .container.about-henriette {
         text-align: left;
       }
 
@@ -525,7 +606,7 @@
     }
 
     /*# sourceMappingURL=about.css.map */
-  </style> -->
+  </style>
 
 </head>
 
@@ -692,7 +773,7 @@
   </footer>
 
   <script async src="../js/nav.js"></script>
- 
+
   <!-- For SEO Optimization -->
   <script type="application/ld+json">
 {
