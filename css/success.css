@@ -412,10 +412,12 @@ body main .animation div {
 }
 body main .animation div.sun {
   overflow: hidden;
+  -webkit-transform: translateY(36px);
   transform: translateY(36px);
   z-index: 1;
 }
 body main .animation div.sun img {
+  -webkit-animation: sunrise 1.5s ease-out;
   animation: sunrise 1.5s ease-out;
 }
 body main .animation div img {
@@ -437,6 +439,20 @@ body main article p {
   margin-bottom: 4rem;
 }
 
+@-webkit-keyframes sunrise {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  30% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
 @keyframes sunrise {
   0% {
     transform: translateY(100%);

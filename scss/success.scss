@@ -18,10 +18,12 @@ body{
 
                 &.sun{
                     overflow: hidden;
+                    -webkit-transform: translateY(36px);
                     transform: translateY(36px);
                     z-index: 1;
                     
                     img{
+                        -webkit-animation: sunrise 1.5s ease-out;
                         animation: sunrise 1.5s ease-out ;
                     }
                 }
@@ -48,6 +50,21 @@ body{
                 margin-bottom: 4rem;
             }
         }
+    }
+}
+
+@-webkit-keyframes sunrise {
+    0%{
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    30%{
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100%{
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
     }
 }
 
