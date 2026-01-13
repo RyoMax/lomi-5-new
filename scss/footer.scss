@@ -1,0 +1,117 @@
+/* Footer styling */
+@use "variables" as *;
+
+footer{
+    background-color: $green;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    padding: 50px 25px 25px;
+    img{
+        aspect-ratio: auto 1 /1;
+        width: 100%;
+        margin-top: 50px;
+
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    .footer-content{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: distribute; /* Flexbox 'space-around' */
+        justify-content: space-around;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        color: white;
+        font-size: 1.8rem;
+
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+
+        ul{
+            margin-bottom:1.6rem;
+            list-style: none;
+            padding: 0;
+            li{
+                margin: 18px;
+            }
+        }
+        a{
+            color: white;
+            text-decoration: unset;
+
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            &:hover{
+                color: $brown-bright;
+            }
+        }
+
+        address{
+            font-style: normal;
+            line-height: 2.8rem;
+        }
+    }
+}
+
+
+@media (min-width:$sm) {
+    footer{
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        img{
+            width: 70%;
+        }
+        .footer-content{
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            gap: 70px;
+        }
+    }
+}
+
+@media (min-width:$md) {
+    footer{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 75px 0;
+
+        img{
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+            box-sizing: content-box;
+            width: 20rem;
+            margin: 0;
+            padding: 25px 100px;
+            padding-left: 0;
+            border-right: 1px solid $green-bright;
+        }
+        .footer-content{
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: start;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            width: 50%;
+            padding-left: 100px;
+        }
+    }
+}

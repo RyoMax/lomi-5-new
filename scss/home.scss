@@ -1,0 +1,243 @@
+@use "variables" as *;
+@use "style" as *;
+@use "container" as *;
+
+header {
+    position: relative;
+    color: $white-bg;
+    background-color: $white-bg;
+
+    .header-bg {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/main/header_mobile-min.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: center;
+        background-position-x: right;
+
+        -webkit-background-attachment: fixed;
+        background-attachment: fixed;
+
+        opacity: 0.8;
+    }
+
+    .header-content {
+        position: relative;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: calc(100vh - $space);
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    p.h3 {
+        margin: 0;
+        margin-bottom: 3.2rem;
+        font-size: 4rem;
+        text-align: center;
+        font-weight: 500;
+
+    }
+
+    img {
+        width: 30%;
+        max-width: 300px;
+    }
+
+    .timify-button {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .massage-btn {
+        color: $white-bg;
+        background-color: $red-button;
+        font-size: 1.2rem;
+    }
+}
+
+main {
+
+    .h3 {
+        font-size: 2.8rem;
+    }
+
+    .welcome {
+        padding: 200px 0;
+        background-color: $white-bg;
+        text-align: center;
+
+        div {
+            margin: 0 auto;
+            width: 90%;
+            padding: 0 30px;
+            max-width: 540px;
+        }
+    }
+
+    .angebot {
+        padding: 200px 15px 100px;
+        background-color: $white-bg;
+        text-align: center;
+
+        .content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            div {
+                width: 60%;
+                max-width: 280px;
+                margin-bottom: 60px;
+            }
+
+            h3 {
+                font-size: 2.8rem;
+                color: $red-orange;
+            }
+
+            img {
+                width: 100%;
+
+            }
+        }
+    }
+
+    .container {
+        position: relative;
+
+        &.about-lomi {
+            background-color: $brown-bright;
+
+            img {
+                position: absolute;
+                top: -30px;
+                right: 48%;
+                width: 110px;
+                height: 110px;
+                z-index: 3;
+            }
+        }
+
+        &.about-henriette {
+            background-color: $green-bright;
+
+            cite {
+                display: block;
+                color: $black-font;
+                font-size: 1.6rem;
+                margin-bottom: 48px;
+                font-weight: 500;
+            }
+
+            .image {
+                opacity: 0.9;
+                background-position: center;
+            }
+        }
+    }
+}
+
+
+
+@media (min-width:$sm) {
+    header p.h3 {
+        font-size: 8rem;
+    }
+
+    header .massage-btn {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (min-width:$md) {
+    main {
+        .welcome {
+            div {
+                max-width: 620px;
+            }
+        }
+
+        .angebot {
+            .content {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: distribute;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                margin: 0 10%;
+
+                div {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:$lg) {
+    header {
+        .header-bg {
+            background-image: url(../img/main/header_min.webp);
+        }
+    }
+
+    .container {
+
+        &.about-lomi {
+
+            .content {
+                text-align: left;
+                width: 50vw;
+            }
+
+            .image {
+                background-image: url(../img/main/Lomi2.webp);
+                width: 50vw;
+            }
+        }
+
+        &.about-henriette {
+
+            .content {
+                text-align: right;
+                width: 60vw;
+            }
+
+            .image {
+                background-image: url(../img/main/Henriette.webp);
+                background-position: left;
+                width: 40vw;
+            }
+        }
+    }
+}

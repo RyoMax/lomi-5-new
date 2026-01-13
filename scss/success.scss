@@ -1,0 +1,64 @@
+@use 'variables' as *;
+@use "style" as *;
+
+body{
+    background-color:white ;
+
+    main{
+
+        .animation{
+            width: 66%;
+            margin: 10rem auto;
+            max-width: 450px;
+            min-width: 250px;
+
+            div{
+                position: relative;
+                z-index: 2;
+
+                &.sun{
+                    overflow: hidden;
+                    transform: translateY(36px);
+                    z-index: 1;
+                    
+                    img{
+                        animation: sunrise 1.5s ease-out ;
+                    }
+                }
+                
+                img{
+                    width: 100%;
+                }
+            }        
+        }
+        article{
+            width: 66%;
+            margin: 10rem auto;
+            max-width: 450px;
+            min-width: 250px;
+            padding: 2rem;
+            background-color: $green-bright;
+            text-align: center;
+
+            h2{
+                margin-bottom: 2rem;
+            }
+
+            p{
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}
+
+@keyframes sunrise {
+    0%{
+        transform: translateY(100%);
+    }
+    30%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

@@ -397,289 +397,56 @@ button {
 }
 
 /* Media Queries */
-@font-face {
-  font-family: butler-ultra-light;
-  src: url("../fonts/Butler_Ultra_Light.otf");
-  font-display: swap;
+body {
+  background-color: white;
 }
-@font-face {
-  font-family: butler-light;
-  src: url("../fonts/Butler_Light.otf");
-  font-display: swap;
+body main .animation {
+  width: 66%;
+  margin: 10rem auto;
+  max-width: 450px;
+  min-width: 250px;
 }
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-LightItalic.ttf");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
+body main .animation div {
+  position: relative;
+  z-index: 2;
 }
-@font-face {
-  font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
+body main .animation div.sun {
+  overflow: hidden;
+  transform: translateY(36px);
+  z-index: 1;
 }
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body main .animation div.sun img {
+  animation: sunrise 1.5s ease-out;
+}
+body main .animation div img {
   width: 100%;
+}
+body main article {
+  width: 66%;
+  margin: 10rem auto;
+  max-width: 450px;
+  min-width: 250px;
+  padding: 2rem;
+  background-color: #CECDAE;
   text-align: center;
 }
-.container .content {
-  max-width: 540px;
-  margin: 0 auto;
-  padding: 50px 30px;
-  width: 100%;
+body main article h2 {
+  margin-bottom: 2rem;
 }
-.container p {
-  margin: 0 0 4.8rem;
-}
-.container .image {
-  display: none;
-  width: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+body main article p {
+  margin-bottom: 4rem;
 }
 
-@media (min-width: 1000px) {
-  .container .image {
-    display: block;
+@keyframes sunrise {
+  0% {
+    transform: translateY(100%);
   }
-  .container .content {
-    padding: 100px 80px;
-    max-width: none;
+  30% {
+    transform: translateY(100%);
   }
-}
-@media (min-width: 1280px) {
-  main .container .content {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
-}
-main {
-  background-color: #DBCFBF;
-  padding: 50px 30px;
-}
-main .lomi-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 50px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-main .lomi-cards > div {
-  max-width: 400px;
-}
-main h1 {
-  text-align: center;
-  font-size: 4.8rem;
-}
-main h1 span {
-  margin-bottom: 12px;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  font-size: 1.6rem;
-  letter-spacing: 8px;
-}
-main .card {
-  padding: 3.2rem;
-  margin-bottom: 4.8rem;
-  background-color: #F9F5EC;
-  text-align: right;
-}
-main .card:nth-child(1) div img, main .card:nth-child(2) div img {
-  aspect-ratio: auto 1/1;
-}
-main .card div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-main .card div img {
-  aspect-ratio: auto 12/8;
-  width: 50%;
-  height: auto;
-}
-main .card div:first-child {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-main .card div:first-child h2 {
-  margin: 0;
-  font-size: 3.28rem;
-  line-height: 3rem;
-}
-main .card div:first-child h2 span {
-  margin-bottom: 1rem;
-  font-size: 1.36rem;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-}
-main .card div:first-child h4 {
-  margin: 0;
-  margin-bottom: 0.8rem;
-  font-size: 1.04rem;
-  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-style: italic;
-}
-main .card div:last-child {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  border-top: 1px solid #777657;
-}
-main .card div:last-child a {
-  -ms-flex-item-align: center;
-  align-self: center;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 40%;
-  min-width: fit-content;
-}
-main .card div:last-child button {
-  width: 100%;
-  padding: 0.2rem 0.2rem;
-  background-color: #994d2d;
-  border: #AB6B4F 3px solid;
-  border-radius: 3px;
-  color: #F9F5EC;
-  text-align: center;
-  font-size: 0.96rem;
-  letter-spacing: 2px;
-}
-main .card div:last-child p {
-  margin: 0;
-  padding-top: 0.5rem;
-  font-size: 1.5rem;
-  font-family: "butler-light", "Times New Roman", Times, serif;
-}
-main .card div:last-child p:last-child {
-  border-left: 1px solid #777657;
-  padding-left: 10px;
-}
-main .forward-contact {
-  text-align: center;
-}
-main .forward-contact p:nth-child(1) {
-  font-size: 2rem;
-  font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-}
-main .forward-contact p:nth-child(2) {
-  font-size: 2.2rem;
-  font-family: "butler-light", "Times New Roman", Times, serif;
-}
-main .forward-contact .massage-btn {
-  border: none;
-  background-color: #F9F5EC;
-}
-
-@media (min-width: 480px) {
-  main .card div img {
-    width: 40%;
-    height: auto;
-  }
-  main .card div:first-child h2 {
-    font-size: 5.2rem;
-  }
-  main .card div:first-child h2 span {
-    font-size: 1.5rem;
-  }
-  main .card div:first-child h4 {
-    font-size: 1.3rem;
-  }
-  main .card div:last-child a {
-    max-width: 30%;
-  }
-  main .card div:last-child button {
-    font-size: 1.1rem;
-  }
-  main .card div:last-child p {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 768px) {
-  main .lomi-cards > div {
-    max-width: 325px;
-  }
-  main .card div img {
-    width: 35%;
-  }
-  main .forward-contact p:nth-child(1) {
-    font-size: 2.2rem;
-  }
-  main .forward-contact p:nth-child(2) {
-    font-size: 2.4rem;
-  }
-}
-@media (min-width: 1000px) {
-  main .lomi-cards > div {
-    max-width: unset;
-    width: 400px;
-  }
-  main .card div img {
-    width: 40%;
-  }
-  main .card div:first-child h4 {
-    font-size: 1.4rem;
-  }
-  main .card div:last-child button {
-    font-size: 1.5rem;
-  }
-  main .card div:last-child p {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 1280px) {
-  main .lomi-cards > div {
-    max-width: unset;
-    width: 500px;
-  }
-  main .card {
-    padding: 6rem;
-  }
-  main .card div img {
-    width: 45%;
-  }
-  main .card div:first-child h2 {
-    font-size: 6.2rem;
-    line-height: 4rem;
-  }
-  main .card div:first-child h2 span {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
-  main .card div:first-child h4 {
-    font-size: 1.6rem;
-  }
-  main .card div:last-child button {
-    font-size: 1.7rem;
-  }
-  main .card div:last-child p {
-    font-size: 3.5rem;
-  }
-  main .forward-contact p:nth-child(1) {
-    font-size: 2.8rem;
-  }
-  main .forward-contact p:nth-child(2) {
-    font-size: 3rem;
+  100% {
+    transform: translateY(0%);
   }
 }
 
-/*# sourceMappingURL=offers.css.map */
+/*# sourceMappingURL=success.css.map */

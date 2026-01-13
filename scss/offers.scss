@@ -1,0 +1,344 @@
+@use 'variables' as *;
+@use "style" as *;
+@use "fonts" as fonts;
+@use "mixins" as *;
+@use "container" as *;
+
+main {
+    background-color: $brown-bright;
+    padding: 50px 30px;
+
+    .lomi-cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 50px;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        &>div {
+            max-width: 400px;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 4.8rem;
+
+        span {
+            margin-bottom: 12px;
+            font-family: fonts.$montserat;
+            font-size: 1.6rem;
+            @include letterSpace();
+        }
+    }
+
+    .card {
+        padding: 3.2rem;
+        margin-bottom: 4.8rem;
+        background-color: $white-bg;
+        text-align: right;
+
+        &:nth-child(1) div img, &:nth-child(2) div img{
+                aspect-ratio: auto 1 /1;
+            }
+        div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            img {
+                aspect-ratio: auto 12 / 8;
+                width: 50%;
+                height: auto;
+            }
+            
+
+            &:first-child {
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+
+                h2 {
+                    margin: 0;
+                    font-size: 3.28rem;
+                    line-height: 3rem;
+
+                    span {
+                    margin-bottom: 1rem;
+                    font-size: 1.36rem;
+                    font-family: fonts.$montserat;
+                    }
+                }
+
+                h4 {
+                    margin: 0;
+                    margin-bottom: .8rem;
+                    font-size: 1.04rem;
+                    font-family: fonts.$montserat;
+                    font-weight: 500;
+                    font-style: italic;
+                }
+            }
+
+            &:last-child {
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: start;
+                border-top: 1px solid $green;
+
+                a {
+                    -ms-flex-item-align: center;
+                    align-self: center;
+                    -webkit-box-flex: 1;
+                    -ms-flex-positive: 1;
+                    flex-grow: 1;
+                    max-width: 40%;
+                    min-width: fit-content;
+                }
+
+                button {
+                    width: 100%;
+                    padding: .2rem .2rem;
+                    background-color: $red-button;
+                    border: $red-orange 3px solid;
+                    border-radius: 3px;
+                    color: $white-bg;
+                    text-align: center;
+                    font-size: .96rem;
+                    letter-spacing: 2px;
+                }
+
+                p {
+                    margin: 0;
+                    padding-top: .5rem;
+                    font-size: 1.5rem;
+                    font-family: fonts.$butler-l;
+
+                    &:last-child {
+                        border-left: 1px solid $green;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .forward-contact {
+        text-align: center;
+
+        p {
+
+            &:nth-child(1) {
+                font-size: 2rem;
+                font-family: fonts.$butler-ul;
+            }
+
+            &:nth-child(2) {
+                font-size: 2.2rem;
+                font-family: fonts.$butler-l;
+            }
+        }
+
+        .massage-btn {
+            border: none;
+            background-color: $white-bg;
+        }
+    }
+}
+
+
+@media (min-width:$sm) {
+    main {
+
+        .card {
+
+            div {
+
+                img {
+                    width: 40%;
+                    height: auto;
+                }
+
+                &:first-child {
+
+                    h2 {
+                        font-size: 5.2rem;
+
+                        span{
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                &:last-child {
+
+                    a {
+                        max-width: 30%;
+                    }
+
+                    button {
+                        font-size: 1.1rem;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:$md) {
+    main {
+
+        .lomi-cards {
+
+            &>div {
+                max-width: 325px;
+            }
+        }
+
+        .card div img {
+            width: 35%;
+        }
+
+        .forward-contact {
+
+            p {
+
+                &:nth-child(1) {
+                    font-size: 2.2rem;
+                }
+
+                &:nth-child(2) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    main {
+
+        .lomi-cards {
+
+            &>div {
+                max-width: unset;
+                width: 400px;
+            }
+        }
+
+        .card {
+
+            div {
+
+                img {
+                    width: 40%;
+                }
+
+                &:first-child {
+
+                    h4 {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &:last-child {
+
+                    button {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width: $xl) {
+    main {
+        .lomi-cards {
+
+            &>div {
+                max-width: unset;
+                width: 500px;
+            }
+        }
+
+        .card {
+            padding: 6rem;
+
+            div {
+
+                img {
+                    width: 45%;
+                }
+
+                &:first-child {
+
+                    h2 {
+                        font-size: 6.2rem;
+                        line-height: 4rem;
+
+                        span{
+                            margin-bottom: 2rem;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                &:last-child {
+
+                    button {
+                        font-size: 1.7rem;
+                    }
+
+                    p {
+                        font-size: 3.5rem;
+                    }
+                }
+            }
+
+        }
+
+        .forward-contact {
+
+            p {
+
+                &:nth-child(1) {
+                    font-size: 2.8rem;
+                }
+
+                &:nth-child(2) {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: butler-ultra-light;
+    src: url("../fonts/Butler_Ultra_Light.otf");
+    font-display: swap;
+}
+
+$butler-ul:"butler-ultra-light", "Times New Roman", Times, serif;
+
+
+@font-face {
+    font-family: butler-light;
+    src: url("../fonts/Butler_Light.otf");
+    font-display: swap;
+}
+
+$butler-l:"butler-light", "Times New Roman", Times, serif;
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-LightItalic.ttf");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf");
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+$montserat:"Montserrat", sans-serif, "Times New Roman", Times, serif;

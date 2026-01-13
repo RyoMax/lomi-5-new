@@ -1,0 +1,88 @@
+@use 'variables' as *;
+@use "fonts" as fonts;
+@use "mixins" as *;
+@use "style" as *;
+@use "container" as *;
+
+main {
+
+    h2 span {
+        font-family: fonts.$montserat;
+        font-size: 1.44rem;
+        margin-bottom: 12px;
+        @include letterSpace();
+    }
+
+    .angebot-info {
+        padding: 200px 0;
+        background-color: $white-bg;
+        text-align: center;
+
+        div {
+            margin: 0 auto;
+            width: 90%;
+            padding: 0 30px;
+            max-width: 540px;
+        }
+    }
+
+    .container {
+        p {
+            text-align: justify;
+        }
+
+        &.about-lomi {
+            background-color: $brown-bright;
+        }
+
+        &.about-henriette {
+            background-color: $green-bright;
+        }
+    }
+}
+
+
+@media (min-width:$md) {
+    main {
+        .angebot-info {
+            div {
+                max-width: 1140px;
+            }
+        }
+    }
+}
+
+@media (min-width:$lg) {
+    .container {
+
+            &.about-lomi {
+                text-align: right;
+                
+                .content {
+                    width: 50vw;
+                }
+
+                .image {
+                    background-image: url(../img/about/lomi-massage.jpg);
+                    width: 50vw;
+                    opacity: 0.7;
+                    background-position: left;
+                }
+            }
+
+            &.about-henriette {
+                text-align: left;
+
+                .content {
+                    width: 60vw;
+                }
+
+                .image {
+                    background-image: url(../img/about/jette-about.jpg);
+                    opacity: 0.7;
+                    width: 40vw;
+                }
+            }
+        }
+}
+

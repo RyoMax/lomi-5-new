@@ -1,0 +1,294 @@
+@use 'variables' as *;
+@use "mixins" as *;
+@use "style" as *;
+@use "container" as *;
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf");
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+$montserat:"Montserrat", sans-serif, "Times New Roman", Times, serif;
+
+main {
+    background-image: url(../img/contact/StockroseMuster_lg_min.webp);
+    background-size: contain;
+    background-position: center; 
+
+    -webkit-background-attachment: fixed;
+    background-attachment: fixed;
+    
+    h1{
+            font-size: 4rem;
+    }
+
+    address {
+            font-style: normal;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+    .biesenbrow {
+        background-color: $brown-bright;
+
+        -webkit-box-shadow: 0 -5px 45px $black-font;
+        box-shadow: 0 -5px 45px $black-font;
+
+        h1 span {
+            font-family: $montserat;
+            font-size: 1.44rem;
+            margin-bottom: 12px;
+            @include letterSpace();
+        }
+
+        address {
+            text-align: left;
+            font-weight: 800;
+        }
+
+        article {
+            margin-top: 40px;
+
+            p,
+            h2 {
+                text-align: justify;
+            }
+        }
+    }
+
+    .form{
+        margin-top: 150px;
+        background-color: $white-bg;
+
+        -webkit-box-shadow: 0 25px 45px $black-font;
+
+        box-shadow: 0 25px 45px $black-font;
+        text-align: center;
+
+        .content>div{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        a{
+            color: $black-font;
+
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        a:hover, a:active{
+            color: $red-orange;
+        }
+        
+        article>*{
+            margin-bottom: 48px;
+        }
+
+        form{
+
+            label{
+                display: block;
+                margin-bottom: .8rem;
+                font-size: 1.6rem;
+            }
+            input, textarea{
+                width: 100%;
+                height: 3.2rem;
+                padding: .6rem 1.2rem;
+                margin-bottom: 1.6rem;
+                border: 2px solid $black-font;
+                border-radius: .4rem;
+                background-color: inherit;
+                font-family: inherit;
+                font-size: 1.6rem;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+
+                -webkit-transition: all .15s ease-in-out;
+                transition: all .15s ease-in-out;
+            }
+            
+            textarea{
+                resize: none;
+                height: 19.2rem;
+            }
+            .massage-btn{
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+.to-form-btn{
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.to-form-btn.hidden{
+    display: none;
+}
+
+.to-form-btn .massage-btn{    
+    -webkit-animation: pulse 6s infinite ease-in-out;    
+    animation: pulse 6s infinite ease-in-out;
+    
+}
+.to-form-btn .massage-btn:hover{
+    -webkit-animation: none;
+    animation: none;
+}
+
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+
+        -webkit-box-shadow: 0 0 0 $black-font;
+        box-shadow: 0 0 0 $black-font;
+        background-color: $white-bg;
+        color: $black-font;
+    }
+    10% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-box-shadow: 5px 5px 10px $black-font;
+        box-shadow: 5px 5px 10px $black-font;
+        background-color: $red-button;
+        color: $white-bg;
+    }
+    20% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 $black-font;
+        box-shadow: 0 0 0 $black-font;
+        background-color: $white-bg;
+        color: $black-font;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 $black-font;
+        box-shadow: 0 0 0 $black-font;
+        background-color: $white-bg;
+        color: $black-font;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 $black-font;
+        background-color: $white-bg;
+        color: $black-font;
+    }
+    10% {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 10px $black-font;
+        background-color: $red-button;
+        color: $white-bg;
+    }
+    20% {
+        transform: scale(1);
+        box-shadow: 0 0 0 $black-font;
+        background-color: $white-bg;
+        color: $black-font;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 $black-font;
+        background-color: $white-bg;
+        color: $black-font;
+    }
+}
+
+@media (min-width:$md){
+    main{
+        h1{
+            font-size: 5rem;
+        }
+        .form{
+            margin-top: 250px;
+        
+            .content{
+                max-width: unset;
+                padding: 50px 30px;
+                text-align: left;
+                &>div{
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+
+                    &>*:nth-child(1){
+                        width: 30%;
+                    }
+                    
+                    &>*:nth-child(2){
+                        width: 60%;
+                    }
+                    
+                }     
+                
+                .btn-box{
+                    text-align: right;
+                }
+            }
+            
+        }    
+    }
+}
+
+
+@media (min-width:$lg) {
+    main {
+        /* background-size:50%; */
+
+        .biesenbrow {
+
+            .content {
+                text-align: left;
+                width: 50vw;
+            }
+
+            .image {
+                background-image: url(../img/contact/loc_bb_desk.jpg);
+                width: 50vw;
+                opacity: 0.7;
+                background-position: center;
+                background-position-x: 60%;
+            }
+        }
+
+        .form{
+            margin-top: 350px;
+
+            .content {
+                width: 65vw;
+                padding: 100px 30px;
+            }
+            .image {
+                background-image: url(../img/contact/Lomi-Haus.jpg);
+                width: 35vw;
+                background-position: center;
+                background-position-x: 60%;
+            }
+        }
+    }
+}
