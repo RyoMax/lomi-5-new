@@ -10,9 +10,9 @@
   <title>LOMI5 | Über Lomi Lomi und Henriette | Hawaiianische Massage in der Uckermark</title>
 
   <!-- CSS Links -->
-  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/about.css"> -->
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/about.css">
 
-  <style>
+  <!-- <style>
     @charset "UTF-8";
 
     @font-face {
@@ -606,7 +606,7 @@
     }
 
     /*# sourceMappingURL=about.css.map */
-  </style>
+  </style> -->
 
 </head>
 
@@ -640,12 +640,9 @@
           <a href="./kontakt.html">KONTAKT</a>
         </li>
         <li>
-          <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
-            data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-            <button>
-              TERMIN&nbsp;BUCHEN
-            </button>
-          </div>
+          <button class="booking-button">
+            TERMIN BUCHEN
+          </button>
         </li>
       </ul>
     </div>
@@ -772,7 +769,29 @@
     </div>
   </footer>
 
-  <script async src="../js/nav.js"></script>
+  <aside id="booking-popup">
+    <div>
+      <button class="close x">
+        <svg width="25" height="25">
+          <line x1="0" y1="0" x2="25" y2="25" />
+          <line x1="25" y1="0" x2="0" y2="25" />
+        </svg>
+      </button>
+      <h3>Weiterleitung zur Buchungsplattform</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quis fuga possimus quo in, cupiditate incidunt
+        at excepturi modi officiis!</p>
+      <a class="btn" target="_blank" href="#">
+        <button class="massage-btn">ZUR BUCHUNG</button>
+      </a>
+    </div>
+  </aside>
+
+  <!-- serves as curtain, to blur background when popup is openend -->
+  <div class="curtain">
+
+  </div>
+
+  <script async src="../js/navAndPopups.js"></script>
 
   <!-- For SEO Optimization -->
   <script type="application/ld+json">

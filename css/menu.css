@@ -85,13 +85,15 @@ nav .links a:hover {
 nav .links li:last-child {
   border: #AB6B4F 3px solid;
   border-radius: 3px;
-  padding: 0.5rem;
 }
 nav .links li:last-child:hover {
   cursor: pointer;
 }
-nav .links li:last-child:hover div {
+nav .links li:last-child:hover button {
   color: #AB6B4F;
+}
+nav .links li:last-child button {
+  padding: 0.5rem;
 }
 nav .links .timify-button button {
   background-color: unset;

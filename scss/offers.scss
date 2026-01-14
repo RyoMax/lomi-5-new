@@ -98,7 +98,7 @@ main {
                 align-items: start;
                 border-top: 1px solid $green;
 
-                a {
+                button {
                     -ms-flex-item-align: center;
                     align-self: center;
                     -webkit-box-flex: 1;
@@ -106,9 +106,6 @@ main {
                     flex-grow: 1;
                     max-width: 40%;
                     min-width: fit-content;
-                }
-
-                button {
                     width: 100%;
                     padding: .2rem .2rem;
                     background-color: $red-button;
@@ -118,6 +115,7 @@ main {
                     text-align: center;
                     font-size: .96rem;
                     letter-spacing: 2px;
+                    cursor: pointer;
                 }
 
                 p {

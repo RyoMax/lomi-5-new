@@ -10,9 +10,9 @@
   <title>LOMI5 | Hawaiianische Massage in der Uckermark</title>
 
   <!-- CSS Links -->
-  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css"> -->
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css">
 
-  <style>
+  <!-- <style>
     @charset "UTF-8";
 
     /* Navigation */
@@ -721,7 +721,7 @@
     }
 
     /*# sourceMappingURL=home.css.map */
-  </style>
+  </style> -->
 
 </head>
 
@@ -755,18 +755,43 @@
           <a href="./pages/kontakt.html">KONTAKT</a>
         </li>
         <li>
-          <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
-            data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-            <button>
+            <button class="booking-button">
               TERMIN BUCHEN
             </button>
-          </div>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- Header - Welcome Section -->
+
+  <!-- 
+    Info Popup for announcements and general info.
+
+    ! HOW TO USE:
+      When you need to show:
+        1. Add class "open" to <aside> to show popup on page load.
+        2. Add class "open" to div.curtain (at bottem of the page) to blur background when popup is openend.
+      When you need to hide:
+          Remove classes from the two steps above
+  -->
+  <aside id="info-popup">
+    <div>
+      <button class="close x">
+        <svg  width="25" height="25">
+          <line x1="0" y1="0" x2="25" y2="25"/>
+          <line x1="25" y1="0" x2="0" y2="25"/>
+        </svg>
+      </button>
+      <h3>Liebe Kunden,</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quis fuga possimus quo in, cupiditate incidunt
+        at excepturi modi officiis!</p>
+      <a class="btn" href="#">
+        <button class="massage-btn close">Alles Klar!</button>
+      </a>
+    </div>
+  </aside>
+
   <header>
     <div class="header-bg"></div>
     <div class="header-content">
@@ -776,11 +801,8 @@
         <br>
         bei dir
       </p>
-      <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
-        data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-        <button class="massage-btn">MASSAGE BUCHEN</button>
-      </div>
-    </div>
+        <button class="massage-btn booking-button">MASSAGE BUCHEN</button> 
+
   </header>
 
   <main>
@@ -900,7 +922,30 @@
     </div>
   </footer>
 
-  <script async src="./js/nav.js"></script>
+  <!-- popup, when booking appointment from menu -->
+  <aside id="booking-popup">
+    <div>
+      <button class="close x">
+        <svg  width="25" height="25">
+          <line x1="0" y1="0" x2="25" y2="25"/>
+          <line x1="25" y1="0" x2="0" y2="25"/>
+        </svg>
+      </button>
+      <h3>Weiterleitung zur Buchungsplattform</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quis fuga possimus quo in, cupiditate incidunt
+        at excepturi modi officiis!</p>
+      <a class="btn" target="_blank" href="#">
+        <button class="massage-btn">ZUR BUCHUNG</button>
+      </a>
+    </div>
+  </aside>
+
+  <!-- serves as curtain, to blur background when popup is openend -->
+  <div class="curtain">
+
+  </div>
+
+  <script async src="./js/navAndPopups.js"></script>
 
   <!-- For SEO Optimization -->
   <script type="application/ld+json">

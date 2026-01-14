@@ -98,15 +98,17 @@ nav {
         li:last-child {
             border: $red-orange 3px solid;
             border-radius: 3px;
-            padding: 0.5rem;
 
             &:hover {
-
                 cursor: pointer;
 
-                div {
+                button {
                     color: $red-orange;
                 }
+            }
+
+            button{
+                padding: 0.5rem;
             }
         }
 

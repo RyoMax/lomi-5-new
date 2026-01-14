@@ -104,6 +104,69 @@ button {
     }
 }
 
+aside {
+    display: none;
+    position: relative;
+
+    &.open {
+        display: block;
+    }
+
+    .x {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 0.2rem;
+        border: .4rem solid $red-button;
+        background-color: $white-bg;
+        color: $white-bg;
+        font-size: 0;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background-color: $red-button;
+        }
+
+        svg {
+            stroke: $black-font;
+            stroke-width: 4
+        }
+
+
+    }
+
+    div {
+        position: fixed;
+        top: 50%;
+        right: 50%;
+        width: 75%;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: $white-bg;
+        box-shadow: 5px 5px 45px $black-font;
+        text-align: center;
+        transform: translate(50%, -50%);
+        z-index: 20;
+    }
+}
+
+.curtain {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background-color: $brown-bright;
+    opacity: 0.85;
+    z-index: 19;
+
+    &.open {
+        display: block;
+    }
+}
+
 
 
 /* Media Queries */

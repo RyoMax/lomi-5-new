@@ -43,12 +43,9 @@
                     <a href="./kontakt.html">KONTAKT</a>
                 </li>
                 <li>
-                    <div class="timify-button" data-account-id="608c2450481bbc11777a2660" data-hide-close-button="false"
-                        data-overlay-color="#000000" data-overlay-opacity="0.8" data-show-guest-booking-form="true">
-                        <button>
-                            TERMIN&nbsp;BUCHEN
-                        </button>
-                    </div>
+                    <button class="booking-button">
+                        TERMIN BUCHEN
+                    </button>
                 </li>
             </ul>
         </div>
@@ -87,13 +84,12 @@
                 062/210/00348
             </p>
             <p>
-                <span>Grafikdesign</span>
+                <span>Grafikdesign:</span>
                 <span>Jule Burkard</span>
             </p>
             <p>
-                <span>Webentwicklung</span>
-                <span>Maximilian Faust</span>
-                <span>www.maxfaust.com</span>
+                <span>Webentwicklung:</span>
+                <span><a target="_blank" href="https://www.linkedin.com/in/maximilian-faust-a7b236223/">Maximilian Faust</a></span>
             </p>
         </article>
         <article>
@@ -215,7 +211,30 @@
         </div>
     </footer>
 
-    <script async src="../js/nav.js"></script>
+    <aside id="booking-popup">
+        <div>
+            <button class="close x">
+                <svg width="25" height="25">
+                    <line x1="0" y1="0" x2="25" y2="25" />
+                    <line x1="25" y1="0" x2="0" y2="25" />
+                </svg>
+            </button>
+            <h3>Weiterleitung zur Buchungsplattform</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quis fuga possimus quo in, cupiditate
+                incidunt
+                at excepturi modi officiis!</p>
+            <a class="btn" target="_blank" href="#">
+                <button class="massage-btn">ZUR BUCHUNG</button>
+            </a>
+        </div>
+    </aside>
+
+    <!-- serves as curtain, to blur background when popup is openend -->
+    <div class="curtain">
+
+    </div>
+
+    <script async src="../js/navAndPopups.js"></script>
 
     <!-- For SEO Optimization -->
     <script type="application/ld+json">

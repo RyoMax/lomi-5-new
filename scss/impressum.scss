@@ -12,6 +12,12 @@ main{
             font-size: 3rem;
             margin: 0;
         }
+
+        a{
+            color: $red-orange;
+            text-decoration: underline;
+        }
+
         p:first-child{
             margin-top: 0;
         }
