@@ -128,8 +128,8 @@ nav {
   /* --- When active (X-state) --- */
 }
 nav .menu-icon.active .line1 {
-  -webkit-transform: translateY(12px) rotate(45deg);
-  transform: translateY(12px) rotate(45deg);
+  -webkit-transform: translate(-19px, 22px) rotate(45deg);
+  transform: translate(-19px, 22px) rotate(45deg);
   /* move to center */
 }
 nav .menu-icon.active .line2 {
@@ -137,8 +137,8 @@ nav .menu-icon.active .line2 {
   /* fade middle line out */
 }
 nav .menu-icon.active .line3 {
-  -webkit-transform: translateY(-12px) rotate(-45deg);
-  transform: translateY(-12px) rotate(-45deg);
+  -webkit-transform: translate(-12px, -12px) rotate(-45deg);
+  transform: translate(-12px, -12px) rotate(-45deg);
   /* move to center */
 }
 
