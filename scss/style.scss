@@ -81,6 +81,7 @@ button {
     margin-left: 5%;
     margin-right: 5%;
     background-color: inherit;
+    color: $black-font;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5;
@@ -150,6 +151,15 @@ aside {
 
     }
 
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+
     .flex {
 
         display: -webkit-box;
@@ -178,7 +188,7 @@ aside {
     }
 
     .cancel {
-        margin: 2rem 0;
+        margin-top: 1rem;
     }
 
     button:not(.close) {
@@ -206,3 +216,20 @@ aside {
 
 
 /* Media Queries */
+
+@media (min-width: $lg) {
+    aside {
+        h3 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin: 1rem 0;
+        }
+
+        .cancel {
+            margin: 2rem 0;
+        }
+    }
+}

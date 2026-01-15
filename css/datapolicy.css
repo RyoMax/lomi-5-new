@@ -379,6 +379,7 @@ button {
   margin-left: 5%;
   margin-right: 5%;
   background-color: inherit;
+  color: #262626;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
@@ -437,6 +438,13 @@ aside .x svg {
   stroke: #262626;
   stroke-width: 4;
 }
+aside h3 {
+  font-size: 2rem;
+}
+aside p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
 aside .flex {
   display: -webkit-box;
   /* Älteres WebKit (iOS < 7, Safari < 7) */
@@ -461,7 +469,7 @@ aside a .massage-btn {
   margin: 0;
 }
 aside .cancel {
-  margin: 2rem 0;
+  margin-top: 1rem;
 }
 aside button:not(.close) {
   background-color: #994d2d;
@@ -484,6 +492,18 @@ aside button:not(.close) {
 }
 
 /* Media Queries */
+@media (min-width: 1000px) {
+  aside h3 {
+    font-size: 4rem;
+  }
+  aside p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+  aside .cancel {
+    margin: 2rem 0;
+  }
+}
 main {
   background-color: #F9F5EC;
   padding: 100px;
