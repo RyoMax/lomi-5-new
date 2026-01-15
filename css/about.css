@@ -42,8 +42,10 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 nav .nav-container {
-  display: -webkit-box; /* Ältere WebKit Flexbox */
-  display: -ms-flexbox; /* IE 10 Flexbox */
+  display: -webkit-box;
+  /* Ältere WebKit Flexbox */
+  display: -ms-flexbox;
+  /* IE 10 Flexbox */
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -149,9 +151,8 @@ nav {
   /* --- When active (X-state) --- */
 }
 nav .menu-icon.active .line1 {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  y: 32;
+  -webkit-transform: translateY(12px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
   /* move to center */
 }
 nav .menu-icon.active .line2 {
@@ -159,9 +160,8 @@ nav .menu-icon.active .line2 {
   /* fade middle line out */
 }
 nav .menu-icon.active .line3 {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  y: 32;
+  -webkit-transform: translateY(-12px) rotate(-45deg);
+  transform: translateY(-12px) rotate(-45deg);
   /* move to center */
 }
 

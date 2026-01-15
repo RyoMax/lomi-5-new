@@ -8,7 +8,7 @@
     font-display: swap;
 }
 
-$butler-ul:"butler-ultra-light", "Times New Roman", Times, serif;
+$butler-ul: "butler-ultra-light", "Times New Roman", Times, serif;
 
 nav {
     -webkit-position: sticky;
@@ -25,8 +25,10 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     .nav-container {
-        display: -webkit-box;    /* Ältere WebKit Flexbox */
-        display: -ms-flexbox;    /* IE 10 Flexbox */
+        display: -webkit-box;
+        /* Ältere WebKit Flexbox */
+        display: -ms-flexbox;
+        /* IE 10 Flexbox */
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -107,7 +109,7 @@ nav {
                 }
             }
 
-            button{
+            button {
                 padding: 0.5rem;
             }
         }
@@ -139,9 +141,9 @@ nav {
     }
 
     .menu-icon rect {
-        -webkit-transition: 
-            -webkit-transform 0.3s ease, 
-            opacity 0.3s ease, 
+        -webkit-transition:
+            -webkit-transform 0.3s ease,
+            opacity 0.3s ease,
             y 0.3s ease;
         transition:
             transform 0.3s ease,
@@ -155,9 +157,8 @@ nav {
 
     /* --- When active (X-state) --- */
     .menu-icon.active .line1 {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        y: 32;
+        -webkit-transform: translateY(12px) rotate(45deg);
+        transform: translateY(12px) rotate(45deg);
         /* move to center */
     }
 
@@ -167,9 +168,8 @@ nav {
     }
 
     .menu-icon.active .line3 {
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        y: 32;
+        -webkit-transform: translateY(-12px) rotate(-45deg);
+        transform: translateY(-12px) rotate(-45deg);
         /* move to center */
     }
 }
@@ -220,6 +220,7 @@ nav {
             gap: 1.5rem;
             padding: 0;
             box-shadow: none;
+
             li>* {
                 font-size: 2.2rem;
             }
