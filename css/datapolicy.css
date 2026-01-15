@@ -457,24 +457,26 @@ aside div {
 main {
   background-color: #F9F5EC;
   padding: 100px;
-}
-main article {
   margin: 2rem 0;
 }
-main article h3 {
+main h4 {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
 }
-main article a {
+main a {
   color: #AB6B4F;
   text-decoration: underline;
 }
-main article p:first-child {
+main li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+main p:first-child {
   margin-top: 0;
 }
-main article p:last-of-type {
+main p:last-of-type {
   margin-bottom: 0;
 }
 
-/*# sourceMappingURL=impressum.css.map */
+/*# sourceMappingURL=datapolicy.css.map */
