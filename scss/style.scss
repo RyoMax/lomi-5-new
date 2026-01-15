@@ -11,7 +11,7 @@
     font-display: swap;
 }
 
-$butler-ul:"butler-ultra-light", "Times New Roman", Times, serif;
+$butler-ul: "butler-ultra-light", "Times New Roman", Times, serif;
 
 
 @font-face {
@@ -21,7 +21,7 @@ $butler-ul:"butler-ultra-light", "Times New Roman", Times, serif;
     font-display: swap;
 }
 
-$montserat:"Montserrat", sans-serif, "Times New Roman", Times, serif;
+$montserat: "Montserrat", sans-serif, "Times New Roman", Times, serif;
 
 * {
     -webkit-box-sizing: border-box;
@@ -112,6 +112,20 @@ aside {
         display: block;
     }
 
+    div:not(.flex) {
+        position: fixed;
+        top: 50%;
+        right: 50%;
+        width: 75%;
+        margin: 0 auto;
+        padding: 6rem 3rem 3rem;
+        background-color: $white-bg;
+        box-shadow: 5px 5px 45px $black-font;
+        text-align: center;
+        transform: translate(50%, -50%);
+        z-index: 20;
+    }
+
     .x {
         position: absolute;
         top: 10px;
@@ -136,18 +150,40 @@ aside {
 
     }
 
-    div {
-        position: fixed;
-        top: 50%;
-        right: 50%;
-        width: 75%;
-        margin: 0 auto;
-        padding: 2rem;
-        background-color: $white-bg;
-        box-shadow: 5px 5px 45px $black-font;
-        text-align: center;
-        transform: translate(50%, -50%);
-        z-index: 20;
+    .flex {
+
+        display: -webkit-box;
+        /* Älteres WebKit (iOS < 7, Safari < 7) */
+        display: -ms-flexbox;
+        /* IE 10 */
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    a {
+        color: $red-orange;
+        text-decoration: underline;
+
+        .massage-btn {
+            margin: 0;
+        }
+    }
+
+    .cancel {
+        margin: 2rem 0;
+    }
+
+    button:not(.close) {
+        background-color: $red-button ;
+        color: $white-bg;
     }
 }
 
@@ -170,4 +206,3 @@ aside {
 
 
 /* Media Queries */
-

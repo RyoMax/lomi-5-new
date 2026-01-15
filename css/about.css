@@ -428,6 +428,19 @@ aside {
 aside.open {
   display: block;
 }
+aside div:not(.flex) {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem 3rem 3rem;
+  background-color: #F9F5EC;
+  box-shadow: 5px 5px 45px #262626;
+  text-align: center;
+  transform: translate(50%, -50%);
+  z-index: 20;
+}
 aside .x {
   position: absolute;
   top: 10px;
@@ -447,18 +460,35 @@ aside .x svg {
   stroke: #262626;
   stroke-width: 4;
 }
-aside div {
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  width: 75%;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #F9F5EC;
-  box-shadow: 5px 5px 45px #262626;
-  text-align: center;
-  transform: translate(50%, -50%);
-  z-index: 20;
+aside .flex {
+  display: -webkit-box;
+  /* Älteres WebKit (iOS < 7, Safari < 7) */
+  display: -ms-flexbox;
+  /* IE 10 */
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+aside a {
+  color: #AB6B4F;
+  text-decoration: underline;
+}
+aside a .massage-btn {
+  margin: 0;
+}
+aside .cancel {
+  margin: 2rem 0;
+}
+aside button:not(.close) {
+  background-color: #994d2d;
+  color: #F9F5EC;
 }
 
 .curtain {
