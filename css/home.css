@@ -558,16 +558,18 @@ header::before {
   height: 100%;
   background-image: url(../img/main/header_mobile-min.webp);
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   background-position-y: center;
   background-position-x: right;
+  -webkit-background-size: cover;
+  background-size: cover;
   -webkit-background-attachment: fixed;
   background-attachment: fixed;
   opacity: 0.8;
   z-index: -10;
+  /* iOS Safari Fix: Hardware-Beschleunigung erzwingen */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
 }
 header .header-content {
   position: relative;
