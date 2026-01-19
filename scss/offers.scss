@@ -71,11 +71,13 @@ main {
                     margin: 0;
                     font-size: 3.28rem;
                     line-height: 3rem;
+                    margin-bottom: 1rem;
 
                     span {
-                    margin-bottom: 1rem;
                     font-size: 1.36rem;
                     font-family: fonts.$montserat;
+                    line-height: 1rem;
+
                     }
                 }
 
@@ -298,10 +300,10 @@ main {
 
                     h2 {
                         font-size: 6.2rem;
-                        line-height: 4rem;
+                        line-height: 3rem;
+                        margin-bottom: 2rem;
 
                         span{
-                            margin-bottom: 2rem;
                             font-size: 2rem;
                         }
                     }

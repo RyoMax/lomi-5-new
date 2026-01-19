@@ -24,7 +24,7 @@ const links = document.getElementById("links");
 const bookingButtons = document.querySelectorAll(".booking-button"); // Some Pages have multiple booking buttons
 const lomiCards = document.querySelectorAll(".lomi-cards .card"); //only for offer page
 const bookingPopup = document.getElementById("booking-popup");
-const bookingPopupLink = document.querySelector("#booking-popup a");
+const bookingPopupLink = document.querySelector("#booking-popup .flex a");
 const infoPopup = document.getElementById("info-popup");
 const closeButtons = document.querySelectorAll(".close"); // Homepage can have infoPopup and bookingPopup
 const curtainElement = document.querySelector(".curtain");
@@ -37,7 +37,7 @@ const curtainElement = document.querySelector(".curtain");
 const timifyDefaultLink = "https://book.timify.com/services?accountId=608c2450481bbc11777a2660&hideCloseButton=true";
 let timifyLink = timifyDefaultLink;
 
-//! Don't change sequence!
+//! Don't change sequence
 //? Contains the timify booking links for each specific Lomi-Product in the sequence presented on the page 
 const timifySpecificLinks = [
   "https://apps.timify.com/sharable-link/6d212aecc3/1.0.0",
@@ -72,14 +72,16 @@ const handleCloseAllPopups = (e) => {
 
 // open bookingPopup, use correct booking link, and blur background (show curtainElement)
 const handleBookingButtonClick = (e) => {
+  /* Reset variable with default value, in case it was previously exchanged */
+  timifyLink = timifyDefaultLink;
+
   const lomiCard = e.target.closest(".card");
+  
   /* Use only on offer.html check, if the booking Link needs to be exchanged */
   if (lomiCard) exchangeTimifyLink(lomiCard);
-  /* rewrite href with correct timifyLink */
-  bookingPopupLink.href = timifyLink;
 
-  /* Reset variable with default value, in case it was exchanged */
-  timifyLink = timifyDefaultLink;
+  /* in any case rewrite href of booking link - back to default or to a specific one */
+  bookingPopupLink.href = timifyLink;
   
   bookingPopup.classList.add("open"); // Show Popup
   curtainElement.classList.add("open"); // Blur Background
@@ -96,10 +98,11 @@ const handleBookingButtonClick = (e) => {
 /* Helper */
 
 // (Only on offer.html) if bookingButton in the lomi card was selected, the timifyLink Variable will be exchange with the respective value one from [timifySpecificLinks]
-const exchangeTimifyLink = (card) => {
+const exchangeTimifyLink = (card) => {  
   /* Extracting the number from the class-name (e.g. card-2 -> 2) */
   const cardNumber = Number(card.classList[card.classList.length - 1].slice(-1));
   timifyLink = timifySpecificLinks[cardNumber - 1];
+  
 }
 
 
