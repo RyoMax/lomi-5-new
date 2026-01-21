@@ -11,9 +11,9 @@
   <title>LOMI5 | Hawaiianische Massage in der Uckermark</title>
 
   <!-- CSS Links -->
-  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css">
-
-  <!-- <style>
+  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./css/home.css">
+ -->
+  <style>
     @charset "UTF-8";
 
     /* Navigation */
@@ -112,15 +112,18 @@
     nav .links li:last-child {
       border: #AB6B4F 3px solid;
       border-radius: 3px;
-      padding: 0.5rem;
     }
 
     nav .links li:last-child:hover {
       cursor: pointer;
     }
 
-    nav .links li:last-child:hover div {
+    nav .links li:last-child:hover button {
       color: #AB6B4F;
+    }
+
+    nav .links li:last-child button {
+      padding: 0.5rem;
     }
 
     nav .links .timify-button button {
@@ -160,9 +163,8 @@
     }
 
     nav .menu-icon.active .line1 {
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      y: 32;
+      -webkit-transform: translate(-19px, 22px) rotate(45deg);
+      transform: translate(-19px, 22px) rotate(45deg);
       /* move to center */
     }
 
@@ -172,9 +174,8 @@
     }
 
     nav .menu-icon.active .line3 {
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      y: 32;
+      -webkit-transform: translate(-12px, -12px) rotate(-45deg);
+      transform: translate(-12px, -12px) rotate(-45deg);
       /* move to center */
     }
 
@@ -442,6 +443,7 @@
       margin-left: 5%;
       margin-right: 5%;
       background-color: inherit;
+      color: #262626;
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 1.5;
@@ -463,7 +465,127 @@
       box-shadow: none;
     }
 
+    aside {
+      display: none;
+      position: relative;
+    }
+
+    aside.open {
+      display: block;
+    }
+
+    aside div:not(.flex) {
+      position: fixed;
+      top: 50%;
+      right: 50%;
+      width: 75%;
+      margin: 0 auto;
+      padding: 6rem 3rem 3rem;
+      background-color: #F9F5EC;
+      box-shadow: 5px 5px 45px #262626;
+      text-align: center;
+      transform: translate(50%, -50%);
+      z-index: 20;
+    }
+
+    aside .x {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.2rem;
+      border: 0.4rem solid #994d2d;
+      background-color: #F9F5EC;
+      color: #F9F5EC;
+      font-size: 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    aside .x:hover {
+      background-color: #994d2d;
+    }
+
+    aside .x svg {
+      stroke: #262626;
+      stroke-width: 4;
+    }
+
+    aside h3 {
+      font-size: 2rem;
+    }
+
+    aside p {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+
+    aside .flex {
+      display: -webkit-box;
+      /* Älteres WebKit (iOS < 7, Safari < 7) */
+      display: -ms-flexbox;
+      /* IE 10 */
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    aside a {
+      color: #AB6B4F;
+      text-decoration: underline;
+    }
+
+    aside a .massage-btn {
+      margin: 0;
+    }
+
+    aside .cancel {
+      margin-top: 1rem;
+    }
+
+    aside button:not(.close) {
+      background-color: #994d2d;
+      color: #F9F5EC;
+    }
+
+    .curtain {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
+      background-color: #DBCFBF;
+      opacity: 0.85;
+      z-index: 19;
+    }
+
+    .curtain.open {
+      display: block;
+    }
+
     /* Media Queries */
+    @media (min-width: 1000px) {
+      aside h3 {
+        font-size: 4rem;
+      }
+
+      aside p {
+        font-size: 1.6rem;
+        margin: 1rem 0;
+      }
+
+      aside .cancel {
+        margin: 2rem 0;
+      }
+    }
+
     .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -513,22 +635,30 @@
     header {
       position: relative;
       color: #F9F5EC;
-      background-color: #F9F5EC;
     }
 
-    header .header-bg {
-      position: absolute;
+    header::before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
       top: 0;
-      height: 100%;
       width: 100%;
+      height: 100%;
       background-image: url(../img/main/header_mobile-min.webp);
       background-repeat: no-repeat;
-      background-size: cover;
       background-position-y: center;
       background-position-x: right;
+      -webkit-background-size: cover;
+      background-size: cover;
       -webkit-background-attachment: fixed;
       background-attachment: fixed;
       opacity: 0.8;
+      z-index: -10;
+      /* iOS Safari Fix: Hardware-Beschleunigung erzwingen */
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      will-change: transform;
     }
 
     header .header-content {
@@ -722,7 +852,7 @@
     }
 
     /*# sourceMappingURL=home.css.map */
-  </style> -->
+  </style>
 
 </head>
 
@@ -756,9 +886,9 @@
           <a href="./pages/kontakt.html">KONTAKT</a>
         </li>
         <li>
-            <button class="booking-button">
-              TERMIN BUCHEN
-            </button>
+          <button class="booking-button">
+            TERMIN BUCHEN
+          </button>
         </li>
       </ul>
     </div>
@@ -779,9 +909,9 @@
   <aside id="info-popup">
     <div>
       <button class="close x">
-        <svg  width="25" height="25">
-          <line x1="0" y1="0" x2="25" y2="25"/>
-          <line x1="25" y1="0" x2="0" y2="25"/>
+        <svg width="25" height="25">
+          <line x1="0" y1="0" x2="25" y2="25" />
+          <line x1="25" y1="0" x2="0" y2="25" />
         </svg>
       </button>
       <h3>Liebe Kunden,</h3>
@@ -802,7 +932,7 @@
         <br>
         bei dir
       </p>
-        <button class="massage-btn booking-button">MASSAGE BUCHEN</button> 
+      <button class="massage-btn booking-button">MASSAGE BUCHEN</button>
 
   </header>
 
@@ -928,38 +1058,39 @@
 
   <!-- popup, when booking appointment from menu -->
   <aside id="booking-popup">
-        <div>
-            <button class="close x">
-                <svg width="25" height="25">
-                    <line x1="0" y1="0" x2="25" y2="25" />
-                    <line x1="25" y1="0" x2="0" y2="25" />
-                </svg>
-            </button>
-            <h3>
-                Weiterleitung zur Buchungsplattform
-            </h3>
-            <p>
-                Sie werden nun zur Buchungsseite von Timify weitergeleitet.
-                Dort gelten die
-                <a  target="_blank" href="https://www.timify.com/de/legal/">Datenschutzbestimmungen von Timify</a>.
+    <div>
+      <button class="close x">
+        <svg width="25" height="25">
+          <line x1="0" y1="0" x2="25" y2="25" />
+          <line x1="25" y1="0" x2="0" y2="25" />
+        </svg>
+      </button>
+      <h3>
+        Weiterleitung zur Buchungsplattform
+      </h3>
+      <p>
+        Sie werden nun zur Buchungsseite von Timify weitergeleitet.
+        Dort gelten die
+        <a target="_blank" href="https://www.timify.com/de/legal/">Datenschutzbestimmungen von Timify</a>.
 
-            </p>
-            <p>
-                Bitte beachten Sie, dass Timify für die Verarbeitung Ihrer Daten verantwortlich ist,
-                sobald Sie die Seite verlassen.
-            </p>
-            <p>
-                Mit Klick auf 'Weiter zur Buchung' bestätigen Sie,
-                dass Sie die Datenschutzbestimmungen von Timify zur Kenntnis genommen haben.
-            </p>
-            <div class="flex">
-                <button class="massage-btn cancel close">ZURÜCK</button>
-                <a class="btn" target="_blank" href="https://book.timify.com/services?accountId=608c2450481bbc11777a2660&hideCloseButton=true">
-                    <button class="massage-btn">ZUR BUCHUNG</button>
-                </a>
-            </div>
-        </div>
-    </aside>
+      </p>
+      <p>
+        Bitte beachten Sie, dass Timify für die Verarbeitung Ihrer Daten verantwortlich ist,
+        sobald Sie die Seite verlassen.
+      </p>
+      <p>
+        Mit Klick auf 'Weiter zur Buchung' bestätigen Sie,
+        dass Sie die Datenschutzbestimmungen von Timify zur Kenntnis genommen haben.
+      </p>
+      <div class="flex">
+        <button class="massage-btn cancel close">ZURÜCK</button>
+        <a class="btn" target="_blank"
+          href="https://book.timify.com/services?accountId=608c2450481bbc11777a2660&hideCloseButton=true">
+          <button class="massage-btn">ZUR BUCHUNG</button>
+        </a>
+      </div>
+    </div>
+  </aside>
 
   <!-- serves as curtain, to blur background when popup is openend -->
   <div class="curtain">

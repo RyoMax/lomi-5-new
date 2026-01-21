@@ -11,37 +11,10 @@
   <title>LOMI5 | Massageangebot | Hawaiianische Massage in der Uckermark</title>
 
   <!-- CSS Links -->
-  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/offers.css">
+  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/offers.css"> -->
 
-  <!-- <style>
+  <style>
     @charset "UTF-8";
-
-    @font-face {
-      font-family: butler-ultra-light;
-      src: url("../fonts/Butler_Ultra_Light.otf");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: butler-light;
-      src: url("../fonts/Butler_Light.otf");
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: Montserrat;
-      src: url("../fonts/Montserrat-LightItalic.ttf");
-      font-weight: 300;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: Montserrat;
-      src: url("../fonts/Montserrat-Regular.ttf");
-      font-weight: normal;
-      font-display: swap;
-    }
 
     /* Navigation */
     @font-face {
@@ -139,15 +112,18 @@
     nav .links li:last-child {
       border: #AB6B4F 3px solid;
       border-radius: 3px;
-      padding: 0.5rem;
     }
 
     nav .links li:last-child:hover {
       cursor: pointer;
     }
 
-    nav .links li:last-child:hover div {
+    nav .links li:last-child:hover button {
       color: #AB6B4F;
+    }
+
+    nav .links li:last-child button {
+      padding: 0.5rem;
     }
 
     nav .links .timify-button button {
@@ -187,9 +163,8 @@
     }
 
     nav .menu-icon.active .line1 {
-      -webkit-transform: rotate(45deg);
-      transform: rotate(45deg);
-      y: 32;
+      -webkit-transform: translate(-19px, 22px) rotate(45deg);
+      transform: translate(-19px, 22px) rotate(45deg);
       /* move to center */
     }
 
@@ -199,9 +174,8 @@
     }
 
     nav .menu-icon.active .line3 {
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      y: 32;
+      -webkit-transform: translate(-12px, -12px) rotate(-45deg);
+      transform: translate(-12px, -12px) rotate(-45deg);
       /* move to center */
     }
 
@@ -469,6 +443,7 @@
       margin-left: 5%;
       margin-right: 5%;
       background-color: inherit;
+      color: #262626;
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 1.5;
@@ -490,7 +465,154 @@
       box-shadow: none;
     }
 
+    aside {
+      display: none;
+      position: relative;
+    }
+
+    aside.open {
+      display: block;
+    }
+
+    aside div:not(.flex) {
+      position: fixed;
+      top: 50%;
+      right: 50%;
+      width: 75%;
+      margin: 0 auto;
+      padding: 6rem 3rem 3rem;
+      background-color: #F9F5EC;
+      box-shadow: 5px 5px 45px #262626;
+      text-align: center;
+      transform: translate(50%, -50%);
+      z-index: 20;
+    }
+
+    aside .x {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.2rem;
+      border: 0.4rem solid #994d2d;
+      background-color: #F9F5EC;
+      color: #F9F5EC;
+      font-size: 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    aside .x:hover {
+      background-color: #994d2d;
+    }
+
+    aside .x svg {
+      stroke: #262626;
+      stroke-width: 4;
+    }
+
+    aside h3 {
+      font-size: 2rem;
+    }
+
+    aside p {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+
+    aside .flex {
+      display: -webkit-box;
+      /* Älteres WebKit (iOS < 7, Safari < 7) */
+      display: -ms-flexbox;
+      /* IE 10 */
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    aside a {
+      color: #AB6B4F;
+      text-decoration: underline;
+    }
+
+    aside a .massage-btn {
+      margin: 0;
+    }
+
+    aside .cancel {
+      margin-top: 1rem;
+    }
+
+    aside button:not(.close) {
+      background-color: #994d2d;
+      color: #F9F5EC;
+    }
+
+    .curtain {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
+      background-color: #DBCFBF;
+      opacity: 0.85;
+      z-index: 19;
+    }
+
+    .curtain.open {
+      display: block;
+    }
+
     /* Media Queries */
+    @media (min-width: 1000px) {
+      aside h3 {
+        font-size: 4rem;
+      }
+
+      aside p {
+        font-size: 1.6rem;
+        margin: 1rem 0;
+      }
+
+      aside .cancel {
+        margin: 2rem 0;
+      }
+    }
+
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: butler-light;
+      src: url("../fonts/Butler_Light.otf");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-LightItalic.ttf");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-display: swap;
+    }
+
     .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -609,12 +731,13 @@
       margin: 0;
       font-size: 3.28rem;
       line-height: 3rem;
+      margin-bottom: 1rem;
     }
 
     main .card div:first-child h2 span {
-      margin-bottom: 1rem;
       font-size: 1.36rem;
       font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      line-height: 1rem;
     }
 
     main .card div:first-child h4 {
@@ -636,7 +759,7 @@
       border-top: 1px solid #777657;
     }
 
-    main .card div:last-child a {
+    main .card div:last-child button {
       -ms-flex-item-align: center;
       align-self: center;
       -webkit-box-flex: 1;
@@ -644,9 +767,6 @@
       flex-grow: 1;
       max-width: 40%;
       min-width: fit-content;
-    }
-
-    main .card div:last-child button {
       width: 100%;
       padding: 0.2rem 0.2rem;
       background-color: #994d2d;
@@ -656,6 +776,7 @@
       text-align: center;
       font-size: 0.96rem;
       letter-spacing: 2px;
+      cursor: pointer;
     }
 
     main .card div:last-child p {
@@ -777,11 +898,11 @@
 
       main .card div:first-child h2 {
         font-size: 6.2rem;
-        line-height: 4rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
       }
 
       main .card div:first-child h2 span {
-        margin-bottom: 2rem;
         font-size: 2rem;
       }
 
@@ -807,7 +928,7 @@
     }
 
     /*# sourceMappingURL=offers.css.map */
-  </style> -->
+  </style>
 
 </head>
 
