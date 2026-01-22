@@ -258,6 +258,9 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -265,13 +268,14 @@
             padding: 50px 25px 25px;
         }
 
-        footer img {
-            aspect-ratio: auto 1/1;
-            width: 100%;
+        footer picture {
             margin-top: 50px;
             -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
             order: 2;
+            /* img {
+      width: 100%;
+  } */
         }
 
         footer .footer-content {
@@ -324,10 +328,6 @@
                 align-items: center;
             }
 
-            footer img {
-                width: 70%;
-            }
-
             footer .footer-content {
                 -webkit-box-pack: center;
                 -ms-flex-pack: center;
@@ -348,12 +348,11 @@
                 padding: 75px 0;
             }
 
-            footer img {
+            footer picture {
                 -webkit-box-ordinal-group: 2;
                 -ms-flex-order: 1;
                 order: 1;
                 box-sizing: content-box;
-                width: 20rem;
                 margin: 0;
                 padding: 25px 100px;
                 padding-left: 0;
@@ -786,9 +785,14 @@
 
     <!-- Footer -->
     <footer>
-        <img src="../img/main/LogoFürFooter.webp"
-            alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter"
-            width="300">
+        <picture>
+            <source media="(min-width: 768px)" srcset="../img/main/LogoFuerFooter.webp" height="250" width="250">
+            <source media="(min-width: 480px)" srcset="../img/main/LogoFuerFooter.webp" height="350" width="350">
+            <source media="(min-width: 320px)" srcset="../img/main/LogoFuerFooter.webp" height="300" width="300">
+            <img src="../img/main/LogoFuerFooter.webp"
+                alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter"
+                height="200" width="200">
+        </picture>
         <div class="footer-content">
             <ul>
                 <li>

@@ -2,721 +2,719 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Das Lomi5 Impressum – Hawaiianische Lomi Lomi Massage in der Uckermark.">
-    <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
-    <link rel="icon" href="../img/main/LogoHell_1.webp">
-    <title>LOMI5 | Datenschuterklärung | Hawaiianische Massage in der Uckermark</title>
-
-    <!-- CSS Links -->
-    <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/datapolicy.css"> -->
-
-    <style>
-        @charset "UTF-8";
-
-        /* Navigation */
-        @font-face {
-            font-family: butler-ultra-light;
-            src: url("../fonts/Butler_Ultra_Light.otf");
-            font-display: swap;
-        }
-
-        nav {
-            -webkit-position: sticky;
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            padding: 2rem;
-            background-color: #F9F5EC;
-            z-index: 20;
-            -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav .nav-container {
-            display: -webkit-box;
-            /* Ältere WebKit Flexbox */
-            display: -ms-flexbox;
-            /* IE 10 Flexbox */
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        nav img {
-            aspect-ratio: auto 5/1;
-            width: 80%;
-            max-height: 80px;
-        }
-
-        nav button {
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        nav .links {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            /* === OPTIMIERUNG FÜR WEBKIT/SAFARI (Flexbox) === */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            gap: 1.5rem;
-            background-color: #F9F5EC;
-            width: 100%;
-            padding: 3rem 0;
-            margin: 0;
-            list-style: none;
-            font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-            -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-        }
-
-        nav .links li>*,
-        nav .links .timify-button button {
-            color: #262626;
-            font-size: 2.4rem;
-            font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-        }
-
-        nav .links a:hover {
-            color: #AB6B4F;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-        }
-
-        nav .links li:last-child {
-            border: #AB6B4F 3px solid;
-            border-radius: 3px;
-        }
-
-        nav .links li:last-child:hover {
-            cursor: pointer;
-        }
-
-        nav .links li:last-child:hover button {
-            color: #AB6B4F;
-        }
-
-        nav .links li:last-child button {
-            padding: 0.5rem;
-        }
-
-        nav .links .timify-button button {
-            background-color: unset;
-            border: none;
-        }
-
-        nav .links.collapsed {
-            padding: 0;
-            -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-            z-index: -1;
-            opacity: 0;
-            -webkit-transition: all 0s ease;
-            transition: all 0s ease;
-        }
-
-        nav {
-            /* button icon animation */
-        }
-
-        nav .menu-icon {
-            cursor: pointer;
-            fill: #AB6B4F;
-        }
-
-        nav .menu-icon rect {
-            -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
-            transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
-            -webkit-transform-origin: 50px 40px;
-            transform-origin: 50px 40px;
-            /* center of viewBox */
-        }
-
-        nav {
-            /* --- When active (X-state) --- */
-        }
-
-        nav .menu-icon.active .line1 {
-            -webkit-transform: translate(-19px, 22px) rotate(45deg);
-            transform: translate(-19px, 22px) rotate(45deg);
-            /* move to center */
-        }
-
-        nav .menu-icon.active .line2 {
-            opacity: 0;
-            /* fade middle line out */
-        }
-
-        nav .menu-icon.active .line3 {
-            -webkit-transform: translate(-12px, -12px) rotate(-45deg);
-            transform: translate(-12px, -12px) rotate(-45deg);
-            /* move to center */
-        }
-
-        @media (min-width: 1000px) {
-            nav {
-                padding: 1rem 0;
-            }
-
-            nav .nav-container {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                gap: 1rem;
-                max-width: none;
-                margin: 0 2%;
-            }
-
-            nav img {
-                width: unset;
-                max-height: unset;
-                height: 8rem;
-            }
-
-            nav #nav-button {
-                display: none;
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-
-            nav .links {
-                position: relative;
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-around;
-                gap: 1.5rem;
-                padding: 0;
-                box-shadow: none;
-            }
-
-            nav .links li>* {
-                font-size: 2.2rem;
-            }
-
-            nav .links.collapsed {
-                -webkit-transform: translateY(0%);
-                transform: translateY(0%);
-                z-index: 3;
-                opacity: 2;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            nav .nav-container {
-                margin: 0 8%;
-                gap: 15rem;
-            }
-
-            nav img {
-                height: 8rem;
-            }
-
-            nav .links li>* {
-                font-size: 2.4rem;
-            }
-        }
-
-        /* Footer styling */
-        footer {
-            background-color: #777657;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            padding: 50px 25px 25px;
-        }
-
-        footer img {
-            aspect-ratio: auto 1/1;
-            width: 100%;
-            margin-top: 50px;
-            -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-            order: 2;
-        }
-
-        footer .footer-content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: distribute;
-            /* Flexbox 'space-around' */
-            justify-content: space-around;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            color: white;
-            font-size: 1.8rem;
-            -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-            order: 1;
-        }
-
-        footer .footer-content ul {
-            margin-bottom: 1.6rem;
-            list-style: none;
-            padding: 0;
-        }
-
-        footer .footer-content ul li {
-            margin: 18px;
-        }
-
-        footer .footer-content a {
-            color: white;
-            text-decoration: unset;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-        }
-
-        footer .footer-content a:hover {
-            color: #DBCFBF;
-        }
-
-        footer .footer-content address {
-            font-style: normal;
-            line-height: 2.8rem;
-        }
-
-        @media (min-width: 480px) {
-            footer {
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
-
-            footer img {
-                width: 70%;
-            }
-
-            footer .footer-content {
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                gap: 70px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            footer {
-                -webkit-box-orient: horizontal;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                flex-direction: row;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                padding: 75px 0;
-            }
-
-            footer img {
-                -webkit-box-ordinal-group: 2;
-                -ms-flex-order: 1;
-                order: 1;
-                box-sizing: content-box;
-                width: 20rem;
-                margin: 0;
-                padding: 25px 100px;
-                padding-left: 0;
-                border-right: 1px solid #CECDAE;
-            }
-
-            footer .footer-content {
-                -webkit-box-pack: start;
-                -ms-flex-pack: start;
-                justify-content: start;
-                -webkit-box-ordinal-group: 3;
-                -ms-flex-order: 2;
-                order: 2;
-                width: 50%;
-                padding-left: 100px;
-            }
-        }
-
-        @font-face {
-            font-family: butler-ultra-light;
-            src: url("../fonts/Butler_Ultra_Light.otf");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: Montserrat;
-            src: url("../fonts/Montserrat-Regular.ttf");
-            font-weight: normal;
-            font-display: swap;
-        }
-
-        * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        :root {
-            font-size: 62.5%;
-            /* 1rem = 10px */
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #F9F5EC;
-            font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-            color: #262626;
-            margin: 0;
-        }
-
-        body h1,
-        body h2,
-        body h3,
-        body .h3 {
-            font-family: "butler-ultra-light", "Times New Roman", Times, serif;
-            font-weight: 500;
-            line-height: 1.2;
-            font-size: 3.2rem;
-            margin: 0 0 3.2rem;
-        }
-
-        p {
-            font-size: 1.6rem;
-            line-height: 1.5;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        a:hover {
-            color: #AB6B4F;
-        }
-
-        button {
-            font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
-        }
-
-        .massage-btn {
-            border: #AB6B4F 3px solid;
-            border-radius: 3px;
-            padding: 6px 12px;
-            margin-left: 5%;
-            margin-right: 5%;
-            background-color: inherit;
-            color: #262626;
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 1.5;
-            cursor: pointer;
-            -webkit-transition: all 0.2s;
-            transition: all 0.2s;
-            letter-spacing: 8px;
-        }
-
-        .massage-btn:hover,
-        .massage-btn :active {
-            background-color: #AB6B4F;
-            color: #F9F5EC;
-            -webkit-box-shadow: 5px 5px 10px #262626;
-            box-shadow: 5px 5px 10px #262626;
-        }
-
-        .massage-btn:focus {
-            box-shadow: none;
-        }
-
-        aside {
-            display: none;
-            position: relative;
-        }
-
-        aside.open {
-            display: block;
-        }
-
-        aside div:not(.flex) {
-            position: fixed;
-            top: 50%;
-            right: 50%;
-            width: 75%;
-            margin: 0 auto;
-            padding: 6rem 3rem 3rem;
-            background-color: #F9F5EC;
-            box-shadow: 5px 5px 45px #262626;
-            text-align: center;
-            transform: translate(50%, -50%);
-            z-index: 20;
-        }
-
-        aside .x {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 0.2rem;
-            border: 0.4rem solid #994d2d;
-            background-color: #F9F5EC;
-            color: #F9F5EC;
-            font-size: 0;
-            -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-        }
-
-        aside .x:hover {
-            background-color: #994d2d;
-        }
-
-        aside .x svg {
-            stroke: #262626;
-            stroke-width: 4;
-        }
-
-        aside h3 {
-            font-size: 2rem;
-        }
-
-        aside p {
-            font-size: 1rem;
-            margin: 1rem 0;
-        }
-
-        aside .flex {
-            display: -webkit-box;
-            /* Älteres WebKit (iOS < 7, Safari < 7) */
-            display: -ms-flexbox;
-            /* IE 10 */
-            display: flex;
-            -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        aside a {
-            color: #AB6B4F;
-            text-decoration: underline;
-        }
-
-        aside a .massage-btn {
-            margin: 0;
-        }
-
-        aside .cancel {
-            margin-top: 1rem;
-        }
-
-        aside button:not(.close) {
-            background-color: #994d2d;
-            color: #F9F5EC;
-        }
-
-        .curtain {
-            display: none;
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            height: 100%;
-            overflow: hidden;
-            background-color: #DBCFBF;
-            opacity: 0.85;
-            z-index: 19;
-        }
-
-        .curtain.open {
-            display: block;
-        }
-
-        /* Media Queries */
-        @media (min-width: 1000px) {
-            aside h3 {
-                font-size: 4rem;
-            }
-
-            aside p {
-                font-size: 1.6rem;
-                margin: 1rem 0;
-            }
-
-            aside .cancel {
-                margin: 2rem 0;
-            }
-        }
-
-        main {
-            background-color: #F9F5EC;
-            padding: 100px;
-            margin: 2rem 0;
-        }
-
-        main h4 {
-            font-weight: bold;
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        main a {
-            color: #AB6B4F;
-            text-decoration: underline;
-        }
-
-        main li {
-            font-size: 1.6rem;
-            line-height: 1.5;
-        }
-
-        main p:first-child {
-            margin-top: 0;
-        }
-
-        main p:last-of-type {
-            margin-bottom: 0;
-        }
-
-        /*# sourceMappingURL=datapolicy.css.map */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Das Lomi5 Impressum – Hawaiianische Lomi Lomi Massage in der Uckermark.">
+  <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
+  <link rel="icon" href="../img/main/LogoHell_1.webp">
+  <title>LOMI5 | Datenschuterklärung | Hawaiianische Massage in der Uckermark</title>
+
+  <!-- CSS Links -->
+  <!-- <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="../css/datapolicy.css"> -->
+
+  <style>
+    @charset "UTF-8";
+
+    /* Navigation */
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
+
+    nav {
+      -webkit-position: sticky;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      padding: 2rem;
+      background-color: #F9F5EC;
+      z-index: 20;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-container {
+      display: -webkit-box;
+      /* Ältere WebKit Flexbox */
+      display: -ms-flexbox;
+      /* IE 10 Flexbox */
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    nav img {
+      aspect-ratio: auto 5/1;
+      width: 80%;
+      max-height: 80px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav .links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      /* === OPTIMIERUNG FÜR WEBKIT/SAFARI (Flexbox) === */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #F9F5EC;
+      width: 100%;
+      padding: 3rem 0;
+      margin: 0;
+      list-style: none;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    nav .links li>*,
+    nav .links .timify-button button {
+      color: #262626;
+      font-size: 2.4rem;
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+    }
+
+    nav .links a:hover {
+      color: #AB6B4F;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    nav .links li:last-child {
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+    }
+
+    nav .links li:last-child:hover {
+      cursor: pointer;
+    }
+
+    nav .links li:last-child:hover button {
+      color: #AB6B4F;
+    }
+
+    nav .links li:last-child button {
+      padding: 0.5rem;
+    }
+
+    nav .links .timify-button button {
+      background-color: unset;
+      border: none;
+    }
+
+    nav .links.collapsed {
+      padding: 0;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      z-index: -1;
+      opacity: 0;
+      -webkit-transition: all 0s ease;
+      transition: all 0s ease;
+    }
+
+    nav {
+      /* button icon animation */
+    }
+
+    nav .menu-icon {
+      cursor: pointer;
+      fill: #AB6B4F;
+    }
+
+    nav .menu-icon rect {
+      -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease, y 0.3s ease;
+      -webkit-transform-origin: 50px 40px;
+      transform-origin: 50px 40px;
+      /* center of viewBox */
+    }
+
+    nav {
+      /* --- When active (X-state) --- */
+    }
+
+    nav .menu-icon.active .line1 {
+      -webkit-transform: translate(-19px, 22px) rotate(45deg);
+      transform: translate(-19px, 22px) rotate(45deg);
+      /* move to center */
+    }
+
+    nav .menu-icon.active .line2 {
+      opacity: 0;
+      /* fade middle line out */
+    }
+
+    nav .menu-icon.active .line3 {
+      -webkit-transform: translate(-12px, -12px) rotate(-45deg);
+      transform: translate(-12px, -12px) rotate(-45deg);
+      /* move to center */
+    }
+
+    @media (min-width: 1000px) {
+      nav {
+        padding: 1rem 0;
+      }
+
+      nav .nav-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 1rem;
+        max-width: none;
+        margin: 0 2%;
+      }
+
+      nav img {
+        width: unset;
+        max-height: unset;
+        height: 8rem;
+      }
+
+      nav #nav-button {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      nav .links {
+        position: relative;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-around;
+        gap: 1.5rem;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      nav .links li>* {
+        font-size: 2.2rem;
+      }
+
+      nav .links.collapsed {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        z-index: 3;
+        opacity: 2;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      nav .nav-container {
+        margin: 0 8%;
+        gap: 15rem;
+      }
+
+      nav img {
+        height: 8rem;
+      }
+
+      nav .links li>* {
+        font-size: 2.4rem;
+      }
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #777657;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 50px 25px 25px;
+    }
+
+    footer picture {
+      margin-top: 50px;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
+      /* img {
+      width: 100%;
+  } */
+    }
+
+    footer .footer-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: distribute;
+      /* Flexbox 'space-around' */
+      justify-content: space-around;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      color: white;
+      font-size: 1.8rem;
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1;
+    }
+
+    footer .footer-content ul {
+      margin-bottom: 1.6rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    footer .footer-content ul li {
+      margin: 18px;
+    }
+
+    footer .footer-content a {
+      color: white;
+      text-decoration: unset;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    footer .footer-content a:hover {
+      color: #DBCFBF;
+    }
+
+    footer .footer-content address {
+      font-style: normal;
+      line-height: 2.8rem;
+    }
+
+    @media (min-width: 480px) {
+      footer {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      footer .footer-content {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 70px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 75px 0;
+      }
+
+      footer picture {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        box-sizing: content-box;
+        margin: 0;
+        padding: 25px 100px;
+        padding-left: 0;
+        border-right: 1px solid #CECDAE;
+      }
+
+      footer .footer-content {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        width: 50%;
+        padding-left: 100px;
+      }
+    }
+
+    @font-face {
+      font-family: butler-ultra-light;
+      src: url("../fonts/Butler_Ultra_Light.otf");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Montserrat;
+      src: url("../fonts/Montserrat-Regular.ttf");
+      font-weight: normal;
+      font-display: swap;
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    :root {
+      font-size: 62.5%;
+      /* 1rem = 10px */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #F9F5EC;
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+      color: #262626;
+      margin: 0;
+    }
+
+    body h1,
+    body h2,
+    body h3,
+    body .h3 {
+      font-family: "butler-ultra-light", "Times New Roman", Times, serif;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 3.2rem;
+      margin: 0 0 3.2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:hover {
+      color: #AB6B4F;
+    }
+
+    button {
+      font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+    }
+
+    .massage-btn {
+      border: #AB6B4F 3px solid;
+      border-radius: 3px;
+      padding: 6px 12px;
+      margin-left: 5%;
+      margin-right: 5%;
+      background-color: inherit;
+      color: #262626;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.5;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      letter-spacing: 8px;
+    }
+
+    .massage-btn:hover,
+    .massage-btn :active {
+      background-color: #AB6B4F;
+      color: #F9F5EC;
+      -webkit-box-shadow: 5px 5px 10px #262626;
+      box-shadow: 5px 5px 10px #262626;
+    }
+
+    .massage-btn:focus {
+      box-shadow: none;
+    }
+
+    aside {
+      display: none;
+      position: relative;
+    }
+
+    aside.open {
+      display: block;
+    }
+
+    aside div:not(.flex) {
+      position: fixed;
+      top: 50%;
+      right: 50%;
+      width: 75%;
+      margin: 0 auto;
+      padding: 6rem 3rem 3rem;
+      background-color: #F9F5EC;
+      box-shadow: 5px 5px 45px #262626;
+      text-align: center;
+      transform: translate(50%, -50%);
+      z-index: 20;
+    }
+
+    aside .x {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.2rem;
+      border: 0.4rem solid #994d2d;
+      background-color: #F9F5EC;
+      color: #F9F5EC;
+      font-size: 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    aside .x:hover {
+      background-color: #994d2d;
+    }
+
+    aside .x svg {
+      stroke: #262626;
+      stroke-width: 4;
+    }
+
+    aside h3 {
+      font-size: 2rem;
+    }
+
+    aside p {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+
+    aside .flex {
+      display: -webkit-box;
+      /* Älteres WebKit (iOS < 7, Safari < 7) */
+      display: -ms-flexbox;
+      /* IE 10 */
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    aside a {
+      color: #AB6B4F;
+      text-decoration: underline;
+    }
+
+    aside a .massage-btn {
+      margin: 0;
+    }
+
+    aside .cancel {
+      margin-top: 1rem;
+    }
+
+    aside button:not(.close) {
+      background-color: #994d2d;
+      color: #F9F5EC;
+    }
+
+    .curtain {
+      display: none;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      overflow: hidden;
+      background-color: #DBCFBF;
+      opacity: 0.85;
+      z-index: 19;
+    }
+
+    .curtain.open {
+      display: block;
+    }
+
+    /* Media Queries */
+    @media (min-width: 1000px) {
+      aside h3 {
+        font-size: 4rem;
+      }
+
+      aside p {
+        font-size: 1.6rem;
+        margin: 1rem 0;
+      }
+
+      aside .cancel {
+        margin: 2rem 0;
+      }
+    }
+
+    main {
+      background-color: #F9F5EC;
+      padding: 100px;
+      margin: 2rem 0;
+    }
+
+    main h4 {
+      font-weight: bold;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    main a {
+      color: #AB6B4F;
+      text-decoration: underline;
+    }
+
+    main li {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    main p:first-child {
+      margin-top: 0;
+    }
+
+    main p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /*# sourceMappingURL=datapolicy.css.map */
+  </style>
 
 </head>
 
 <body>
-    <!-- Responsive Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a aria-label="Zur Startseite" class="logo" href="../">
-                <img src="../img/main/LogoMenu.webp" alt="Lomi5 – Hawaiianische Massage in der Uckermark Logo"
-                    width="300">
-            </a>
-            <button id="nav-button" aria-label="Toggle Hamburger Menu">
-                <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
-                    <rect class="line1" width="100" height="15" rx="8"></rect>
-                    <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
-                    <rect class="line3" y="50" width="100" height="15" rx="8"></rect>
-                </svg>
+  <!-- Responsive Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a aria-label="Zur Startseite" class="logo" href="../">
+        <img src="../img/main/LogoMenu.webp" alt="Lomi5 – Hawaiianische Massage in der Uckermark Logo" width="300">
+      </a>
+      <button id="nav-button" aria-label="Toggle Hamburger Menu">
+        <svg id="menuIcon" class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+          <rect class="line1" width="100" height="15" rx="8"></rect>
+          <rect class="line2" y="25" width="100" height="15" rx="8"></rect>
+          <rect class="line3" y="50" width="100" height="15" rx="8"></rect>
+        </svg>
 
 
-            </button>
-            <ul class="links collapsed" id="links">
-                <li>
-                    <a href="../">HOME</a>
-                </li>
-                <li>
-                    <a href="./about.html">ABOUT</a>
-                </li>
-                <li>
-                    <a href="./angebot.html">ANGEBOT</a>
-                </li>
-                <li>
-                    <a href="./kontakt.html">KONTAKT</a>
-                </li>
-                <li>
-                    <button class="booking-button">
-                        TERMIN BUCHEN
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+      </button>
+      <ul class="links collapsed" id="links">
+        <li>
+          <a href="../">HOME</a>
+        </li>
+        <li>
+          <a href="./about.html">ABOUT</a>
+        </li>
+        <li>
+          <a href="./angebot.html">ANGEBOT</a>
+        </li>
+        <li>
+          <a href="./kontakt.html">KONTAKT</a>
+        </li>
+        <li>
+          <button class="booking-button">
+            TERMIN BUCHEN
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <main>
-        <h1>
-            Datenschutz&shy;erkl&auml;rung
-        </h1>
-        <h2>
-            1. Datenschutz auf einen Blick
-        </h2>
-        <h3>
-            Allgemeine Hinweise
-        </h3>
-        <p>
-            Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen
-            Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
-            pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz
-            entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.
-        </p>
-        <h3>
-            Datenerfassung auf dieser Website
-        </h3>
-        <h4>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</h4>
-        <p>
-            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen
-            Sie dem Abschnitt &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser Datenschutzerkl&auml;rung
-            entnehmen.
-        </p>
-        <h4>Wie erfassen wir Ihre Daten?</h4>
-        <p>
-            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.&nbsp;B.
-            um
-            Daten handeln, die Sie in ein Kontaktformular eingeben.
-        </p>
-        <p>
-            Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme
-            erfasst. Das sind vor allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder Uhrzeit des
-            Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
-        </p>
-        <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>
-        <p>
-            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gew&auml;hrleisten.
-            Andere
-            Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern &uuml;ber die Website
-            Vertr&auml;ge geschlossen oder angebahnt werden k&ouml;nnen, werden die &uuml;bermittelten Daten auch
-            f&uuml;r Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.
-        </p>
-        <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>
-        <p>
-            Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber Herkunft, Empf&auml;nger und Zweck Ihrer
-            gespeicherten personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein Recht, die Berichtigung oder
-            L&ouml;schung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben,
-            k&ouml;nnen Sie diese Einwilligung jederzeit f&uuml;r die Zukunft widerrufen. Au&szlig;erdem haben Sie das
-            Recht, unter bestimmten Umst&auml;nden die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten
-            zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde
-            zu.
-        </p>
-        <p>
-            Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit an uns wenden.
-        </p>
-        <!-- <h3>
+  <main>
+    <h1>
+      Datenschutz&shy;erkl&auml;rung
+    </h1>
+    <h2>
+      1. Datenschutz auf einen Blick
+    </h2>
+    <h3>
+      Allgemeine Hinweise
+    </h3>
+    <p>
+      Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen
+      Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
+      pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz
+      entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.
+    </p>
+    <h3>
+      Datenerfassung auf dieser Website
+    </h3>
+    <h4>Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?</h4>
+    <p>
+      Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen
+      Sie dem Abschnitt &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser Datenschutzerkl&auml;rung
+      entnehmen.
+    </p>
+    <h4>Wie erfassen wir Ihre Daten?</h4>
+    <p>
+      Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.&nbsp;B.
+      um
+      Daten handeln, die Sie in ein Kontaktformular eingeben.
+    </p>
+    <p>
+      Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme
+      erfasst. Das sind vor allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem oder Uhrzeit des
+      Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
+    </p>
+    <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>
+    <p>
+      Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gew&auml;hrleisten.
+      Andere
+      Daten k&ouml;nnen zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern &uuml;ber die Website
+      Vertr&auml;ge geschlossen oder angebahnt werden k&ouml;nnen, werden die &uuml;bermittelten Daten auch
+      f&uuml;r Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.
+    </p>
+    <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>
+    <p>
+      Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber Herkunft, Empf&auml;nger und Zweck Ihrer
+      gespeicherten personenbezogenen Daten zu erhalten. Sie haben au&szlig;erdem ein Recht, die Berichtigung oder
+      L&ouml;schung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben,
+      k&ouml;nnen Sie diese Einwilligung jederzeit f&uuml;r die Zukunft widerrufen. Au&szlig;erdem haben Sie das
+      Recht, unter bestimmten Umst&auml;nden die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten
+      zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde
+      zu.
+    </p>
+    <p>
+      Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie sich jederzeit an uns wenden.
+    </p>
+    <!-- <h3>
             Analyse-Tools und Tools von Dritt&shy;anbietern
         </h3>
         <p>
@@ -727,399 +725,404 @@
             Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerkl&auml;rung.
         
         </p> -->
-        <h2>
-            2. Hosting
-        </h2>
-        <p>
-            Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
-        </p>
-        <h3>
-            Host Europe
-        </h3>
-        <p>
-            Anbieter ist die Host Europe GmbH, Hansestra&szlig;e 111, 51149, K&ouml;ln (nachfolgend Host Europe) Wenn
-            Sie
-            unsere Website besuchen, erfasst Host Europe verschiedene Logfiles inklusive Ihrer IP-Adressen.
-        </p>
-        <p>
-            Details entnehmen Sie der&n Datenschutzerkl&auml;rung von Host Europe: <a
-                href="https://www.hosteurope.de/AGB/Datenschutzerklaerung/" target="_blank"
-                rel="noopener noreferrer">https://www.hosteurope.de/&shy;AGB/Datenschutzerklaerung/</a>.
-        </p>
-        <p>
-            Die Verwendung von Host Europe erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein
-            berechtigtes Interesse an einer m&ouml;glichst zuverl&auml;ssigen Darstellung unserer Website. Sofern eine
-            entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von
-            Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies
-            oder den Zugriff auf Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. f&uuml;r Device-Fingerprinting)
-            im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
-        </p>
+    <h2>
+      2. Hosting
+    </h2>
+    <p>
+      Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
+    </p>
+    <h3>
+      Host Europe
+    </h3>
+    <p>
+      Anbieter ist die Host Europe GmbH, Hansestra&szlig;e 111, 51149, K&ouml;ln (nachfolgend Host Europe) Wenn
+      Sie
+      unsere Website besuchen, erfasst Host Europe verschiedene Logfiles inklusive Ihrer IP-Adressen.
+    </p>
+    <p>
+      Details entnehmen Sie der&n Datenschutzerkl&auml;rung von Host Europe: <a
+        href="https://www.hosteurope.de/AGB/Datenschutzerklaerung/" target="_blank"
+        rel="noopener noreferrer">https://www.hosteurope.de/&shy;AGB/Datenschutzerklaerung/</a>.
+    </p>
+    <p>
+      Die Verwendung von Host Europe erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein
+      berechtigtes Interesse an einer m&ouml;glichst zuverl&auml;ssigen Darstellung unserer Website. Sofern eine
+      entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von
+      Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies
+      oder den Zugriff auf Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. f&uuml;r Device-Fingerprinting)
+      im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+    </p>
 
-        <h4>Auftragsverarbeitung</h4>
-        <p>
-            Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes
-            geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der
-            gew&auml;hrleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren
-            Weisungen und unter Einhaltung der DSGVO verarbeitet.
-        </p>
-        <h2>
-            3. Externe Buchungssysteme
-        </h2>
-        <p>
-            Wir nutzen für Terminbuchungen folgendem Anbieter:
-        </p>
-        <h3>
-            Timify
-        </h3>
-        <p>
-            Anbieter ist die TerminApp GmbH, CEO: Emanuel Simon, Balanstraße 73, Gebäude Nr. 7, 4. OG, 81541 München
-            (nachfolgend Timify).
-            Wenn Sie auf den Buchungslink klicken,
-            werden Sie auf die Webseite von Timify weitergeleitet.
-            Dort gelten die Datenschutzbestimmungen von Timify.
-        </p>
-        <p>
-            Details entnehmen Sie der Datenschutzerklärung von Timify:
-            <a href="https://www.timify.com/de/legal/">https://www.timify.com/&shy;de/legal/</a>.
-        </p>
-        <p>
-            Die Weiterleitung zu Timify erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
-            da die Buchung von Terminen Teil der vorvertraglichen Maßnahmen ist.
-            Sofern eine entsprechende Einwilligung abgefragt wurde,
-            erfolgt die Verarbeitung ausschließlich auf Grundlage von
-            Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung ist jederzeit widerrufbar.
-        </p>
-        <h4>Auftragsverarbeitung</h4>
-        <p>
-            Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung
-            des oben genannten Dienstes geschlossen.
-            Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag,
-            der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher
-            nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
-        </p>
-        <h2>
-            4. Allgemeine Hinweise und Pflicht&shy;informationen
-        </h2>
-        <h3>
-            Datenschutz
-        </h3>
-        <p>
-            Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre
-            personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser
-            Datenschutzerkl&auml;rung.
-        </p>
-        <p>
-            Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten
-            sind Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Die vorliegende
-            Datenschutzerkl&auml;rung erl&auml;utert, welche Daten wir erheben und wof&uuml;r wir sie nutzen. Sie
-            erl&auml;utert auch, wie und zu welchem Zweck das geschieht.
-        </p>
-        <p>
-            Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per
-            E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch
-            Dritte ist nicht m&ouml;glich.
-        </p>
-        <h3>
-            Hinweis zur verantwortlichen Stelle
-        </h3>
-        <p>
-            Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:
-        </p>
-        <p>
-            Lomi5<br>
-            Henriette Burkard <br>
-            Hirtenende 5<br>
-            16278 Angermünde
-        </p>
+    <h4>Auftragsverarbeitung</h4>
+    <p>
+      Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes
+      geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der
+      gew&auml;hrleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren
+      Weisungen und unter Einhaltung der DSGVO verarbeitet.
+    </p>
+    <h2>
+      3. Externe Buchungssysteme
+    </h2>
+    <p>
+      Wir nutzen für Terminbuchungen folgendem Anbieter:
+    </p>
+    <h3>
+      Timify
+    </h3>
+    <p>
+      Anbieter ist die TerminApp GmbH, CEO: Emanuel Simon, Balanstraße 73, Gebäude Nr. 7, 4. OG, 81541 München
+      (nachfolgend Timify).
+      Wenn Sie auf den Buchungslink klicken,
+      werden Sie auf die Webseite von Timify weitergeleitet.
+      Dort gelten die Datenschutzbestimmungen von Timify.
+    </p>
+    <p>
+      Details entnehmen Sie der Datenschutzerklärung von Timify:
+      <a href="https://www.timify.com/de/legal/">https://www.timify.com/&shy;de/legal/</a>.
+    </p>
+    <p>
+      Die Weiterleitung zu Timify erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+      da die Buchung von Terminen Teil der vorvertraglichen Maßnahmen ist.
+      Sofern eine entsprechende Einwilligung abgefragt wurde,
+      erfolgt die Verarbeitung ausschließlich auf Grundlage von
+      Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung ist jederzeit widerrufbar.
+    </p>
+    <h4>Auftragsverarbeitung</h4>
+    <p>
+      Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung
+      des oben genannten Dienstes geschlossen.
+      Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag,
+      der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher
+      nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
+    </p>
+    <h2>
+      4. Allgemeine Hinweise und Pflicht&shy;informationen
+    </h2>
+    <h3>
+      Datenschutz
+    </h3>
+    <p>
+      Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre
+      personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser
+      Datenschutzerkl&auml;rung.
+    </p>
+    <p>
+      Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten
+      sind Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Die vorliegende
+      Datenschutzerkl&auml;rung erl&auml;utert, welche Daten wir erheben und wof&uuml;r wir sie nutzen. Sie
+      erl&auml;utert auch, wie und zu welchem Zweck das geschieht.
+    </p>
+    <p>
+      Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.&nbsp;B. bei der Kommunikation per
+      E-Mail) Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch
+      Dritte ist nicht m&ouml;glich.
+    </p>
+    <h3>
+      Hinweis zur verantwortlichen Stelle
+    </h3>
+    <p>
+      Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser Website ist:
+    </p>
+    <p>
+      Lomi5<br>
+      Henriette Burkard <br>
+      Hirtenende 5<br>
+      16278 Angermünde
+    </p>
 
-        <p>
-            Telefon: +49 152 21 68 47 28<br />
-            E-Mail: info@lomi5.de
-        </p>
-        <p>
-            Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit
-            anderen
-            &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
-            E-Mail-Adressen o. &Auml;.) entscheidet.
-        </p>
+    <p>
+      Telefon: +49 152 21 68 47 28<br />
+      E-Mail: info@lomi5.de
+    </p>
+    <p>
+      Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit
+      anderen
+      &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
+      E-Mail-Adressen o. &Auml;.) entscheidet.
+    </p>
 
-        <h3>
-            Speicherdauer
-        </h3>
-        <p>
-            Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere Speicherdauer genannt wurde, verbleiben
-            Ihre personenbezogenen Daten bei uns, bis der Zweck f&uuml;r die Datenverarbeitung entf&auml;llt. Wenn Sie
-            ein berechtigtes L&ouml;schersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen,
-            werden Ihre Daten gel&ouml;scht, sofern wir keine anderen rechtlich zul&auml;ssigen Gr&uuml;nde f&uuml;r die
-            Speicherung Ihrer personenbezogenen Daten haben (z.&nbsp;B. steuer- oder handelsrechtliche
-            Aufbewahrungsfristen); im letztgenannten Fall erfolgt die L&ouml;schung nach Fortfall dieser Gr&uuml;nde.
+    <h3>
+      Speicherdauer
+    </h3>
+    <p>
+      Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere Speicherdauer genannt wurde, verbleiben
+      Ihre personenbezogenen Daten bei uns, bis der Zweck f&uuml;r die Datenverarbeitung entf&auml;llt. Wenn Sie
+      ein berechtigtes L&ouml;schersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen,
+      werden Ihre Daten gel&ouml;scht, sofern wir keine anderen rechtlich zul&auml;ssigen Gr&uuml;nde f&uuml;r die
+      Speicherung Ihrer personenbezogenen Daten haben (z.&nbsp;B. steuer- oder handelsrechtliche
+      Aufbewahrungsfristen); im letztgenannten Fall erfolgt die L&ouml;schung nach Fortfall dieser Gr&uuml;nde.
 
-        </p>
-        <h3>
-            Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
-        </h3>
-        <p>
-            Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf
-            Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien
-            nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdr&uuml;cklichen Einwilligung in die
-            &Uuml;bertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung au&szlig;erdem auf
-            Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf
-            Informationen in Ihr Endger&auml;t (z.&nbsp;B. via Device-Fingerprinting) eingewilligt haben, erfolgt die
-            Datenverarbeitung zus&auml;tzlich auf Grundlage von &sect; 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit
-            widerrufbar. Sind Ihre Daten zur Vertragserf&uuml;llung oder zur Durchf&uuml;hrung vorvertraglicher
-            Ma&szlig;nahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des
-            Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erf&uuml;llung einer rechtlichen Verpflichtung
-            erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf
-            Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. &Uuml;ber die jeweils im
-            Einzelfall einschl&auml;gigen Rechtsgrundlagen wird in den folgenden Abs&auml;tzen dieser
-            Datenschutzerkl&auml;rung informiert.
-        </p>
-        <h3>
-            Empf&auml;nger von personenbezogenen Daten
-        </h3>
-        <p>
-            Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit verschiedenen externen Stellen zusammen.
-            Dabei ist teilweise auch eine &Uuml;bermittlung von personenbezogenen Daten an diese externen Stellen
-            erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer
-            Vertragserf&uuml;llung erforderlich ist, wenn wir gesetzlich hierzu verpflichtet sind (z.&nbsp;B. Weitergabe
-            von Daten an Steuerbeh&ouml;rden), wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an
-            der Weitergabe haben oder wenn eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von
-            Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf Grundlage eines g&uuml;ltigen
-            Vertrags &uuml;ber Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung wird ein Vertrag
-            &uuml;ber gemeinsame Verarbeitung geschlossen.
-        </p>
-        <h3>
-            Widerruf Ihrer Einwilligung zur Datenverarbeitung
-        </h3>
-        <p>
-            Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie
-            k&ouml;nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtm&auml;&szlig;igkeit der bis
-            zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
-        </p>
-        <h3>
-            Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen sowie gegen Direktwerbung (Art. 21
-            DSGVO)
-        </h3>
-        <p>
-            WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT
-            DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER
-            PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH F&Uuml;R EIN AUF DIESE BESTIMMUNGEN
-            GEST&Uuml;TZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE
-            DIESER DATENSCHUTZERKL&Auml;RUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN
-            PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR K&Ouml;NNEN ZWINGENDE SCHUTZW&Uuml;RDIGE
-            GR&Uuml;NDE F&Uuml;R DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN &Uuml;BERWIEGEN
-            ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUS&Uuml;BUNG ODER VERTEIDIGUNG VON RECHTSANSPR&Uuml;CHEN
-            (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
-        </p>
-        <p>
-            WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT,
-            JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER
-            WERBUNG EINZULEGEN; DIES GILT AUCH F&Uuml;R DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG
-            STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER
-            DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
-        </p>
-        <h3>
-            Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde
-        </h3>
-        <p>
-            Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
-            Aufsichtsbeh&ouml;rde, insbesondere in dem Mitgliedstaat ihres gew&ouml;hnlichen Aufenthalts, ihres
-            Arbeitsplatzes oder des Orts des mutma&szlig;lichen Versto&szlig;es zu. Das Beschwerderecht besteht
-            unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
-        </p>
-        <h3>
-            Recht auf Daten&shy;&uuml;bertrag&shy;barkeit
-        </h3>
-        <p>
-            Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erf&uuml;llung eines Vertrags
-            automatisiert verarbeiten, an sich oder an einen Dritten in einem g&auml;ngigen, maschinenlesbaren Format
-            aush&auml;ndigen zu lassen. Sofern Sie die direkte &Uuml;bertragung der Daten an einen anderen
-            Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.
-        </p>
-        <h3>
-            Auskunft, Berichtigung und L&ouml;schung
-        </h3>
-        <p>
-            Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft
-            &uuml;ber Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empf&auml;nger und den Zweck der
-            Datenverarbeitung und ggf. ein Recht auf Berichtigung oder L&ouml;schung dieser Daten. Hierzu sowie zu
-            weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
-        </p>
-        <h3>
-            Recht auf Einschr&auml;nkung der Verarbeitung
-        </h3>
-        <p>
-            Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-            Hierzu k&ouml;nnen Sie sich jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der Verarbeitung
-            besteht in folgenden F&auml;llen:
-        </p>
-        <ul>
-            <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, ben&ouml;tigen
-                wir in der Regel Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer der Pr&uuml;fung haben Sie
-                das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
-            <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtm&auml;&szlig;ig geschah/geschieht,
-                k&ouml;nnen Sie statt der L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung verlangen.</li>
-            <li>Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen, Sie sie jedoch zur Aus&uuml;bung,
-                Verteidigung oder Geltendmachung von Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht, statt
-                der L&ouml;schung die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-            </li>
-            <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abw&auml;gung zwischen
-                Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen
-                &uuml;berwiegen, haben Sie das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen
-                Daten zu verlangen.</li>
-        </ul>
-        <p>
-            Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschr&auml;nkt haben, d&uuml;rfen diese Daten
-            &ndash; von ihrer Speicherung abgesehen &ndash; nur mit Ihrer Einwilligung oder zur Geltendmachung,
-            Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen oder zum Schutz der Rechte einer anderen
-            nat&uuml;rlichen oder juristischen Person oder aus Gr&uuml;nden eines wichtigen &ouml;ffentlichen Interesses
-            der Europ&auml;ischen Union oder eines Mitgliedstaats verarbeitet werden.
-        </p>
-        <h3>
-            SSL- bzw. TLS-Verschl&uuml;sselung
-        </h3>
-        <p>
-            Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung vertraulicher Inhalte, wie
-            zum Beispiel Anfragen über das Kontaktformular, eine SSL- bzw.
-            TLS-Verschl&uuml;sselung. Eine verschl&uuml;sselte Verbindung erkennen Sie daran, dass die Adresszeile des
-            Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer
-            Browserzeile.
-        </p>
-        <p>
-            Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist, k&ouml;nnen die Daten, die Sie an uns
-            &uuml;bermitteln, nicht von Dritten mitgelesen werden.
-        </p>
-        <h2>
-            5. Datenerfassung auf dieser Website
-        </h2>
-        <h3>
-            Kontaktformular
-        </h3>
-        <p>
-            Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular
-            inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r den Fall
-            von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-        </p>
-        <p>
-            Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit
-            der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher
-            Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem
-            berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
-            DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die
-            Einwilligung ist jederzeit widerrufbar.
-        </p>
-        <p>
-            Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung
-            auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung
-            entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche
-            Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
-        </p>
-        <h3>
-            Anfrage per E-Mail, Telefon oder Telefax
-        </h3>
-        <p>
-            Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus
-            hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns
-            gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
-        </p>
-        <p>
-            Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit
-            der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher
-            Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem
-            berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
-            DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die
-            Einwilligung ist jederzeit widerrufbar.
-        </p>
-        <p>
-            Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur
-            L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die
-            Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende
-            gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben
-            unber&uuml;hrt.
-        </p>
-        <p>
-            Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
-        </p>
-    </main>
+    </p>
+    <h3>
+      Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website
+    </h3>
+    <p>
+      Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf
+      Grundlage von Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien
+      nach Art. 9 Abs. 1 DSGVO verarbeitet werden. Im Falle einer ausdr&uuml;cklichen Einwilligung in die
+      &Uuml;bertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung au&szlig;erdem auf
+      Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf
+      Informationen in Ihr Endger&auml;t (z.&nbsp;B. via Device-Fingerprinting) eingewilligt haben, erfolgt die
+      Datenverarbeitung zus&auml;tzlich auf Grundlage von &sect; 25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit
+      widerrufbar. Sind Ihre Daten zur Vertragserf&uuml;llung oder zur Durchf&uuml;hrung vorvertraglicher
+      Ma&szlig;nahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO. Des
+      Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erf&uuml;llung einer rechtlichen Verpflichtung
+      erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung kann ferner auf
+      Grundlage unseres berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. &Uuml;ber die jeweils im
+      Einzelfall einschl&auml;gigen Rechtsgrundlagen wird in den folgenden Abs&auml;tzen dieser
+      Datenschutzerkl&auml;rung informiert.
+    </p>
+    <h3>
+      Empf&auml;nger von personenbezogenen Daten
+    </h3>
+    <p>
+      Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit verschiedenen externen Stellen zusammen.
+      Dabei ist teilweise auch eine &Uuml;bermittlung von personenbezogenen Daten an diese externen Stellen
+      erforderlich. Wir geben personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer
+      Vertragserf&uuml;llung erforderlich ist, wenn wir gesetzlich hierzu verpflichtet sind (z.&nbsp;B. Weitergabe
+      von Daten an Steuerbeh&ouml;rden), wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO an
+      der Weitergabe haben oder wenn eine sonstige Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von
+      Auftragsverarbeitern geben wir personenbezogene Daten unserer Kunden nur auf Grundlage eines g&uuml;ltigen
+      Vertrags &uuml;ber Auftragsverarbeitung weiter. Im Falle einer gemeinsamen Verarbeitung wird ein Vertrag
+      &uuml;ber gemeinsame Verarbeitung geschlossen.
+    </p>
+    <h3>
+      Widerruf Ihrer Einwilligung zur Datenverarbeitung
+    </h3>
+    <p>
+      Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie
+      k&ouml;nnen eine bereits erteilte Einwilligung jederzeit widerrufen. Die Rechtm&auml;&szlig;igkeit der bis
+      zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
+    </p>
+    <h3>
+      Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen sowie gegen Direktwerbung (Art. 21
+      DSGVO)
+    </h3>
+    <p>
+      WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT
+      DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG IHRER
+      PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN; DIES GILT AUCH F&Uuml;R EIN AUF DIESE BESTIMMUNGEN
+      GEST&Uuml;TZTES PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNEHMEN SIE
+      DIESER DATENSCHUTZERKL&Auml;RUNG. WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN
+      PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR K&Ouml;NNEN ZWINGENDE SCHUTZW&Uuml;RDIGE
+      GR&Uuml;NDE F&Uuml;R DIE VERARBEITUNG NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN &Uuml;BERWIEGEN
+      ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUS&Uuml;BUNG ODER VERTEIDIGUNG VON RECHTSANSPR&Uuml;CHEN
+      (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
+    </p>
+    <p>
+      WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT,
+      JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER
+      WERBUNG EINZULEGEN; DIES GILT AUCH F&Uuml;R DAS PROFILING, SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG
+      STEHT. WENN SIE WIDERSPRECHEN, WERDEN IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER
+      DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+    </p>
+    <h3>
+      Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde
+    </h3>
+    <p>
+      Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
+      Aufsichtsbeh&ouml;rde, insbesondere in dem Mitgliedstaat ihres gew&ouml;hnlichen Aufenthalts, ihres
+      Arbeitsplatzes oder des Orts des mutma&szlig;lichen Versto&szlig;es zu. Das Beschwerderecht besteht
+      unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+    </p>
+    <h3>
+      Recht auf Daten&shy;&uuml;bertrag&shy;barkeit
+    </h3>
+    <p>
+      Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erf&uuml;llung eines Vertrags
+      automatisiert verarbeiten, an sich oder an einen Dritten in einem g&auml;ngigen, maschinenlesbaren Format
+      aush&auml;ndigen zu lassen. Sofern Sie die direkte &Uuml;bertragung der Daten an einen anderen
+      Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+    </p>
+    <h3>
+      Auskunft, Berichtigung und L&ouml;schung
+    </h3>
+    <p>
+      Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft
+      &uuml;ber Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empf&auml;nger und den Zweck der
+      Datenverarbeitung und ggf. ein Recht auf Berichtigung oder L&ouml;schung dieser Daten. Hierzu sowie zu
+      weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
+    </p>
+    <h3>
+      Recht auf Einschr&auml;nkung der Verarbeitung
+    </h3>
+    <p>
+      Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+      Hierzu k&ouml;nnen Sie sich jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der Verarbeitung
+      besteht in folgenden F&auml;llen:
+    </p>
+    <ul>
+      <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, ben&ouml;tigen
+        wir in der Regel Zeit, um dies zu &uuml;berpr&uuml;fen. F&uuml;r die Dauer der Pr&uuml;fung haben Sie
+        das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+      <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtm&auml;&szlig;ig geschah/geschieht,
+        k&ouml;nnen Sie statt der L&ouml;schung die Einschr&auml;nkung der Datenverarbeitung verlangen.</li>
+      <li>Wenn wir Ihre personenbezogenen Daten nicht mehr ben&ouml;tigen, Sie sie jedoch zur Aus&uuml;bung,
+        Verteidigung oder Geltendmachung von Rechtsanspr&uuml;chen ben&ouml;tigen, haben Sie das Recht, statt
+        der L&ouml;schung die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+      </li>
+      <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abw&auml;gung zwischen
+        Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen
+        &uuml;berwiegen, haben Sie das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer personenbezogenen
+        Daten zu verlangen.</li>
+    </ul>
+    <p>
+      Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschr&auml;nkt haben, d&uuml;rfen diese Daten
+      &ndash; von ihrer Speicherung abgesehen &ndash; nur mit Ihrer Einwilligung oder zur Geltendmachung,
+      Aus&uuml;bung oder Verteidigung von Rechtsanspr&uuml;chen oder zum Schutz der Rechte einer anderen
+      nat&uuml;rlichen oder juristischen Person oder aus Gr&uuml;nden eines wichtigen &ouml;ffentlichen Interesses
+      der Europ&auml;ischen Union oder eines Mitgliedstaats verarbeitet werden.
+    </p>
+    <h3>
+      SSL- bzw. TLS-Verschl&uuml;sselung
+    </h3>
+    <p>
+      Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der &Uuml;bertragung vertraulicher Inhalte, wie
+      zum Beispiel Anfragen über das Kontaktformular, eine SSL- bzw.
+      TLS-Verschl&uuml;sselung. Eine verschl&uuml;sselte Verbindung erkennen Sie daran, dass die Adresszeile des
+      Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer
+      Browserzeile.
+    </p>
+    <p>
+      Wenn die SSL- bzw. TLS-Verschl&uuml;sselung aktiviert ist, k&ouml;nnen die Daten, die Sie an uns
+      &uuml;bermitteln, nicht von Dritten mitgelesen werden.
+    </p>
+    <h2>
+      5. Datenerfassung auf dieser Website
+    </h2>
+    <h3>
+      Kontaktformular
+    </h3>
+    <p>
+      Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular
+      inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r den Fall
+      von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+    </p>
+    <p>
+      Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit
+      der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher
+      Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem
+      berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+      DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die
+      Einwilligung ist jederzeit widerrufbar.
+    </p>
+    <p>
+      Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur L&ouml;schung
+      auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die Datenspeicherung
+      entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche
+      Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unber&uuml;hrt.
+    </p>
+    <h3>
+      Anfrage per E-Mail, Telefon oder Telefax
+    </h3>
+    <p>
+      Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus
+      hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns
+      gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+    </p>
+    <p>
+      Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit
+      der Erf&uuml;llung eines Vertrags zusammenh&auml;ngt oder zur Durchf&uuml;hrung vorvertraglicher
+      Ma&szlig;nahmen erforderlich ist. In allen &uuml;brigen F&auml;llen beruht die Verarbeitung auf unserem
+      berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+      DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die
+      Einwilligung ist jederzeit widerrufbar.
+    </p>
+    <p>
+      Die von Ihnen an uns per Kontaktanfragen &uuml;bersandten Daten verbleiben bei uns, bis Sie uns zur
+      L&ouml;schung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck f&uuml;r die
+      Datenspeicherung entf&auml;llt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende
+      gesetzliche Bestimmungen &ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben
+      unber&uuml;hrt.
+    </p>
+    <p>
+      Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
+    </p>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-        <img src="../img/main/LogoFürFooter.webp"
-            alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter"
-            width="300">
-        <div class="footer-content">
-            <ul>
-                <li>
-                    <strong><a href="./kontakt.html">Kontakt</a></strong>
-                </li>
-                <li>
-                    <a href="mailto:info@lomi5.de">info@lomi5.de</a>
-                </li>
-                <li>
-                    <address>
-                        Henriette Burkard
-                        <br>
-                        Hirtenende 5
-                        <br>
-                        16278 Biesenbrow
-                    </address>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <strong><a href="./impressum.html">Impressum</a></strong>
-                </li>
-                <li>
-                    <strong><a href="./datatenschutz.html">Datenschutz</a></strong>
-                </li>
-                <li>
-                    <strong><a href="./about.html">Über Lomi5</a></strong>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-    <aside id="booking-popup">
-        <div>
-            <button class="close x">
-                <svg width="25" height="25">
-                    <line x1="0" y1="0" x2="25" y2="25" />
-                    <line x1="25" y1="0" x2="0" y2="25" />
-                </svg>
-            </button>
-            <h3>
-                Weiterleitung zur Buchungsplattform
-            </h3>
-            <p>
-                Sie werden nun zur Buchungsseite von Timify weitergeleitet.
-                Dort gelten die
-                <a target="_blank" href="https://www.timify.com/de/legal/">Datenschutzbestimmungen von Timify</a>.
-
-            </p>
-            <p>
-                Bitte beachten Sie, dass Timify für die Verarbeitung Ihrer Daten verantwortlich ist,
-                sobald Sie die Seite verlassen.
-            </p>
-            <p>
-                Mit Klick auf 'Weiter zur Buchung' bestätigen Sie,
-                dass Sie die Datenschutzbestimmungen von Timify zur Kenntnis genommen haben.
-            </p>
-            <div class="flex">
-                <button class="massage-btn cancel close">ZURÜCK</button>
-                <a class="btn" target="_blank"
-                    href="https://book.timify.com/services?accountId=608c2450481bbc11777a2660&hideCloseButton=true">
-                    <button class="massage-btn">ZUR BUCHUNG</button>
-                </a>
-            </div>
-        </div>
-    </aside>
-
-    <!-- serves as curtain, to blur background when popup is openend -->
-    <div class="curtain">
-
+  <!-- Footer -->
+  <footer>
+    <picture>
+      <source media="(min-width: 768px)" srcset="../img/main/LogoFuerFooter.webp" height="250" width="250">
+      <source media="(min-width: 480px)" srcset="../img/main/LogoFuerFooter.webp" height="350" width="350">
+      <source media="(min-width: 320px)" srcset="../img/main/LogoFuerFooter.webp" height="300" width="300">
+      <img src="../img/main/LogoFuerFooter.webp"
+        alt="Logo: 'Lomi5' mit Sonnenaufgang darüber und dem Schriftzug 'Hawaiianische Massage in der Uckermark' darunter"
+        height="200" width="200">
+    </picture>
+    <div class="footer-content">
+      <ul>
+        <li>
+          <strong><a href="./kontakt.html">Kontakt</a></strong>
+        </li>
+        <li>
+          <a href="mailto:info@lomi5.de">info@lomi5.de</a>
+        </li>
+        <li>
+          <address>
+            Henriette Burkard
+            <br>
+            Hirtenende 5
+            <br>
+            16278 Biesenbrow
+          </address>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <strong><a href="./impressum.html">Impressum</a></strong>
+        </li>
+        <li>
+          <strong><a href="./datatenschutz.html">Datenschutz</a></strong>
+        </li>
+        <li>
+          <strong><a href="./about.html">Über Lomi5</a></strong>
+        </li>
+      </ul>
     </div>
+  </footer>
 
-    <script async src="../js/navAndPopups.js"></script>
+  <aside id="booking-popup">
+    <div>
+      <button class="close x">
+        <svg width="25" height="25">
+          <line x1="0" y1="0" x2="25" y2="25" />
+          <line x1="25" y1="0" x2="0" y2="25" />
+        </svg>
+      </button>
+      <h3>
+        Weiterleitung zur Buchungsplattform
+      </h3>
+      <p>
+        Sie werden nun zur Buchungsseite von Timify weitergeleitet.
+        Dort gelten die
+        <a target="_blank" href="https://www.timify.com/de/legal/">Datenschutzbestimmungen von Timify</a>.
+
+      </p>
+      <p>
+        Bitte beachten Sie, dass Timify für die Verarbeitung Ihrer Daten verantwortlich ist,
+        sobald Sie die Seite verlassen.
+      </p>
+      <p>
+        Mit Klick auf 'Weiter zur Buchung' bestätigen Sie,
+        dass Sie die Datenschutzbestimmungen von Timify zur Kenntnis genommen haben.
+      </p>
+      <div class="flex">
+        <button class="massage-btn cancel close">ZURÜCK</button>
+        <a class="btn" target="_blank"
+          href="https://book.timify.com/services?accountId=608c2450481bbc11777a2660&hideCloseButton=true">
+          <button class="massage-btn">ZUR BUCHUNG</button>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- serves as curtain, to blur background when popup is openend -->
+  <div class="curtain">
+
+  </div>
+
+  <script async src="../js/navAndPopups.js"></script>
 
 </body>
 
