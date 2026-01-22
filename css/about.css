@@ -545,6 +545,12 @@ aside button:not(.close) {
     padding-bottom: 150px;
   }
 }
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
 main h2 span {
   font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
   font-size: 1.44rem;

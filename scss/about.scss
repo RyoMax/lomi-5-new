@@ -3,6 +3,13 @@
 @use "style" as *;
 @use "container" as *;
 
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf");
+    font-weight: normal;
+    font-display: swap;
+}
+
 main {
 
     h2 span {
