@@ -547,9 +547,10 @@ aside button:not(.close) {
 }
 @font-face {
   font-family: Montserrat;
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-weight: normal;
-  font-display: swap;
+  src: url("../fonts/Montserrat-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: optional;
 }
 main h2 span {
   font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
@@ -570,6 +571,12 @@ main .angebot-info div {
 }
 main .container p {
   text-align: justify;
+}
+main .container em {
+  font-style: italic;
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  font-weight: 300;
+  line-height: inherit;
 }
 main .container.about-lomi {
   background-color: #DBCFBF;

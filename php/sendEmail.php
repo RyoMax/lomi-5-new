@@ -12,7 +12,7 @@ $messageRaw = isset($_POST['message']) ? trim($_POST['message']) : '';
 
 // Check required fields
 if ($nameRaw === '' || $emailRaw === '' || $messageRaw === '') {
-    header('Location: https://www.lomi5.de/empty.html');
+    header('Location: https://www.lomi5.de/pages/error.html');
     exit;
 }
 
@@ -20,7 +20,7 @@ if ($nameRaw === '' || $emailRaw === '' || $messageRaw === '') {
 $emailSanitized = filter_var($emailRaw, FILTER_SANITIZE_EMAIL);
 if (!filter_var($emailSanitized, FILTER_VALIDATE_EMAIL)) {
     // invalid email -> treat as error
-    header('Location: https://www.lomi5.de/error.html');
+    header('Location: https://www.lomi5.de/pages/error.html');
     exit;
 }
 
@@ -61,10 +61,10 @@ $htmlMessage = '<!doctype html>' .
 // Send mail
 $sent = mail($to, $subject, $htmlMessage, $headers);
 if (!$sent) {
-    header('Location: https://www.lomi5.de/error.html');
+    header('Location: https://www.lomi5.de/pages/error.html');
     exit;
 }
 
-header('Location: https://www.lomi5.de/success.html');
+header('Location: https://www.lomi5.de/pages/success.html');
 exit;
 ?>

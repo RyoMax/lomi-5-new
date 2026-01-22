@@ -5,9 +5,10 @@
 
 @font-face {
     font-family: Montserrat;
-    src: url("../fonts/Montserrat-Regular.ttf");
-    font-weight: normal;
-    font-display: swap;
+    src: url("../fonts/Montserrat-LightItalic.ttf");
+    font-weight: 300;
+    font-style: italic;
+    font-display: optional;
 }
 
 main {
@@ -37,6 +38,13 @@ main {
             text-align: justify;
         }
 
+        em {
+            font-style: italic;
+            font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+            font-weight: 300;
+            line-height: inherit;
+        }
+
         &.about-lomi {
             background-color: $brown-bright;
         }
@@ -61,34 +69,33 @@ main {
 @media (min-width:$lg) {
     .container {
 
-            &.about-lomi {
-                text-align: right;
-                
-                .content {
-                    width: 50vw;
-                }
+        &.about-lomi {
+            text-align: right;
 
-                .image {
-                    background-image: url(../img/about/lomi-massage.jpg);
-                    width: 50vw;
-                    opacity: 0.7;
-                    background-position: left;
-                }
+            .content {
+                width: 50vw;
             }
 
-            &.about-henriette {
-                text-align: left;
-
-                .content {
-                    width: 60vw;
-                }
-
-                .image {
-                    background-image: url(../img/about/jette-about.jpg);
-                    opacity: 0.7;
-                    width: 40vw;
-                }
+            .image {
+                background-image: url(../img/about/lomi-massage.jpg);
+                width: 50vw;
+                opacity: 0.7;
+                background-position: left;
             }
         }
-}
 
+        &.about-henriette {
+            text-align: left;
+
+            .content {
+                width: 60vw;
+            }
+
+            .image {
+                background-image: url(../img/about/jette-about.jpg);
+                opacity: 0.7;
+                width: 40vw;
+            }
+        }
+    }
+}
