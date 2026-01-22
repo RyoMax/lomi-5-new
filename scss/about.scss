@@ -1,5 +1,4 @@
 @use 'variables' as *;
-@use "fonts" as fonts;
 @use "mixins" as *;
 @use "style" as *;
 @use "container" as *;
@@ -7,7 +6,7 @@
 main {
 
     h2 span {
-        font-family: fonts.$montserat;
+        font-family: $montserat;
         font-size: 1.44rem;
         margin-bottom: 12px;
         @include letterSpace();
