@@ -7,6 +7,7 @@
   <meta name="description"
     content="Erfahre mehr über Lomi5, die hawaiianische Lomi Lomi Massage in der Uckermark. Lerne Henriette kennen, ihre Philosophie und wie du bei ihr Ruhe, Entspannung und Wohlbefinden findest.">
   <meta name="author" content="Maximilian Faust, Jule Burkard und Henriette Burkard">
+  <link rel="preload" as="font" href="../fonts/Montserrat-LightItalic.ttf" type="font/ttf" crossorigin>
   <link rel="icon" href="../img/main/LogoHell_1.webp">
   <title>LOMI5 | Über Lomi Lomi und Henriette | Hawaiianische Massage in der Uckermark</title>
 
@@ -26,7 +27,7 @@
   src: url("../fonts/Montserrat-LightItalic.ttf");
   font-weight: 300;
   font-style: italic;
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: Montserrat;
@@ -46,6 +47,13 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+em {
+  font-style: italic;
+  font-family: "Montserrat", sans-serif, "Times New Roman", Times, serif;
+  font-weight: 300;
+  line-height: inherit;
 }
 nav {
   -webkit-position: sticky;
